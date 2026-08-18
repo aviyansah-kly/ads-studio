@@ -64,10 +64,7 @@ header [style*="background:#1769E0"]{background:#fff!important;border-color:#fff
 header [style*="background:#fff"]{background:rgba(255,255,255,.1)!important;border-color:rgba(255,255,255,.3)!important;color:#fff!important}
 #top{position:relative;isolation:isolate;overflow:hidden;margin-top:-72px;padding-top:180px!important;min-height:760px;background:#102567;color:#fff}
 #top:before{content:"";position:absolute;inset:0;z-index:-3;background-image:linear-gradient(rgba(255,255,255,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.09) 1px,transparent 1px);background-size:96px 96px;mask-image:linear-gradient(to bottom,black 0%,transparent 82%)}
-.klyLiquid{position:absolute;inset:-18%;z-index:-2;filter:blur(3px);pointer-events:none;overflow:hidden}
-.klyLiquid:before,.klyLiquid:after{content:"";position:absolute;border-radius:42% 58% 64% 36%/48% 38% 62% 52%;will-change:transform}
-.klyLiquid:before{width:72vw;height:62vw;max-width:1050px;max-height:880px;right:-8%;top:-18%;background:radial-gradient(circle at 34% 30%,#6DE2FF 0,#2478FF 34%,#5748FF 66%,rgba(85,72,255,.15) 78%);animation:liquidA 14s ease-in-out infinite}
-.klyLiquid:after{width:58vw;height:50vw;max-width:820px;max-height:720px;left:-18%;bottom:-44%;background:radial-gradient(circle at 64% 36%,#42C7FF 0,#2458E6 42%,#102567 75%);opacity:.84;animation:liquidB 17s ease-in-out infinite}
+.gradient{position:absolute;inset:0;width:100%;height:100%;z-index:-2;pointer-events:none}
 #top h1,#top h2,#top h3{color:#fff!important}
 #top p,#top span{color:rgba(255,255,255,.78)!important}
 #top>div{position:relative;z-index:1}
@@ -77,8 +74,7 @@ header [style*="background:#fff"]{background:rgba(255,255,255,.1)!important;bord
 section[style*="background:#172033"]{background:#17152F!important}
 section[style*="padding:84px"]>div{background:#5548FF!important;color:#fff!important;border:0!important;border-radius:28px!important}
 section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
-@media(max-width:700px){h1{font-size:44px!important}h2{font-size:34px!important}header{top:10px;width:calc(100% - 20px)}header>div:first-child{padding-inline:14px!important}#top{margin-top:-72px;padding-top:150px!important}.klyLiquid:before{width:150vw;height:120vw;right:-70%;top:-4%}.klyLiquid:after{width:130vw;height:110vw;left:-70%;bottom:-10%}#top>div{grid-template-columns:1fr!important}#solutions,#gallery,#showcase,#casestudies,#howitworks{padding-inline:18px!important}}
-@media(prefers-reduced-motion:reduce){.klyLiquid:before,.klyLiquid:after{animation:none!important}}
+@media(max-width:700px){h1{font-size:44px!important}h2{font-size:34px!important}header{top:10px;width:calc(100% - 20px)}header>div:first-child{padding-inline:14px!important}#top{margin-top:-72px;padding-top:150px!important}#top>div{grid-template-columns:1fr!important}#solutions,#gallery,#showcase,#casestudies,#howitworks{padding-inline:18px!important}}
 </style>
 </helmet>
 
@@ -86,9 +82,9 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
 
 <header style="position:sticky;top:0;z-index:60;background:rgba(255,255,255,0.93);backdrop-filter:blur(10px);border-bottom:1px solid #E6ECF4">
   <div style="max-width:1260px;margin:0 auto;padding:0 28px;height:68px;display:flex;align-items:center;gap:32px">
-    <a href="#top" style="display:flex;align-items:baseline;gap:7px;color:#172033;flex:none">
+    <a href="#top" style="display:flex;align-items:center;gap:9px;color:#172033;flex:none">
       <img src="/kly-logo-web.png" alt="KLY" style="width:58px;height:36px;object-fit:contain">
-      <span style="font-size:12px;font-weight:600;letter-spacing:0.16em;color:#5A6478">ADS STUDIO</span>
+      <span style="display:flex;align-items:center;height:36px;font-size:12px;font-weight:600;line-height:1;letter-spacing:0.16em;color:#5A6478">ADS STUDIO</span>
     </a>
     <nav style="display:none;gap:26px;flex:1" data-nav="desktop" class="klyNavDesktop">
       <sc-for list="{{ navItems }}" as="item" hint-placeholder-count="5">
@@ -114,7 +110,7 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
 </header>
 
 <section id="top" style="padding:64px 28px 24px">
-  <div class="klyLiquid" aria-hidden="true"></div>
+  <canvas class="gradient" aria-hidden="true"></canvas>
   <div style="max-width:1260px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:56px;align-items:center">
     <div style="animation:kfUp .5s ease both">
       <div style="display:inline-flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;color:#1769E0;background:#EDF3FD;border:1px solid #D8E5FA;padding:6px 11px;border-radius:999px">SOLUSI PERIKLANAN KLY</div>
@@ -1538,6 +1534,20 @@ class Component extends DCLogic {
     };
   }
 }
+</script>
+<script type="module">
+  import { WaveGradient } from '/wavegradient.js';
+  const canvasElement = document.querySelector('.gradient');
+  new WaveGradient(canvasElement, {
+    debug: false,
+    colors: ['#2941CB', '#6348DE', '#2941CB', '#0e1a75'],
+    fps: 60,
+    seed: 0,
+    density: [0.03, 0.08],
+    speed: 0.6,
+    amplitude: 320,
+    time: 0
+  });
 </script>
 </body>
 </html>
