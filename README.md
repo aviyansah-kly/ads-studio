@@ -24,3 +24,9 @@ The static production output is generated in `dist/`.
 - Build output directory: `dist`
 - Root directory: `/`
 - Node.js version: `22`
+
+## Cloudflare Workers deployment
+
+The repository includes `wrangler.jsonc`. Cloudflare should deploy the latest
+`main` commit with `npx wrangler deploy`; Wrangler runs `npm run build` and
+publishes the static files from `dist/`.
