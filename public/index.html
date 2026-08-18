@@ -62,26 +62,22 @@ header a,header span,header nav a{color:rgba(255,255,255,.8)!important}
 header nav a:hover{color:#fff!important}
 header [style*="background:#1769E0"]{background:#fff!important;border-color:#fff!important;color:#17152F!important}
 header [style*="background:#fff"]{background:rgba(255,255,255,.1)!important;border-color:rgba(255,255,255,.3)!important;color:#fff!important}
-#top{position:relative;isolation:isolate;overflow:hidden;margin-top:-72px;padding-top:180px!important;padding-bottom:150px!important;min-height:820px;background:#000;color:#fff}
+#top{position:relative;isolation:isolate;overflow:hidden;margin-top:-72px;padding-top:180px!important;padding-bottom:150px!important;min-height:820px;background:#102567;color:#fff}
 #top:before{content:"";position:absolute;inset:0;z-index:-3;background-image:linear-gradient(rgba(255,255,255,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.09) 1px,transparent 1px);background-size:96px 96px;mask-image:linear-gradient(to bottom,black 0%,transparent 82%)}
-.gradient{position:absolute;inset:-3%;width:106%;height:106%;z-index:-2;pointer-events:none;filter:blur(10px) saturate(108%);transform:scale(1.02);opacity:1}
+.gradient{position:absolute;inset:-5%;width:110%;height:110%;z-index:-2;pointer-events:none;filter:blur(28px) saturate(112%);transform:scale(1.035);opacity:.98}
 #top:after{content:"";position:absolute;z-index:-1;left:0;right:0;bottom:-1px;height:210px;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.03) 18%,rgba(255,255,255,.24) 48%,rgba(255,255,255,.72) 76%,#fff 100%)}
 #top h1,#top h2,#top h3{color:#fff!important}
 #top p,#top span{color:rgba(255,255,255,.78)!important}
 #top>div{position:relative;z-index:1}
+#top>div>div:last-child>div{background:rgba(255,255,255,.86)!important;backdrop-filter:blur(20px);border-color:rgba(255,255,255,.45)!important;box-shadow:0 28px 80px rgba(5,15,48,.28)!important}
+#top>div>div:last-child p,#top>div>div:last-child span,#top>div>div:last-child div{color:#17152F!important}
 #top [style*="border-top:1px solid #E6ECF4"]{border-top-color:rgba(255,255,255,.25)!important}
-.heroPerson{position:relative;min-height:590px;display:flex;align-items:flex-end;justify-content:center;animation:kfUp .65s .1s ease both}
-.heroPerson:before{content:"";position:absolute;width:76%;aspect-ratio:1;left:15%;bottom:4%;border-radius:50%;background:radial-gradient(circle,rgba(111,226,255,.4) 0,rgba(99,72,222,.23) 43%,transparent 70%);filter:blur(26px)}
-.heroPerson img{position:relative;z-index:2;width:min(100%,510px);height:610px;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 28px 38px rgba(5,12,48,.28))}
-.heroSignal{position:absolute;z-index:3;display:flex;align-items:center;gap:9px;padding:10px 14px;border:1px solid rgba(255,255,255,.32);border-radius:999px;background:rgba(19,29,74,.46);backdrop-filter:blur(14px);box-shadow:0 12px 32px rgba(5,12,48,.2);color:#fff!important;font-size:12px;font-weight:600}
-.heroSignal:before{content:"";width:7px;height:7px;border-radius:50%;background:#73E5FF;box-shadow:0 0 0 5px rgba(115,229,255,.12)}
-.heroSignalOne{top:24%;right:2%}.heroSignalTwo{top:48%;left:0}.heroSignalThree{bottom:14%;right:-1%}
 .klyTrustSection{position:relative;z-index:4;margin-top:-92px!important;padding-top:0!important}
 .klyTrustSection>div{box-shadow:0 26px 70px rgba(20,31,73,.12);background:rgba(247,247,251,.88)!important;backdrop-filter:blur(18px) saturate(130%);border-color:rgba(255,255,255,.72)!important}
 section[style*="background:#172033"]{background:#17152F!important}
 section[style*="padding:84px"]>div{background:#5548FF!important;color:#fff!important;border:0!important;border-radius:28px!important}
 section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
-@media(max-width:700px){h1{font-size:44px!important}h2{font-size:34px!important}header{top:10px;width:calc(100% - 20px)}header>div:first-child{padding-inline:14px!important}#top{margin-top:-72px;padding-top:150px!important;padding-bottom:130px!important}.gradient{filter:blur(22px) saturate(110%)}.heroPerson{min-height:470px;margin-top:12px}.heroPerson img{height:490px}.heroSignal{font-size:10px;padding:8px 11px}.heroSignalOne{right:0}.heroSignalTwo{left:-2%}.klyTrustSection{margin-top:-72px!important}#top>div{grid-template-columns:1fr!important}#solutions,#gallery,#showcase,#casestudies,#howitworks{padding-inline:18px!important}}
+@media(max-width:700px){h1{font-size:44px!important}h2{font-size:34px!important}header{top:10px;width:calc(100% - 20px)}header>div:first-child{padding-inline:14px!important}#top{margin-top:-72px;padding-top:150px!important;padding-bottom:130px!important}.gradient{filter:blur(22px) saturate(110%)}.klyTrustSection{margin-top:-72px!important}#top>div{grid-template-columns:1fr!important}#solutions,#gallery,#showcase,#casestudies,#howitworks{padding-inline:18px!important}}
 </style>
 </helmet>
 
@@ -121,8 +117,8 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
   <div style="max-width:1260px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:56px;align-items:center">
     <div style="animation:kfUp .5s ease both">
       <div style="display:inline-flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;color:#1769E0;background:#EDF3FD;border:1px solid #D8E5FA;padding:6px 11px;border-radius:999px">SOLUSI PERIKLANAN KLY</div>
-      <h1 style="font-size:clamp(34px,4.4vw,54px);line-height:1.06;letter-spacing:-0.028em;font-weight:600;margin:22px 0 0;max-width:15ch">Ubah kekuatan KLY menjadi pertumbuhan baru.</h1>
-      <p style="font-size:17px;line-height:1.6;color:#4A5568;max-width:54ch;margin:20px 0 0">Hubungkan audience, konten, kreator, data, dan media KLY untuk membangun campaign yang lebih bernilai—di luar sekadar banner dan pageview.</p>
+      <h1 style="font-size:clamp(34px,4.4vw,54px);line-height:1.06;letter-spacing:-0.028em;font-weight:600;margin:22px 0 0;max-width:15ch">Dari tujuan bisnis ke solusi campaign yang tepat.</h1>
+      <p style="font-size:17px;line-height:1.6;color:#4A5568;max-width:54ch;margin:20px 0 0">Jelajahi media, konten, kreator, commerce, dan pengalaman interaktif KLY dalam satu tempat.</p>
       <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:30px">
         <button onClick="{{ goBrief }}" style="display:inline-flex;align-items:center;gap:9px;padding:14px 22px;background:#1769E0;border:1px solid #1769E0;color:#fff;border-radius:10px;font-size:15px;font-weight:600" style-hover="background:#1257B8;border-color:#1257B8" style-active="background:#0F4794">Temukan Solusi<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 5l7 7-7 7"></path></svg></button>
         <button onClick="{{ goGallery }}" style="padding:14px 22px;background:#fff;border:1px solid #D4DDEA;color:#172033;border-radius:10px;font-size:15px;font-weight:600" style-hover="border-color:#1769E0;color:#1769E0" style-active="background:#F4F7FB">Lihat Galeri Iklan</button>
@@ -137,11 +133,49 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
       </div>
     </div>
 
-    <div class="heroPerson">
-      <img src="/kly-hero-creator.webp" alt="Kreator Indonesia menggunakan smartphone" width="800" height="1200">
-      <span class="heroSignal heroSignalOne">Audience</span>
-      <span class="heroSignal heroSignalTwo">Content & Creator</span>
-      <span class="heroSignal heroSignalThree">Commerce</span>
+    <div style="animation:kfUp .6s .1s ease both">
+      <div style="border:1px solid #E3E9F2;border-radius:14px;background:#fff;box-shadow:0 18px 44px -28px rgba(23,32,51,0.32);overflow:hidden">
+        <div style="display:flex;align-items:center;gap:8px;padding:12px 16px;background:#F4F7FB;border-bottom:1px solid #E6ECF4">
+          <span style="width:9px;height:9px;border-radius:999px;background:#EF3F35;opacity:.6"></span>
+          <span style="width:9px;height:9px;border-radius:999px;background:#F5A000;opacity:.6"></span>
+          <span style="width:9px;height:9px;border-radius:999px;background:#209447;opacity:.6"></span>
+          <span style="margin-left:8px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#8A94A6;letter-spacing:.06em">campaign-advisor / preview</span>
+        </div>
+        <div style="padding:24px 24px 22px">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+            <div style="background:#F8FAFD;border:1px solid #EDF1F7;border-radius:10px;padding:12px 14px">
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;color:#8A94A6">TUJUAN</div>
+              <div style="font-size:14.5px;font-weight:600;margin-top:5px">Peluncuran Produk</div>
+            </div>
+            <div style="background:#F8FAFD;border:1px solid #EDF1F7;border-radius:10px;padding:12px 14px">
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;color:#8A94A6">TARGET AUDIENCE</div>
+              <div style="font-size:14.5px;font-weight:600;margin-top:5px">Perempuan, 18–34</div>
+            </div>
+            <div style="background:#F8FAFD;border:1px solid #EDF1F7;border-radius:10px;padding:12px 14px">
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;color:#8A94A6">KATEGORI</div>
+              <div style="font-size:14.5px;font-weight:600;margin-top:5px">Kecantikan</div>
+            </div>
+            <div style="background:#F8FAFD;border:1px solid #EDF1F7;border-radius:10px;padding:12px 14px">
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;color:#8A94A6">SETUP</div>
+              <div style="font-size:14.5px;font-weight:600;margin-top:5px">14–21 hari</div>
+            </div>
+          </div>
+          <div style="margin-top:20px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;color:#8A94A6">REKOMENDASI SOLUSI</div>
+          <div style="display:flex;flex-direction:column;gap:8px;margin-top:10px">
+            <sc-for list="{{ heroSolutions }}" as="hs" hint-placeholder-count="3">
+              <div style="display:flex;align-items:center;gap:12px;border:1px solid #E3E9F2;border-radius:10px;padding:12px 14px" style-hover="border-color:#1769E0;background:#FAFCFF">
+                <span style="width:26px;height:26px;flex:none;display:flex;align-items:center;justify-content:center;border-radius:8px;background:#EDF3FD;color:#1769E0;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500">{{ hs.n }}</span>
+                <span style="font-size:14px;font-weight:600">{{ hs.name }}</span>
+                <span style="margin-left:auto;font-size:11.5px;font-weight:500;color:#209447;background:#E9F5ED;padding:4px 9px;border-radius:999px">{{ hs.match }}</span>
+              </div>
+            </sc-for>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;margin-top:18px;padding-top:14px;border-top:1px dashed #E3E9F2">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#8A94A6" stroke-width="2" stroke-linecap="round"><path d="M12 3l2.4 6.2L21 12l-6.6 2.8L12 21l-2.4-6.2L3 12l6.6-2.8z"></path></svg>
+            <span style="font-size:11.5px;color:#8A94A6">Rekomendasi awal · Perlu divalidasi bersama tim KLY</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1505,23 +1539,17 @@ class Component extends DCLogic {
 }
 </script>
 <script type="module">
-  import { ShaderGradient } from '/shadergradient.js';
+  import { WaveGradient } from '/wavegradient.js';
   const canvasElement = document.querySelector('.gradient');
-  new ShaderGradient(canvasElement, {
-    animate: 'on',
-    bgColor1: '#000000',
-    bgColor2: '#000000',
-    brightness: 1.2,
-    color1: '#6164ff',
-    color2: '#7a36c7',
-    color3: '#ea9dfd',
-    pixelDensity: 1,
-    rotationZ: 225,
-    uDensity: 1.8,
-    uFrequency: 5.5,
-    uSpeed: 0.2,
-    uStrength: 3,
-    uTime: 0.2
+  new WaveGradient(canvasElement, {
+    debug: false,
+    colors: ['#2941CB', '#6348DE', '#2941CB', '#0e1a75'],
+    fps: 60,
+    seed: 0,
+    density: [0.03, 0.08],
+    speed: 0.6,
+    amplitude: 320,
+    time: 0
   });
 </script>
 </body>
