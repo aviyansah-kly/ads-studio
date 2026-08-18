@@ -87,15 +87,15 @@ header [style*="background:#fff"]{background:rgba(255,255,255,.1)!important;bord
 @keyframes klyLogoMarquee{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
 .goalIntro{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(360px,.75fr);gap:64px;align-items:end}
 .goalIntro p{margin:0!important}
-.goalGrid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;margin-top:30px}
-.goalCard{min-height:218px;display:flex;flex-direction:column;border-radius:16px!important;padding:18px!important}
+.goalGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:30px}
+.goalCard{min-height:205px;display:flex;flex-direction:column;border-radius:16px!important;padding:20px!important}
 .goalCard h3{font-size:16px!important;line-height:1.25!important;margin-top:18px!important}
 .goalCard p{font-size:14px!important;line-height:1.48!important;margin-top:8px!important}
 .goalLink{margin-top:auto!important;padding:14px 0 0!important;background:transparent!important;border:0!important;color:#1769E0!important;font-size:14px!important;font-weight:650!important;text-align:left!important;width:auto!important;justify-content:flex-start!important}
 section[style*="background:#172033"]{background:#17152F!important}
 section[style*="padding:84px"]>div{background:#5548FF!important;color:#fff!important;border:0!important;border-radius:28px!important}
 section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
-@media(max-width:980px){.goalIntro{grid-template-columns:1fr;gap:18px}.goalGrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:980px){.goalIntro{grid-template-columns:1fr;gap:18px}.goalGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){h1{font-size:44px!important}h2{font-size:34px!important}header{top:10px;width:calc(100% - 20px)}header>div:first-child{padding-inline:14px!important}#top{margin-top:-72px;padding-top:150px!important;padding-bottom:130px!important}.gradient{filter:blur(4px) saturate(103%) brightness(.96)}.klyTrustSection{margin-top:0!important;padding-top:48px!important}.klyEcosystemStats{grid-template-columns:repeat(2,1fr);gap:18px 10px;margin-top:32px}.klyEcosystemStat{min-height:88px;padding:8px}.klyMediaLogos{margin-top:26px;mask-image:linear-gradient(90deg,transparent 0,#000 14%,#000 86%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 14%,#000 86%,transparent 100%)}.klyMediaTrack{animation-duration:22s}.klyMediaGroup{gap:42px;padding-right:42px}.klyMediaLogo{width:124px;flex-basis:124px}.klyMediaLogo img{height:30px}.goalGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.goalCard{min-height:210px}#top>div{grid-template-columns:1fr!important}#solutions,#gallery,#showcase,#casestudies,#howitworks{padding-inline:18px!important}}
 @media(max-width:460px){.goalGrid{grid-template-columns:1fr}.goalCard{min-height:190px}}
 @media(prefers-reduced-motion:reduce){.klyMediaTrack{animation:none}}
@@ -243,7 +243,7 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
       <p style="font-size:16px;line-height:1.55;color:#5A6478">Pilih hasil yang ingin dicapai. Sistem akan menyaring solusi KLY yang paling relevan untuk kebutuhan Anda.</p>
     </div>
     <div class="goalGrid">
-      <sc-for list="{{ useCases }}" as="uc" hint-placeholder-count="6">
+      <sc-for list="{{ useCases }}" as="uc" hint-placeholder-count="4">
         <div class="goalCard" onClick="{{ uc.select }}" role="button" tabindex="0" style="border:1px solid #E3E9F2;background:#fff;cursor:pointer;transition:border-color .18s,box-shadow .18s,transform .18s;border-color:{{ uc.border }};box-shadow:{{ uc.shadow }}" style-hover="border-color:#9DBBFF;transform:translateY(-2px)">
           <div style="display:flex;align-items:center;justify-content:space-between">
             <span style="display:inline-flex;align-items:center;justify-content:center;min-width:38px;height:38px;padding:0 9px;border-radius:10px;background:{{ uc.iconBg }};color:{{ uc.iconFg }};font-size:15px;font-weight:700">{{ uc.n }}</span>
@@ -259,7 +259,7 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
         </div>
       </sc-for>
     </div>
-    <p style="font-size:14px;color:#6A7487;margin:18px 0 0">Pilih satu tujuan untuk menyaring galeri solusi KLY.</p>
+    <p style="font-size:14px;color:#6A7487;margin:18px 0 0">Empat tujuan utama ini mencakup seluruh opsi kampanye. Filter lebih detail tersedia di galeri.</p>
   </div>
 </section>
 
@@ -1102,12 +1102,10 @@ class Component extends DCLogic {
     heroSolutions: [{ n: '01', name: 'Pemilih Produk Fimela', match: 'Rekomendasi utama' }, { n: '02', name: 'Seri Ulasan Kreator', match: 'Pendukung' }, { n: '03', name: 'Cerita Belanja', match: 'Perluasan' }],
     nav: [['Solusi', 'solutions'], ['Skenario', 'showcase'], ['Galeri Iklan', 'gallery'], ['Studi Kasus', 'casestudies'], ['Cara Kerja', 'howitworks']],
     useCases: [
-      { id: 'launch', title: 'Peluncuran Produk', filter: 'Pertimbangan', icon: ['M12 3l7 4v6c0 4-3 7-7 8-4-1-7-4-7-8V7z', 'M9.5 12l1.8 1.8L15 10'], desc: 'Kenalkan produk baru melalui konten, kreator, dan pengalaman interaktif.', products: ['Pemilih Produk Interaktif', 'Editorial Brand', 'Seri Ulasan Kreator'], kpis: ['Minat produk', 'Eksplorasi produk', 'Klik ke pembelian'] },
-      { id: 'aware', title: 'Jangkauan & Cerita Brand', filter: 'Awareness', icon: ['M4 12a8 8 0 0 1 16 0', 'M8 17h8'], desc: 'Bangun jangkauan melalui konten, video, dan kreator.', products: ['Video Brand', 'Native Premium', 'Kolaborasi Kreator', 'Sponsor Editorial'], kpis: ['Jangkauan', 'Video selesai ditonton', 'Waktu interaksi'] },
-      { id: 'consider', title: 'Pertimbangan & Edukasi', filter: 'Edukasi', icon: ['M4 6h16', 'M4 12h10'], desc: 'Bantu audiens memahami dan membandingkan produk.', products: ['Alat Perbandingan', 'Kuis Interaktif', 'Kalkulator', 'Seri Konten Ahli'], kpis: ['Alat selesai digunakan', 'Minat produk', 'Kunjungan ulang'] },
-      { id: 'leads', title: 'Pengumpulan Lead', filter: 'Lead', icon: ['M4 19V9l8-5 8 5v10', 'M9 19v-6h6v6'], desc: 'Ubah minat audiens menjadi lead yang terukur.', products: ['Formulir Lead', 'Pemilih Konsultasi', 'Pendaftaran Webinar', 'Kuis Rekomendasi Produk'], kpis: ['Lead berkualitas', 'Formulir selesai', 'Biaya per lead'] },
-      { id: 'commerce', title: 'Penjualan & Konversi', filter: 'Commerce', icon: ['M4 5h3l2 11h9', 'M9 20h.01M17 20h.01'], desc: 'Hubungkan konten langsung dengan aksi pembelian.', products: ['Cerita Belanja', 'Modul Rekomendasi Produk', 'Penemuan Promo', 'Modul Afiliasi'], kpis: ['Klik produk', 'Minat belanja', 'Nilai transaksi'] },
-      { id: 'community', title: 'Komunitas & Interaksi', filter: 'Interaksi', icon: ['M7 20v-2a4 4 0 0 1 4-4h2a4 4 0 0 1 4 4v2', 'M12 4a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z'], desc: 'Bangun partisipasi melalui kuis, acara, dan komunitas.', products: ['Tantangan Interaktif', 'Acara Langsung', 'Program Komunitas', 'Pengalaman Penggemar'], kpis: ['Partisipasi', 'Kunjungan ulang', 'Pendaftaran'] }
+      { id: 'reach', title: 'Bangun Jangkauan', filters: ['Awareness', 'Jangkauan', 'Pertimbangan'], desc: 'Perluas jangkauan, kuatkan cerita brand, dan dukung peluncuran produk.' },
+      { id: 'consider', title: 'Dorong Pertimbangan', filters: ['Pertimbangan', 'Edukasi'], desc: 'Bantu audiens memahami, membandingkan, dan memilih produk.' },
+      { id: 'engage', title: 'Tingkatkan Interaksi', filters: ['Interaksi', 'Insight Audience', 'Komunitas'], desc: 'Bangun partisipasi melalui konten, kuis, acara, dan komunitas.' },
+      { id: 'action', title: 'Kejar Aksi', filters: ['Lead', 'Commerce', 'Kunjungan'], desc: 'Arahkan minat menjadi lead, kunjungan, atau pembelian.' }
     ],
     products: [
       { id: 1, name: 'KLY Pemilih Produk', type: 'Solusi Interaktif', obj: ['Pertimbangan', 'Lead', 'Commerce'], del: 'Halaman milik KLY', res: 'Tinggi', desc: 'Kuis singkat untuk membantu audiens memilih produk.', kpi: ['Tingkat penyelesaian', 'Klik rekomendasi', 'Minat berkualitas'], lead: '10–14 hari', bud: 'Menengah', ind: ['Kecantikan', 'FMCG', 'Teknologi', 'Properti'], props: ['Fimela', 'KapanLagi', 'Merdeka'], sim: [3, 5], best: 'Cocok untuk produk dengan beberapa pilihan atau varian.', assets: ['Data dan varian produk', 'Panduan brand', 'Visual utama', 'Tautan produk'], meas: 'Aktivitas utama di setiap langkah dapat diukur dan dilaporkan berkala.', adNote: 'Tampil sebagai bagian dari halaman KLY sehingga tidak bergantung pada server iklan.', kind: 'interactive',
@@ -1239,6 +1237,8 @@ class Component extends DCLogic {
       const hay = (p.name + ' ' + p.desc + ' ' + p.type + ' ' + p.obj.join(' ') + ' ' + p.ind.join(' ') + ' ' + p.props.join(' ')).toLowerCase();
       if (hay.indexOf(q) < 0) return false;
     }
+    const goal = this.DATA.useCases.filter(u => u.id === s.useCase)[0];
+    if (goal && goal.filters && !p.obj.some(o => goal.filters.indexOf(o) >= 0)) return false;
     if (f.objective !== 'Semua' && p.obj.indexOf(f.objective) < 0) return false;
     if (f.industry !== 'Semua' && p.ind.indexOf(f.industry) < 0) return false;
     if (f.property !== 'Semua' && p.props.indexOf(f.property) < 0) return false;
@@ -1258,7 +1258,7 @@ class Component extends DCLogic {
     return true;
   }
 
-  setF = (key) => (e) => { const v = e.target.value; this.setState(s => ({ f: Object.assign({}, s.f, { [key]: v }) })); };
+  setF = (key) => (e) => { const v = e.target.value; this.setState(s => ({ useCase: key === 'objective' ? null : s.useCase, f: Object.assign({}, s.f, { [key]: v }) })); };
   setB = (key) => (e) => { const v = e.target.value; this.setState(s => ({ brief: Object.assign({}, s.brief, { [key]: v }) })); };
   setP = (key) => (e) => { const v = e.target.value; this.setState(s => ({ prop: Object.assign({}, s.prop, { [key]: v }) })); };
 
@@ -1421,10 +1421,10 @@ class Component extends DCLogic {
           border: active ? '#1769E0' : '#E3E9F2',
           shadow: active ? '0 14px 34px -26px rgba(23,105,224,.6)' : 'none',
           iconBg: active ? '#1769E0' : '#EDF3FD', iconFg: active ? '#fff' : '#1769E0',
-          select: () => { this.setState(st => ({ useCase: st.useCase === u.id ? null : u.id, view: 'grid', f: Object.assign({}, st.f, { objective: st.useCase === u.id ? 'Semua' : u.filter }) })); },
+          select: () => { this.setState(st => ({ useCase: st.useCase === u.id ? null : u.id, view: 'grid', f: Object.assign({}, st.f, { objective: 'Semua' }) })); },
           view: (e) => {
             if (e && e.stopPropagation) e.stopPropagation();
-            this.setState(st => ({ useCase: u.id, view: 'grid', f: Object.assign({}, st.f, { objective: u.filter }) }));
+            this.setState(st => ({ useCase: u.id, view: 'grid', f: Object.assign({}, st.f, { objective: 'Semua' }) }));
             this.timers.push(setTimeout(() => this.scrollTo('gallery'), 80));
           }
         });
