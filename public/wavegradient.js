@@ -4,12 +4,12 @@ export class WaveGradient {
     this.canvas = canvas;
     this.ctx = canvas.getContext('2d', { alpha: false });
     this.options = Object.assign({
-      colors: ['#2941CB', '#6348DE', '#2941CB', '#0e1a75'],
+      colors: ['#233EB8', '#3D56D6', '#2948B8', '#172B8F'],
       fps: 60,
       seed: 0,
-      density: [0.03, 0.08],
-      speed: 0.6,
-      amplitude: 320,
+      density: [0.018, 0.046],
+      speed: 0.34,
+      amplitude: 280,
       time: 0
     }, options);
     this.time = this.options.time || 0;
@@ -36,14 +36,14 @@ export class WaveGradient {
 
   wave(index, color, phase, baseline, opacity) {
     const ctx = this.ctx;
-    const amp = Math.min(this.options.amplitude, this.height * 0.43);
+    const amp = Math.min(this.options.amplitude, this.height * 0.36);
     const frequency = this.options.density[0] +
       (this.options.density[1] - this.options.density[0]) * (index / 4);
     const points = [];
-    for (let x = -80; x <= this.width + 80; x += 28) {
+    for (let x = -100; x <= this.width + 100; x += 36) {
       points.push({ x, y: baseline +
-        Math.sin(x * frequency * 0.16 + phase) * amp * (0.20 + index * 0.035) +
-        Math.cos(x * frequency * 0.075 - phase * 0.7) * amp * 0.16 });
+        Math.sin(x * frequency * 0.13 + phase) * amp * (0.16 + index * 0.026) +
+        Math.cos(x * frequency * 0.058 - phase * 0.58) * amp * 0.12 });
     }
     ctx.beginPath();
     ctx.moveTo(-80, this.height + 80);
@@ -61,10 +61,27 @@ export class WaveGradient {
     g.addColorStop(0, color);
     g.addColorStop(1, this.options.colors[(index + 1) % this.options.colors.length]);
     ctx.globalAlpha = opacity;
-    ctx.filter = 'blur(18px)';
+    ctx.filter = 'blur(38px)';
     ctx.fillStyle = g;
     ctx.fill();
     ctx.filter = 'none';
+  }
+
+  blob(index, color, phase, opacity) {
+    const ctx = this.ctx;
+    const radius = Math.max(this.width, this.height) * (0.28 + index * 0.025);
+    const x = this.width * (0.5 + Math.sin(phase * (0.34 + index * 0.035)) * 0.46);
+    const y = this.height * (0.48 + Math.cos(phase * (0.27 + index * 0.028)) * 0.34);
+    const gradient = ctx.createRadialGradient(x, y, 0, x, y, radius);
+    gradient.addColorStop(0, color);
+    gradient.addColorStop(0.52, color);
+    gradient.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.save();
+    ctx.globalAlpha = opacity;
+    ctx.filter = 'blur(52px)';
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, this.width, this.height);
+    ctx.restore();
   }
 
   draw() {
@@ -72,17 +89,19 @@ export class WaveGradient {
     const colors = this.options.colors;
     const bg = ctx.createLinearGradient(0, 0, this.width, this.height);
     bg.addColorStop(0, colors[3]);
-    bg.addColorStop(0.48, colors[0]);
-    bg.addColorStop(1, colors[2]);
+    bg.addColorStop(0.46, colors[0]);
+    bg.addColorStop(1, '#1D329D');
     ctx.globalAlpha = 1;
     ctx.fillStyle = bg;
     ctx.fillRect(0, 0, this.width, this.height);
     ctx.globalCompositeOperation = 'screen';
-    this.wave(0, colors[1], this.time + 0.8, this.height * 0.22, 0.58);
-    this.wave(1, colors[0], this.time * 0.82 + 2.3, this.height * 0.42, 0.54);
-    this.wave(2, colors[1], this.time * 1.12 + 4.1, this.height * 0.61, 0.43);
-    this.wave(3, colors[2], this.time * 0.68 + 5.4, this.height * 0.80, 0.40);
-    this.wave(4, colors[1], this.time * 0.56 + 7.1, this.height * 0.96, 0.28);
+    this.blob(0, colors[1], this.time + 0.4, 0.18);
+    this.blob(1, colors[2], this.time + 3.2, 0.16);
+    this.blob(2, colors[1], this.time + 6.1, 0.12);
+    this.wave(0, colors[1], this.time + 0.8, this.height * 0.24, 0.30);
+    this.wave(1, colors[0], this.time * 0.82 + 2.3, this.height * 0.46, 0.28);
+    this.wave(2, colors[1], this.time * 1.08 + 4.1, this.height * 0.68, 0.23);
+    this.wave(3, colors[2], this.time * 0.64 + 5.4, this.height * 0.88, 0.20);
     ctx.globalCompositeOperation = 'source-over';
     ctx.globalAlpha = 1;
   }
@@ -90,7 +109,7 @@ export class WaveGradient {
   frame(now) {
     const interval = 1000 / this.options.fps;
     if (!this.last || now - this.last >= interval) {
-      if (!this.reduceMotion) this.time += 0.006 * this.options.speed;
+      if (!this.reduceMotion) this.time += 0.008 * this.options.speed;
       this.draw();
       this.last = now;
     }
