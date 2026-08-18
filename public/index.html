@@ -56,13 +56,14 @@ button{border-radius:999px!important;font-weight:650!important}
 #solutions [role="button"]{padding:24px!important;min-height:270px}
 #gallery>div>div:nth-child(2){background:#F5F5F8!important;border:0!important;padding:16px!important}
 #showcase>div>div:nth-child(2)>div,#casestudies [style*="display:flex;flex-direction:column"]{box-shadow:0 12px 36px rgba(23,21,47,.06)}
-header{top:18px!important;width:calc(100% - 40px);max-width:1160px;margin:0 auto;border:1px solid rgba(255,255,255,.22)!important;border-radius:22px;background:rgba(20,24,48,.66)!important;backdrop-filter:blur(18px) saturate(145%)!important;box-shadow:0 18px 55px rgba(11,20,52,.2);overflow:hidden}
+header{top:18px!important;width:calc(100% - 56px);max-width:1260px;margin:0 auto;border:1px solid rgba(255,255,255,.22)!important;border-radius:22px;background:rgba(20,24,48,.66)!important;backdrop-filter:blur(18px) saturate(145%)!important;box-shadow:0 18px 55px rgba(11,20,52,.2);overflow:hidden}
 header>div:first-child{height:72px!important;padding-inline:26px!important}
+header img[alt="KLY"]{filter:brightness(0) invert(1)}
 header a,header span,header nav a{color:rgba(255,255,255,.8)!important}
 header nav a:hover{color:#fff!important}
 header [style*="background:#1769E0"]{background:#fff!important;border-color:#fff!important;color:#17152F!important}
 header [style*="background:#fff"]{background:rgba(255,255,255,.1)!important;border-color:rgba(255,255,255,.3)!important;color:#fff!important}
-#top{position:relative;isolation:isolate;overflow:hidden;margin-top:-72px;padding-top:180px!important;padding-bottom:150px!important;min-height:820px;background:#102567;color:#fff}
+#top{position:relative;isolation:isolate;overflow:hidden;margin-top:-72px;padding-top:180px!important;padding-bottom:150px!important;min-height:820px;background:#584DFC;color:#fff}
 #top:before{content:"";position:absolute;inset:0;z-index:-3;background-image:linear-gradient(rgba(255,255,255,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.09) 1px,transparent 1px);background-size:96px 96px;mask-image:linear-gradient(to bottom,black 0%,transparent 82%)}
 .gradient{position:absolute;inset:-5%;width:110%;height:110%;z-index:-2;pointer-events:none;filter:blur(28px) saturate(112%);transform:scale(1.035);opacity:.98}
 #top:after{content:"";position:absolute;z-index:-1;left:0;right:0;bottom:-1px;height:210px;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.03) 18%,rgba(255,255,255,.24) 48%,rgba(255,255,255,.72) 76%,#fff 100%)}
@@ -1513,7 +1514,7 @@ class Component extends DCLogic {
   const canvasElement = document.querySelector('.gradient');
   new WaveGradient(canvasElement, {
     debug: false,
-    colors: ['#2941CB', '#6348DE', '#2941CB', '#0e1a75'],
+    colors: ['#584DFC', '#7066FF', '#584DFC', '#4036C8'],
     fps: 60,
     seed: 0,
     density: [0.03, 0.08],
