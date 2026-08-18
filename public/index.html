@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Temukan solusi periklanan KLY, susun brief campaign, bandingkan format, dan ajukan proposal.">
+<meta name="description" content="Temukan solusi periklanan KLY, susun kebutuhan kampanye, bandingkan format, dan ajukan proposal.">
 <meta name="theme-color" content="#1769E0">
-<title>KLY Ads Discovery Hub</title>
+<title>KLY Ads Studio</title>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -33,8 +33,8 @@ button{cursor:pointer}
 @keyframes liquidB{0%,100%{transform:translate3d(8%,10%,0) rotate(0deg) scale(1)}45%{transform:translate3d(-12%,-4%,0) rotate(-14deg) scale(1.12)}75%{transform:translate3d(5%,-10%,0) rotate(8deg) scale(.94)}}
 input::placeholder,textarea::placeholder{color:#8A94A6}
 .klyNavDesktop{display:none !important}
-.klyNavMobile{display:flex !important}
-@media (min-width:900px){.klyNavDesktop{display:flex !important}.klyNavMobile{display:none !important}}
+.klyNavPonsel{display:flex !important}
+@media (min-width:900px){.klyNavDesktop{display:flex !important}.klyNavPonsel{display:none !important}}
 @media print{body *{visibility:hidden}#planSheet,#planSheet *{visibility:visible}#planSheet{position:absolute;left:0;top:0;width:100%;border:0;box-shadow:none;max-height:none;overflow:visible}}
 /* Criteo-inspired presentation layer: bolder hierarchy, modular cards, less visual noise */
 body{font-family:'Instrument Sans',system-ui,sans-serif!important;color:#17152F!important}
@@ -96,8 +96,8 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
     </nav>
     <div style="margin-left:auto;display:flex;align-items:center;gap:10px">
       <button onClick="{{ goSales }}" style="display:none;padding:9px 16px;border:1px solid #D4DDEA;background:#fff;color:#172033;border-radius:9px;font-size:13.5px;font-weight:600" style-hover="border-color:#1769E0;color:#1769E0" style-active="background:#F4F7FB" class="klyNavDesktop">Hubungi Sales</button>
-      <button onClick="{{ goBrief }}" style="padding:9px 17px;border:1px solid #1769E0;background:#1769E0;color:#fff;border-radius:9px;font-size:13.5px;font-weight:600" style-hover="background:#1257B8;border-color:#1257B8" style-active="background:#0F4794">Susun Campaign</button>
-      <button onClick="{{ toggleMenu }}" aria-label="Menu" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid #D4DDEA;background:#fff;border-radius:9px" class="klyNavMobile">
+      <button onClick="{{ goBrief }}" style="padding:9px 17px;border:1px solid #1769E0;background:#1769E0;color:#fff;border-radius:9px;font-size:13.5px;font-weight:600" style-hover="background:#1257B8;border-color:#1257B8" style-active="background:#0F4794">Susun Kampanye</button>
+      <button onClick="{{ toggleMenu }}" aria-label="Menu" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid #D4DDEA;background:#fff;border-radius:9px" class="klyNavPonsel">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#172033" stroke-width="2" stroke-linecap="round"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg>
       </button>
     </div>
@@ -117,8 +117,8 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
   <div style="max-width:1260px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:56px;align-items:center">
     <div style="animation:kfUp .5s ease both">
       <div style="display:inline-flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;color:#1769E0;background:#EDF3FD;border:1px solid #D8E5FA;padding:6px 11px;border-radius:999px">SOLUSI PERIKLANAN KLY</div>
-      <h1 style="font-size:clamp(34px,4.4vw,54px);line-height:1.06;letter-spacing:-0.028em;font-weight:600;margin:22px 0 0;max-width:15ch">Dari tujuan bisnis ke solusi campaign yang tepat.</h1>
-      <p style="font-size:17px;line-height:1.6;color:#4A5568;max-width:54ch;margin:20px 0 0">Jelajahi media, konten, kreator, commerce, dan pengalaman interaktif KLY dalam satu tempat.</p>
+      <h1 style="font-size:clamp(34px,4.4vw,54px);line-height:1.06;letter-spacing:-0.028em;font-weight:600;margin:22px 0 0;max-width:15ch">Temukan solusi iklan KLY yang tepat.</h1>
+      <p style="font-size:17px;line-height:1.6;color:#4A5568;max-width:54ch;margin:20px 0 0">Pilih tujuan, lihat format, dan susun kampanye dalam satu tempat.</p>
       <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:30px">
         <button onClick="{{ goBrief }}" style="display:inline-flex;align-items:center;gap:9px;padding:14px 22px;background:#1769E0;border:1px solid #1769E0;color:#fff;border-radius:10px;font-size:15px;font-weight:600" style-hover="background:#1257B8;border-color:#1257B8" style-active="background:#0F4794">Temukan Solusi<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 5l7 7-7 7"></path></svg></button>
         <button onClick="{{ goGallery }}" style="padding:14px 22px;background:#fff;border:1px solid #D4DDEA;color:#172033;border-radius:10px;font-size:15px;font-weight:600" style-hover="border-color:#1769E0;color:#1769E0" style-active="background:#F4F7FB">Lihat Galeri Iklan</button>
@@ -139,7 +139,7 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
           <span style="width:9px;height:9px;border-radius:999px;background:#EF3F35;opacity:.6"></span>
           <span style="width:9px;height:9px;border-radius:999px;background:#F5A000;opacity:.6"></span>
           <span style="width:9px;height:9px;border-radius:999px;background:#209447;opacity:.6"></span>
-          <span style="margin-left:8px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#8A94A6;letter-spacing:.06em">campaign-advisor / preview</span>
+          <span style="margin-left:8px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#8A94A6;letter-spacing:.06em">pratinjau rekomendasi kampanye</span>
         </div>
         <div style="padding:24px 24px 22px">
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
@@ -148,7 +148,7 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
               <div style="font-size:14.5px;font-weight:600;margin-top:5px">Peluncuran Produk</div>
             </div>
             <div style="background:#F8FAFD;border:1px solid #EDF1F7;border-radius:10px;padding:12px 14px">
-              <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;color:#8A94A6">TARGET AUDIENCE</div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;color:#8A94A6">TARGET AUDIENS</div>
               <div style="font-size:14.5px;font-weight:600;margin-top:5px">Perempuan, 18–34</div>
             </div>
             <div style="background:#F8FAFD;border:1px solid #EDF1F7;border-radius:10px;padding:12px 14px">
@@ -156,7 +156,7 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
               <div style="font-size:14.5px;font-weight:600;margin-top:5px">Kecantikan</div>
             </div>
             <div style="background:#F8FAFD;border:1px solid #EDF1F7;border-radius:10px;padding:12px 14px">
-              <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;color:#8A94A6">SETUP</div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;color:#8A94A6">WAKTU SIAP</div>
               <div style="font-size:14.5px;font-weight:600;margin-top:5px">14–21 hari</div>
             </div>
           </div>
@@ -183,14 +183,14 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
 <section class="klyTrustSection" aria-label="Jangkauan KLY" style="padding:26px 28px 0">
   <div style="max-width:1260px;margin:0 auto;border:1px solid #E3E9F2;border-radius:24px;padding:26px;background:#F7F7FB">
     <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:10px">
-      <div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;color:#5548FF">JANGKAUAN EKOSISTEM KLY</div><h2 style="font-size:24px!important;letter-spacing:-.02em!important;margin:8px 0 0">Satu akses ke audience lintas minat.</h2></div>
+      <div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;color:#5548FF">JANGKAUAN EKOSISTEM KLY</div><h2 style="font-size:24px!important;letter-spacing:-.02em!important;margin:8px 0 0">Satu akses ke audiens lintas minat.</h2></div>
       <span style="font-size:11px;color:#7A8496">Data publik kly.id · menunggu validasi internal</span>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:22px">
-      <div style="background:#fff;border-radius:16px;padding:18px"><strong style="font-size:27px">Top 3</strong><div style="font-size:13px;color:#5A6478;margin-top:4px">grup media online Indonesia</div></div>
-      <div style="background:#fff;border-radius:16px;padding:18px"><strong style="font-size:27px">113 juta</strong><div style="font-size:13px;color:#5A6478;margin-top:4px">unique visitors per bulan</div></div>
+      <div style="background:#fff;border-radius:16px;padding:18px"><strong style="font-size:27px">3 Besar</strong><div style="font-size:13px;color:#5A6478;margin-top:4px">grup media daring Indonesia</div></div>
+      <div style="background:#fff;border-radius:16px;padding:18px"><strong style="font-size:27px">113 juta</strong><div style="font-size:13px;color:#5A6478;margin-top:4px">pengunjung unik per bulan</div></div>
       <div style="background:#fff;border-radius:16px;padding:18px"><strong style="font-size:27px">45 juta</strong><div style="font-size:13px;color:#5A6478;margin-top:4px">pengikut media sosial</div></div>
-      <div style="background:#fff;border-radius:16px;padding:18px"><strong style="font-size:27px">200+</strong><div style="font-size:13px;color:#5A6478;margin-top:4px">brand mempercayai KLY</div></div>
+      <div style="background:#fff;border-radius:16px;padding:18px"><strong style="font-size:27px">200+</strong><div style="font-size:13px;color:#5A6478;margin-top:4px">brand telah bekerja sama dengan KLY</div></div>
     </div>
     <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:16px"><sc-for list="{{ mediaBrands }}" as="brand" hint-placeholder-count="8"><span style="font-size:12px;font-weight:600;background:#fff;border:1px solid #E3E9F2;border-radius:999px;padding:7px 11px">{{ brand }}</span></sc-for></div>
   </div>
@@ -201,7 +201,7 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
     <div style="max-width:60ch">
       <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:#8A94A6">01 — TUJUAN</div>
       <h2 style="font-size:clamp(27px,3vw,38px);line-height:1.12;letter-spacing:-0.024em;font-weight:600;margin:14px 0 0">Mulai dari tujuan bisnis.</h2>
-      <p style="font-size:16.5px;line-height:1.6;color:#4A5568;margin:16px 0 0">Pilih aksi yang diharapkan dari audience. KLY akan mencocokkannya dengan kanal dan solusi yang relevan.</p>
+      <p style="font-size:16.5px;line-height:1.6;color:#4A5568;margin:16px 0 0">Pilih hasil yang ingin dicapai. Kami akan menampilkan solusi yang sesuai.</p>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:18px;margin-top:36px">
       <sc-for list="{{ useCases }}" as="uc" hint-placeholder-count="6">
@@ -212,24 +212,12 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
             </span>
             <sc-if value="{{ uc.active }}" hint-placeholder-val="{{ false }}">
               <span style="display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;color:#1769E0;background:#EDF3FD;padding:5px 10px;border-radius:999px">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>Selected
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>Dipilih
               </span>
             </sc-if>
           </div>
           <h3 style="font-size:18px;font-weight:600;letter-spacing:-0.01em;margin:16px 0 0">{{ uc.title }}</h3>
           <p style="font-size:14px;line-height:1.55;color:#5A6478;margin:9px 0 0">{{ uc.desc }}</p>
-          <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2;margin-top:18px">SUGGESTED PRODUCTS</div>
-          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px">
-            <sc-for list="{{ uc.products }}" as="p" hint-placeholder-count="3">
-              <span style="font-size:12px;font-weight:500;color:#3C4658;background:#F4F7FB;border:1px solid #E9EEF6;padding:4px 9px;border-radius:7px">{{ p }}</span>
-            </sc-for>
-          </div>
-          <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2;margin-top:16px">PRIMARY KPI</div>
-          <div style="display:flex;flex-direction:column;gap:5px;margin-top:8px">
-            <sc-for list="{{ uc.kpis }}" as="k" hint-placeholder-count="3">
-              <div style="display:flex;align-items:center;gap:8px;font-size:12.5px;color:#5A6478"><span style="width:4px;height:4px;border-radius:999px;background:#B9C2D0"></span>{{ k }}</div>
-            </sc-for>
-          </div>
           <sc-if value="{{ uc.active }}" hint-placeholder-val="{{ false }}">
             <button onClick="{{ uc.view }}" style="margin-top:18px;width:100%;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px;background:#1769E0;border:1px solid #1769E0;color:#fff;border-radius:9px;font-size:13.5px;font-weight:600;animation:kfIn .2s ease" style-hover="background:#1257B8" style-active="background:#0F4794">Lihat Rekomendasi Solusi<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 5l7 7-7 7"></path></svg></button>
           </sc-if>
@@ -242,56 +230,56 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
 <section id="advisor" style="margin-top:88px;padding:72px 28px;background:#F4F7FB;border-top:1px solid #E6ECF4;border-bottom:1px solid #E6ECF4;scroll-margin-top:68px">
   <div style="max-width:1260px;margin:0 auto">
     <div style="max-width:62ch">
-      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:#1769E0">02 — CAMPAIGN ADVISOR</div>
-      <h2 style="font-size:clamp(27px,3vw,38px);line-height:1.12;letter-spacing:-0.024em;font-weight:600;margin:14px 0 0">Build your shortlist.</h2>
-      <p style="font-size:16.5px;line-height:1.6;color:#4A5568;margin:16px 0 0">Share the goal, audience, and budget. We’ll recommend the best-fit products.</p>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:#1769E0">02 — REKOMENDASI</div>
+      <h2 style="font-size:clamp(27px,3vw,38px);line-height:1.12;letter-spacing:-0.024em;font-weight:600;margin:14px 0 0">Susun rekomendasi kampanye.</h2>
+      <p style="font-size:16.5px;line-height:1.6;color:#4A5568;margin:16px 0 0">Isi kebutuhan singkat untuk melihat solusi yang sesuai.</p>
     </div>
 
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(400px,1fr));gap:22px;margin-top:34px;align-items:start">
       <div style="background:#fff;border:1px solid #E3E9F2;border-radius:14px;padding:26px">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
           <label style="display:flex;flex-direction:column;gap:7px">
-            <span style="font-size:12.5px;font-weight:600;color:#3C4658">Brand name</span>
-            <input value="{{ brief.brand }}" onChange="{{ setBrand }}" placeholder="e.g. Lumière Skincare" style="padding:11px 13px;border:1px solid #D4DDEA;border-radius:9px;background:#fff;font-size:14px" style-focus="border-color:#1769E0">
+            <span style="font-size:12.5px;font-weight:600;color:#3C4658">Nama brand</span>
+            <input value="{{ brief.brand }}" onChange="{{ setBrand }}" placeholder="Contoh: Lumière Skincare" style="padding:11px 13px;border:1px solid #D4DDEA;border-radius:9px;background:#fff;font-size:14px" style-focus="border-color:#1769E0">
           </label>
           <label style="display:flex;flex-direction:column;gap:7px">
-            <span style="font-size:12.5px;font-weight:600;color:#3C4658">Industry</span>
-            <select value="{{ brief.industry }}" onChange="{{ setIndustry }}" style="padding:11px 13px;border:1px solid #D4DDEA;border-radius:9px;background:#fff;font-size:14px">
+            <span style="font-size:12.5px;font-weight:600;color:#3C4658">Industri</span>
+            <select value="{{ brief.industry }}" onChange="{{ setIndustri }}" style="padding:11px 13px;border:1px solid #D4DDEA;border-radius:9px;background:#fff;font-size:14px">
               <sc-for list="{{ industryOptions }}" as="o" hint-placeholder-count="8"><option value="{{ o }}">{{ o }}</option></sc-for>
             </select>
           </label>
           <label style="display:flex;flex-direction:column;gap:7px">
-            <span style="font-size:12.5px;font-weight:600;color:#3C4658">Tujuan campaign</span>
-            <select value="{{ brief.objective }}" onChange="{{ setObjective }}" style="padding:11px 13px;border:1px solid #D4DDEA;border-radius:9px;background:#fff;font-size:14px">
+            <span style="font-size:12.5px;font-weight:600;color:#3C4658">Tujuan kampanye</span>
+            <select value="{{ brief.objective }}" onChange="{{ setTujuan }}" style="padding:11px 13px;border:1px solid #D4DDEA;border-radius:9px;background:#fff;font-size:14px">
               <sc-for list="{{ objectiveOptions }}" as="o" hint-placeholder-count="6"><option value="{{ o }}">{{ o }}</option></sc-for>
             </select>
           </label>
           <label style="display:flex;flex-direction:column;gap:7px">
-            <span style="font-size:12.5px;font-weight:600;color:#3C4658">Target audience</span>
-            <input value="{{ brief.audience }}" onChange="{{ setAudience }}" placeholder="e.g. Women 18–34, urban" style="padding:11px 13px;border:1px solid #D4DDEA;border-radius:9px;background:#fff;font-size:14px" style-focus="border-color:#1769E0">
+            <span style="font-size:12.5px;font-weight:600;color:#3C4658">Target audiens</span>
+            <input value="{{ brief.audience }}" onChange="{{ setAudience }}" placeholder="Contoh: Perempuan 18–34, perkotaan" style="padding:11px 13px;border:1px solid #D4DDEA;border-radius:9px;background:#fff;font-size:14px" style-focus="border-color:#1769E0">
           </label>
           <label style="display:flex;flex-direction:column;gap:7px">
-            <span style="font-size:12.5px;font-weight:600;color:#3C4658">Budget range</span>
+            <span style="font-size:12.5px;font-weight:600;color:#3C4658">Anggaran</span>
             <select value="{{ brief.budget }}" onChange="{{ setBudget }}" style="padding:11px 13px;border:1px solid #D4DDEA;border-radius:9px;background:#fff;font-size:14px">
               <sc-for list="{{ budgetOptions }}" as="o" hint-placeholder-count="4"><option value="{{ o }}">{{ o }}</option></sc-for>
             </select>
           </label>
           <label style="display:flex;flex-direction:column;gap:7px">
-            <span style="font-size:12.5px;font-weight:600;color:#3C4658">Durasi campaign</span>
+            <span style="font-size:12.5px;font-weight:600;color:#3C4658">Durasi kampanye</span>
             <select value="{{ brief.duration }}" onChange="{{ setDuration }}" style="padding:11px 13px;border:1px solid #D4DDEA;border-radius:9px;background:#fff;font-size:14px">
               <sc-for list="{{ durationOptions }}" as="o" hint-placeholder-count="4"><option value="{{ o }}">{{ o }}</option></sc-for>
             </select>
           </label>
         </div>
         <label style="display:flex;flex-direction:column;gap:7px;margin-top:16px">
-          <span style="font-size:12.5px;font-weight:600;color:#3C4658">Desired audience action</span>
+          <span style="font-size:12.5px;font-weight:600;color:#3C4658">Aksi yang diharapkan</span>
           <select value="{{ brief.action }}" onChange="{{ setAction }}" style="padding:11px 13px;border:1px solid #D4DDEA;border-radius:9px;background:#fff;font-size:14px">
             <sc-for list="{{ actionOptions }}" as="o" hint-placeholder-count="5"><option value="{{ o }}">{{ o }}</option></sc-for>
           </select>
         </label>
         <label style="display:flex;flex-direction:column;gap:7px;margin-top:16px">
-          <span style="font-size:12.5px;font-weight:600;color:#3C4658">Additional campaign context</span>
-          <textarea value="{{ brief.context }}" onChange="{{ setContext }}" rows="3" placeholder="Anything else we should know — launch dates, key markets, must-have properties" style="padding:11px 13px;border:1px solid #D4DDEA;border-radius:9px;background:#fff;font-size:14px;resize:vertical;font-family:inherit" style-focus="border-color:#1769E0"></textarea>
+          <span style="font-size:12.5px;font-weight:600;color:#3C4658">Catatan tambahan</span>
+          <textarea value="{{ brief.context }}" onChange="{{ setContext }}" rows="3" placeholder="Contoh: tanggal tayang atau kebutuhan khusus" style="padding:11px 13px;border:1px solid #D4DDEA;border-radius:9px;background:#fff;font-size:14px;resize:vertical;font-family:inherit" style-focus="border-color:#1769E0"></textarea>
         </label>
         <button onClick="{{ generate }}" disabled="{{ generating }}" style="margin-top:20px;width:100%;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px;background:#1769E0;border:1px solid #1769E0;color:#fff;border-radius:10px;font-size:15px;font-weight:600;opacity:{{ genOpacity }}" style-hover="background:#1257B8" style-active="background:#0F4794">
           <sc-if value="{{ generating }}" hint-placeholder-val="{{ false }}">
@@ -299,7 +287,7 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
           </sc-if>
           {{ generateLabel }}
         </button>
-        <p style="font-size:11.5px;color:#8A94A6;margin:12px 0 0">Rule-based matching on industry, objective, and budget. Sample data — indicative planning only.</p>
+        <p style="font-size:11.5px;color:#8A94A6;margin:12px 0 0">Rekomendasi awal berdasarkan kebutuhan Anda.</p>
       </div>
 
       <div>
@@ -308,8 +296,8 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
             <span style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:12px;background:#EDF3FD;color:#1769E0">
               <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.4 6.2L21 12l-6.6 2.8L12 21l-2.4-6.2L3 12l6.6-2.8z"></path></svg>
             </span>
-            <h3 style="font-size:17px;font-weight:600;margin:16px 0 0">Your recommended shortlist appears here</h3>
-            <p style="font-size:14px;line-height:1.55;color:#5A6478;margin:9px auto 0;max-width:38ch">Fill the brief and generate a shortlist of three campaign packages, each with objectives, KPI, setup time, and budget fit.</p>
+            <h3 style="font-size:17px;font-weight:600;margin:16px 0 0">Rekomendasi akan tampil di sini</h3>
+            <p style="font-size:14px;line-height:1.55;color:#5A6478;margin:9px auto 0;max-width:38ch">Isi kebutuhan untuk mendapatkan tiga pilihan kampanye.</p>
           </div>
         </sc-if>
 
@@ -344,7 +332,7 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
                       <p style="font-size:13.5px;line-height:1.55;color:#5A6478;margin:7px 0 0;max-width:46ch">{{ pk.why }}</p>
                     </div>
                     <sc-if value="{{ pk.best }}" hint-placeholder-val="{{ false }}">
-                      <span style="flex:none;font-size:11px;font-weight:700;letter-spacing:.06em;color:#fff;background:#1769E0;padding:6px 11px;border-radius:999px">BEST MATCH</span>
+                      <span style="flex:none;font-size:11px;font-weight:700;letter-spacing:.06em;color:#fff;background:#1769E0;padding:6px 11px;border-radius:999px">PILIHAN UTAMA</span>
                     </sc-if>
                   </div>
                   <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:16px">
@@ -353,18 +341,18 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
                     </sc-for>
                   </div>
                   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-top:18px;padding-top:16px;border-top:1px solid #EDF1F7">
-                    <div><div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2">OBJECTIVE</div><div style="font-size:13.5px;font-weight:500;margin-top:5px">{{ pk.objective }}</div></div>
-                    <div><div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2">SETUP TIME</div><div style="font-size:13.5px;font-weight:500;margin-top:5px">{{ pk.setup }}</div></div>
-                    <div><div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2">SUGGESTED KPI</div><div style="font-size:13.5px;font-weight:500;margin-top:5px">{{ pk.kpi }}</div></div>
-                    <div><div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2">BUDGET FIT</div><div style="font-size:13.5px;font-weight:500;margin-top:5px;color:{{ pk.fitColor }}">{{ pk.fit }}</div></div>
+                    <div><div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2">TUJUAN</div><div style="font-size:13.5px;font-weight:500;margin-top:5px">{{ pk.objective }}</div></div>
+                    <div><div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2">WAKTU SIAP</div><div style="font-size:13.5px;font-weight:500;margin-top:5px">{{ pk.setup }}</div></div>
+                    <div><div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2">KPI UTAMA</div><div style="font-size:13.5px;font-weight:500;margin-top:5px">{{ pk.kpi }}</div></div>
+                    <div><div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2">KESESUAIAN ANGGARAN</div><div style="font-size:13.5px;font-weight:500;margin-top:5px;color:{{ pk.fitColor }}">{{ pk.fit }}</div></div>
                   </div>
                 </div>
               </sc-for>
             </div>
             <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:18px">
-              <button onClick="{{ previewRecommended }}" style="padding:12px 18px;background:#172033;border:1px solid #172033;color:#fff;border-radius:9px;font-size:13.5px;font-weight:600" style-hover="background:#0E1626" style-active="background:#000">Lihat Preview Rekomendasi</button>
-              <button onClick="{{ openPlan }}" style="display:inline-flex;align-items:center;gap:8px;padding:12px 18px;background:#fff;border:1px solid #D4DDEA;color:#172033;border-radius:9px;font-size:13.5px;font-weight:600" style-hover="border-color:#1769E0;color:#1769E0"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"></path><path d="M7 10l5 5 5-5"></path><path d="M5 20h14"></path></svg>Download Plan</button>
-              <button onClick="{{ openProposal }}" style="padding:12px 18px;background:#fff;border:1px solid #1769E0;color:#1769E0;border-radius:9px;font-size:13.5px;font-weight:600" style-hover="background:#EDF3FD">Request Proposal</button>
+              <button onClick="{{ previewRecommended }}" style="padding:12px 18px;background:#172033;border:1px solid #172033;color:#fff;border-radius:9px;font-size:13.5px;font-weight:600" style-hover="background:#0E1626" style-active="background:#000">Lihat Pratinjau</button>
+              <button onClick="{{ openPlan }}" style="display:inline-flex;align-items:center;gap:8px;padding:12px 18px;background:#fff;border:1px solid #D4DDEA;color:#172033;border-radius:9px;font-size:13.5px;font-weight:600" style-hover="border-color:#1769E0;color:#1769E0"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"></path><path d="M7 10l5 5 5-5"></path><path d="M5 20h14"></path></svg>Unduh Rencana</button>
+              <button onClick="{{ openProposal }}" style="padding:12px 18px;background:#fff;border:1px solid #1769E0;color:#1769E0;border-radius:9px;font-size:13.5px;font-weight:600" style-hover="background:#EDF3FD">Ajukan Proposal</button>
             </div>
           </div>
         </sc-if>
@@ -377,22 +365,22 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
   <div style="max-width:1260px;margin:0 auto">
     <div style="display:flex;flex-wrap:wrap;gap:20px;align-items:flex-end;justify-content:space-between">
       <div style="max-width:60ch">
-        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:#8A94A6">03 — SOLUTIONS LIBRARY</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:#8A94A6">03 — GALERI SOLUSI</div>
         <h2 style="font-size:clamp(27px,3vw,38px);line-height:1.12;letter-spacing:-0.024em;font-weight:600;margin:14px 0 0">Jelajahi seluruh solusi.</h2>
-        <p style="font-size:16.5px;line-height:1.6;color:#4A5568;margin:16px 0 0">Compare media, content, first-party experiences, social, and commerce products.</p>
+        <p style="font-size:16.5px;line-height:1.6;color:#4A5568;margin:16px 0 0">Lihat dan bandingkan solusi KLY.</p>
       </div>
       <div style="display:flex;background:#F4F7FB;border:1px solid #E3E9F2;border-radius:10px;padding:3px;gap:3px">
-        <button onClick="{{ setGrid }}" style="padding:8px 15px;border:0;border-radius:8px;font-size:13px;font-weight:600;background:{{ gridBg }};color:{{ gridFg }}">Grid</button>
-        <button onClick="{{ setCompareView }}" style="padding:8px 15px;border:0;border-radius:8px;font-size:13px;font-weight:600;background:{{ cmpBg }};color:{{ cmpFg }}">Compare</button>
+        <button onClick="{{ setGrid }}" style="padding:8px 15px;border:0;border-radius:8px;font-size:13px;font-weight:600;background:{{ gridBg }};color:{{ gridFg }}">Galeri</button>
+        <button onClick="{{ setCompareView }}" style="padding:8px 15px;border:0;border-radius:8px;font-size:13px;font-weight:600;background:{{ cmpBg }};color:{{ cmpFg }}">Bandingkan</button>
       </div>
     </div>
 
     <div style="margin-top:28px;border:1px solid #E3E9F2;border-radius:12px;padding:18px;background:#FCFDFE">
       <div style="display:flex;align-items:center;gap:10px;border:1px solid #D4DDEA;background:#fff;border-radius:9px;padding:11px 13px">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A94A6" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.8-3.8"></path></svg>
-        <input value="{{ search }}" onChange="{{ setSearch }}" placeholder="Search solutions, objectives, or industries" style="border:0;outline:0;flex:1;font-size:14px;background:transparent">
+        <input value="{{ search }}" onChange="{{ setSearch }}" placeholder="Cari solusi atau tujuan" style="border:0;outline:0;flex:1;font-size:14px;background:transparent">
         <sc-if value="{{ hasSearch }}" hint-placeholder-val="{{ false }}">
-          <button onClick="{{ clearSearch }}" aria-label="Clear search" style="border:0;background:transparent;display:flex;color:#8A94A6" style-hover="color:#172033"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6L6 18"></path><path d="M6 6l12 12"></path></svg></button>
+          <button onClick="{{ clearSearch }}" aria-label="Hapus pencarian" style="border:0;background:transparent;display:flex;color:#8A94A6" style-hover="color:#172033"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6L6 18"></path><path d="M6 6l12 12"></path></svg></button>
         </sc-if>
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:14px">
@@ -408,9 +396,9 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
       <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:16px">
         <span style="font-size:13px;color:#5A6478">{{ resultLabel }}</span>
         <sc-if value="{{ useCaseFilterOn }}" hint-placeholder-val="{{ false }}">
-          <span style="display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:500;color:#1769E0;background:#EDF3FD;border:1px solid #D8E5FA;padding:5px 10px;border-radius:999px">Objective: {{ useCaseName }}<button onClick="{{ clearUseCase }}" aria-label="Clear objective filter" style="border:0;background:transparent;display:flex;color:#1769E0"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M18 6L6 18"></path><path d="M6 6l12 12"></path></svg></button></span>
+          <span style="display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:500;color:#1769E0;background:#EDF3FD;border:1px solid #D8E5FA;padding:5px 10px;border-radius:999px">Tujuan: {{ useCaseNama }}<button onClick="{{ clearUseCase }}" aria-label="Hapus filter tujuan" style="border:0;background:transparent;display:flex;color:#1769E0"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M18 6L6 18"></path><path d="M6 6l12 12"></path></svg></button></span>
         </sc-if>
-        <button onClick="{{ resetFilters }}" style="margin-left:auto;padding:8px 14px;background:#fff;border:1px solid #D4DDEA;border-radius:8px;font-size:12.5px;font-weight:600;color:#5A6478" style-hover="border-color:#1769E0;color:#1769E0">Reset filters</button>
+        <button onClick="{{ resetFilters }}" style="margin-left:auto;padding:8px 14px;background:#fff;border:1px solid #D4DDEA;border-radius:8px;font-size:12.5px;font-weight:600;color:#5A6478" style-hover="border-color:#1769E0;color:#1769E0">Atur ulang</button>
       </div>
     </div>
 
@@ -426,18 +414,12 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
             </div>
             <h3 style="font-size:17.5px;font-weight:600;letter-spacing:-0.012em;margin:15px 0 0">{{ p.name }}</h3>
             <p style="font-size:13.5px;line-height:1.55;color:#5A6478;margin:8px 0 0">{{ p.desc }}</p>
-            <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:14px">
-              <sc-for list="{{ p.objectives }}" as="o" hint-placeholder-count="2">
-                <span style="font-size:11.5px;color:#3C4658;background:#F4F7FB;border:1px solid #E9EEF6;padding:3px 8px;border-radius:6px">{{ o }}</span>
-              </sc-for>
-            </div>
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px;padding-top:14px;border-top:1px solid #EDF1F7">
-              <div><div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;color:#9AA3B2">BUDGET</div><div style="font-size:13px;font-weight:500;margin-top:4px">{{ p.budget }}</div></div>
-              <div><div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;color:#9AA3B2">SETUP</div><div style="font-size:13px;font-weight:500;margin-top:4px">{{ p.lead }}</div></div>
-              <div style="grid-column:span 2"><div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;color:#9AA3B2">DELIVERY</div><div style="font-size:13px;font-weight:500;margin-top:4px">{{ p.delivery }}</div></div>
+              <div><div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;color:#9AA3B2">ANGGARAN</div><div style="font-size:13px;font-weight:500;margin-top:4px">{{ p.budget }}</div></div>
+              <div><div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;color:#9AA3B2">WAKTU SIAP</div><div style="font-size:13px;font-weight:500;margin-top:4px">{{ p.lead }}</div></div>
             </div>
             <div style="display:flex;align-items:center;gap:10px;margin-top:18px">
-              <button onClick="{{ p.open }}" style="flex:1;padding:11px;background:#fff;border:1px solid #1769E0;color:#1769E0;border-radius:9px;font-size:13.5px;font-weight:600" style-hover="background:#1769E0;color:#fff" style-active="background:#1257B8">View Experience</button>
+              <button onClick="{{ p.open }}" style="flex:1;padding:11px;background:#fff;border:1px solid #1769E0;color:#1769E0;border-radius:9px;font-size:13.5px;font-weight:600" style-hover="background:#1769E0;color:#fff" style-active="background:#1257B8">Lihat Detail</button>
               <button onClick="{{ p.toggleCompare }}" disabled="{{ p.cmpDisabled }}" style="display:inline-flex;align-items:center;gap:8px;padding:11px 13px;border:1px solid {{ p.cmpBorder }};background:{{ p.cmpBg }};color:{{ p.cmpFg }};border-radius:9px;font-size:13px;font-weight:600;opacity:{{ p.cmpOpacity }}">
                 <span style="width:15px;height:15px;display:flex;align-items:center;justify-content:center;border:1.5px solid {{ p.boxBorder }};background:{{ p.boxBg }};border-radius:4px;color:#fff">
                   <sc-if value="{{ p.selected }}" hint-placeholder-val="{{ false }}"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg></sc-if>
@@ -451,9 +433,9 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
       <sc-if value="{{ empty }}" hint-placeholder-val="{{ false }}">
         <div style="margin-top:22px;border:1px dashed #CBD6E5;border-radius:12px;padding:56px 28px;text-align:center;background:#FCFDFE">
           <span style="display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:12px;background:#F4F7FB;color:#8A94A6"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.8-3.8"></path></svg></span>
-          <h3 style="font-size:17px;font-weight:600;margin:14px 0 0">No solutions match these filters</h3>
-          <p style="font-size:14px;color:#5A6478;margin:8px 0 0">Try a broader objective or budget range, or reset the filters.</p>
-          <button onClick="{{ resetFilters }}" style="margin-top:18px;padding:11px 18px;background:#1769E0;border:1px solid #1769E0;color:#fff;border-radius:9px;font-size:13.5px;font-weight:600" style-hover="background:#1257B8">Reset filters</button>
+          <h3 style="font-size:17px;font-weight:600;margin:14px 0 0">Tidak ada solusi yang sesuai</h3>
+          <p style="font-size:14px;color:#5A6478;margin:8px 0 0">Coba ubah atau hapus filter.</p>
+          <button onClick="{{ resetFilters }}" style="margin-top:18px;padding:11px 18px;background:#1769E0;border:1px solid #1769E0;color:#fff;border-radius:9px;font-size:13.5px;font-weight:600" style-hover="background:#1257B8">Atur ulang</button>
         </div>
       </sc-if>
     </sc-if>
@@ -465,11 +447,11 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
             <table style="width:100%;border-collapse:collapse;min-width:640px">
               <thead>
                 <tr>
-                  <th style="text-align:left;padding:16px 18px;background:#F4F7FB;border-bottom:1px solid #E3E9F2;font-size:11px;font-family:'IBM Plex Mono',monospace;letter-spacing:.12em;color:#8A94A6;width:200px">ATTRIBUTE</th>
+                  <th style="text-align:left;padding:16px 18px;background:#F4F7FB;border-bottom:1px solid #E3E9F2;font-size:11px;font-family:'IBM Plex Mono',monospace;letter-spacing:.12em;color:#8A94A6;width:200px">ATRIBUT</th>
                   <sc-for list="{{ compareProducts }}" as="cp" hint-placeholder-count="2">
                     <th style="text-align:left;padding:16px 18px;background:#F4F7FB;border-bottom:1px solid #E3E9F2;border-left:1px solid #EDF1F7">
                       <div style="font-size:15px;font-weight:600;letter-spacing:-0.01em">{{ cp.name }}</div>
-                      <button onClick="{{ cp.toggleCompare }}" style="margin-top:6px;border:0;background:transparent;padding:0;font-size:11.5px;font-weight:600;color:#8A94A6" style-hover="color:#EF3F35">Remove</button>
+                      <button onClick="{{ cp.toggleCompare }}" style="margin-top:6px;border:0;background:transparent;padding:0;font-size:11.5px;font-weight:600;color:#8A94A6" style-hover="color:#EF3F35">Hapus</button>
                     </th>
                   </sc-for>
                 </tr>
@@ -487,15 +469,15 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
             </table>
           </div>
           <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:16px">
-            <button onClick="{{ addToBrief }}" style="padding:12px 18px;background:#1769E0;border:1px solid #1769E0;color:#fff;border-radius:9px;font-size:13.5px;font-weight:600" style-hover="background:#1257B8">Tambahkan ke Brief</button>
-            <button onClick="{{ clearCompare }}" style="padding:12px 18px;background:#fff;border:1px solid #D4DDEA;color:#5A6478;border-radius:9px;font-size:13.5px;font-weight:600" style-hover="border-color:#EF3F35;color:#EF3F35">Clear selection</button>
+            <button onClick="{{ addToBrief }}" style="padding:12px 18px;background:#1769E0;border:1px solid #1769E0;color:#fff;border-radius:9px;font-size:13.5px;font-weight:600" style-hover="background:#1257B8">Tambahkan ke Kebutuhan</button>
+            <button onClick="{{ clearCompare }}" style="padding:12px 18px;background:#fff;border:1px solid #D4DDEA;color:#5A6478;border-radius:9px;font-size:13.5px;font-weight:600" style-hover="border-color:#EF3F35;color:#EF3F35">Hapus pilihan</button>
           </div>
         </sc-if>
         <sc-if value="{{ compareNotReady }}" hint-placeholder-val="{{ true }}">
           <div style="border:1px dashed #CBD6E5;border-radius:12px;padding:52px 28px;text-align:center;background:#FCFDFE">
-            <h3 style="font-size:17px;font-weight:600;margin:0">Select at least two solutions to compare</h3>
-            <p style="font-size:14px;color:#5A6478;margin:8px 0 0">Switch to Grid, tick Compare on up to three solutions, then return here.</p>
-            <button onClick="{{ setGrid }}" style="margin-top:18px;padding:11px 18px;background:#fff;border:1px solid #1769E0;color:#1769E0;border-radius:9px;font-size:13.5px;font-weight:600" style-hover="background:#EDF3FD">Back to Grid</button>
+            <h3 style="font-size:17px;font-weight:600;margin:0">Pilih minimal dua solusi</h3>
+            <p style="font-size:14px;color:#5A6478;margin:8px 0 0">Pilih maksimal tiga solusi dari galeri.</p>
+            <button onClick="{{ setGrid }}" style="margin-top:18px;padding:11px 18px;background:#fff;border:1px solid #1769E0;color:#1769E0;border-radius:9px;font-size:13.5px;font-weight:600" style-hover="background:#EDF3FD">Kembali ke Galeri</button>
           </div>
         </sc-if>
       </div>
@@ -506,9 +488,9 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
 <section id="showcase" style="padding:88px 28px 0;scroll-margin-top:80px">
   <div style="max-width:1260px;margin:0 auto">
     <div style="max-width:58ch">
-      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:#8A94A6">04 — SCENARIOS</div>
-      <h2 style="font-size:clamp(27px,3vw,38px);line-height:1.12;letter-spacing:-0.024em;font-weight:600;margin:14px 0 0">See the campaign in action.</h2>
-      <p style="font-size:13px;color:#8A94A6;margin:14px 0 0">Illustrative use case — performance estimates require validation</p>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:#8A94A6">04 — CONTOH KAMPANYE</div>
+      <h2 style="font-size:clamp(27px,3vw,38px);line-height:1.12;letter-spacing:-0.024em;font-weight:600;margin:14px 0 0">Lihat contoh penerapannya.</h2>
+      <p style="font-size:13px;color:#8A94A6;margin:14px 0 0">Contoh konsep · hasil perlu divalidasi</p>
     </div>
     <div style="display:flex;flex-direction:column;gap:18px;margin-top:32px">
       <sc-for list="{{ scenarios }}" as="s" hint-placeholder-count="4">
@@ -517,9 +499,9 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
             <div style="padding:26px;border-right:1px solid #EDF1F7">
               <span style="font-size:11.5px;font-weight:600;color:{{ s.tagFg }};background:{{ s.tagBg }};padding:5px 10px;border-radius:7px">{{ s.tag }}</span>
               <h3 style="font-size:20px;font-weight:600;letter-spacing:-0.015em;margin:14px 0 0">{{ s.title }}</h3>
-              <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2;margin-top:16px">BRAND CHALLENGE</div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2;margin-top:16px">TANTANGAN</div>
               <p style="font-size:14.5px;line-height:1.6;color:#3C4658;margin:8px 0 0">{{ s.challenge }}</p>
-              <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2;margin-top:20px">SOLUTION</div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2;margin-top:20px">SOLUSI</div>
               <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:9px">
                 <sc-for list="{{ s.solution }}" as="x" hint-placeholder-count="4">
                   <span style="font-size:12px;font-weight:500;color:#3C4658;background:#F4F7FB;border:1px solid #E9EEF6;padding:4px 9px;border-radius:7px">{{ x }}</span>
@@ -527,7 +509,7 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
               </div>
             </div>
             <div style="padding:26px;background:#FCFDFE">
-              <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2">USER JOURNEY</div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2">ALUR AUDIENS</div>
               <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:12px">
                 <sc-for list="{{ s.journey }}" as="j" hint-placeholder-count="5">
                   <span style="display:inline-flex;align-items:center;gap:8px">
@@ -538,7 +520,7 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
                   </span>
                 </sc-for>
               </div>
-              <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2;margin-top:22px">PRIMARY METRICS</div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2;margin-top:22px">METRIK UTAMA</div>
               <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:10px">
                 <sc-for list="{{ s.metrics }}" as="m" hint-placeholder-count="4">
                   <div style="border:1px solid #E9EEF6;background:#fff;border-radius:9px;padding:11px 13px;font-size:13px;font-weight:500;color:#3C4658">{{ m }}</div>
@@ -556,7 +538,7 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
   <div style="max-width:1260px;margin:0 auto">
     <div style="max-width:56ch">
       <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:#8A94A6">05 — STUDI KASUS</div>
-      <h2 style="font-size:clamp(27px,3vw,38px);line-height:1.12;letter-spacing:-0.024em;font-weight:600;margin:14px 0 0">Bukti campaign yang telah berjalan.</h2>
+      <h2 style="font-size:clamp(27px,3vw,38px);line-height:1.12;letter-spacing:-0.024em;font-weight:600;margin:14px 0 0">Hasil kampanye sebelumnya.</h2>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:18px;margin-top:32px">
       <sc-for list="{{ caseStudies }}" as="cs" hint-placeholder-count="3">
@@ -568,13 +550,8 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
           <h3 style="font-size:18px;font-weight:600;letter-spacing:-0.012em;margin:15px 0 0">{{ cs.title }}</h3>
           <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2;margin-top:16px">TANTANGAN BISNIS</div>
           <p style="font-size:13.5px;line-height:1.55;color:#5A6478;margin:7px 0 0">{{ cs.challenge }}</p>
-          <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2;margin-top:16px">SOLUSI CAMPAIGN</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2;margin-top:16px">SOLUSI KAMPANYE</div>
           <p style="font-size:13.5px;line-height:1.55;color:#5A6478;margin:7px 0 0">{{ cs.solution }}</p>
-          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:14px">
-            <sc-for list="{{ cs.products }}" as="x" hint-placeholder-count="3">
-              <span style="font-size:11.5px;color:#3C4658;background:#F4F7FB;border:1px solid #E9EEF6;padding:3px 8px;border-radius:6px">{{ x }}</span>
-            </sc-for>
-          </div>
           <div style="display:flex;flex-direction:column;gap:7px;margin-top:16px;padding-top:14px;border-top:1px solid #EDF1F7">
             <sc-for list="{{ cs.metrics }}" as="m" hint-placeholder-count="3">
               <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#5A6478">{{ m }}</div>
@@ -592,7 +569,7 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
   <div style="max-width:1260px;margin:0 auto">
     <div style="max-width:52ch">
       <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:#8A94A6">06 — PROSES</div>
-      <h2 style="font-size:clamp(27px,3vw,38px);line-height:1.12;letter-spacing:-0.024em;font-weight:600;margin:14px 0 0">Dari brief hingga tayang.</h2>
+      <h2 style="font-size:clamp(27px,3vw,38px);line-height:1.12;letter-spacing:-0.024em;font-weight:600;margin:14px 0 0">Dari kebutuhan hingga tayang.</h2>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:32px">
       <sc-for list="{{ steps }}" as="st" hint-placeholder-count="4">
@@ -620,7 +597,7 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
         </div>
       </sc-for>
     </div>
-    <p style="font-size:17px;line-height:1.6;color:rgba(255,255,255,.82);margin:30px 0 0;max-width:62ch">Satu hub menghubungkan audience, konten, kreator, data, dan pengalaman KLY.</p>
+    <p style="font-size:17px;line-height:1.6;color:rgba(255,255,255,.82);margin:30px 0 0;max-width:62ch">Satu tempat untuk menghubungkan audiens, konten, kreator, dan data KLY.</p>
   </div>
 </section>
 
@@ -629,7 +606,7 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
     <h2 style="font-size:clamp(27px,3.4vw,42px);line-height:1.1;letter-spacing:-0.026em;font-weight:600;margin:0 auto;max-width:24ch">Siap menemukan solusi yang tepat?</h2>
     <p style="font-size:16.5px;line-height:1.6;color:#4A5568;margin:16px auto 0;max-width:46ch">Susun pilihan awal, lalu validasi bersama tim KLY.</p>
     <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:26px">
-      <button onClick="{{ goBrief }}" style="padding:14px 22px;background:#1769E0;border:1px solid #1769E0;color:#fff;border-radius:10px;font-size:15px;font-weight:600" style-hover="background:#1257B8" style-active="background:#0F4794">Susun Campaign</button>
+      <button onClick="{{ goBrief }}" style="padding:14px 22px;background:#1769E0;border:1px solid #1769E0;color:#fff;border-radius:10px;font-size:15px;font-weight:600" style-hover="background:#1257B8" style-active="background:#0F4794">Susun Kampanye</button>
       <button onClick="{{ goSales }}" style="padding:14px 22px;background:#fff;border:1px solid #D4DDEA;color:#172033;border-radius:10px;font-size:15px;font-weight:600" style-hover="border-color:#1769E0;color:#1769E0">Hubungi Sales</button>
     </div>
     <p style="font-size:12.5px;color:#8A94A6;margin:22px 0 0">Tanpa komitmen · Rekomendasi bersifat indikatif · Rencana final divalidasi KLY</p>
@@ -655,7 +632,7 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
         <img src="/kly-logo-web.png" alt="KLY" style="width:56px;height:34px;object-fit:contain">
         <span style="font-size:11.5px;font-weight:600;letter-spacing:.16em;color:#8A94A6">ADS STUDIO</span>
       </div>
-      <p style="font-size:12px;line-height:1.6;color:#9AA3B2;margin:0;max-width:78ch">This prototype is created for KLY Build Day. Products, pricing, audience data, and performance benchmarks shown here are illustrative and require internal validation.</p>
+      <p style="font-size:12px;line-height:1.6;color:#9AA3B2;margin:0;max-width:78ch">Prototipe KLY Build Day. Seluruh data perlu divalidasi internal.</p>
     </div>
   </div>
 </footer>
@@ -670,8 +647,8 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
         </sc-for>
       </div>
       <div style="margin-left:auto;display:flex;gap:10px">
-        <button onClick="{{ clearCompare }}" style="padding:10px 15px;background:transparent;border:1px solid rgba(255,255,255,.28);color:#fff;border-radius:9px;font-size:13px;font-weight:600" style-hover="border-color:#fff">Clear</button>
-        <button onClick="{{ openCompare }}" disabled="{{ barDisabled }}" style="padding:10px 17px;background:#1769E0;border:1px solid #1769E0;color:#fff;border-radius:9px;font-size:13px;font-weight:600;opacity:{{ barOpacity }}" style-hover="background:#3480EC">Compare Solutions</button>
+        <button onClick="{{ clearCompare }}" style="padding:10px 15px;background:transparent;border:1px solid rgba(255,255,255,.28);color:#fff;border-radius:9px;font-size:13px;font-weight:600" style-hover="border-color:#fff">Hapus</button>
+        <button onClick="{{ openCompare }}" disabled="{{ barDisabled }}" style="padding:10px 17px;background:#1769E0;border:1px solid #1769E0;color:#fff;border-radius:9px;font-size:13px;font-weight:600;opacity:{{ barOpacity }}" style-hover="background:#3480EC">Bandingkan Solusi</button>
       </div>
     </div>
   </div>
@@ -702,23 +679,23 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
             <p style="font-size:16px;line-height:1.6;color:#3C4658;margin:0;max-width:64ch">{{ dp.desc }}</p>
             <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:26px">
               <div style="border:1px solid #E3E9F2;border-radius:11px;padding:18px">
-                <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2">BEST USED FOR</div>
+                <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2">COCOK UNTUK</div>
                 <p style="font-size:14px;line-height:1.55;color:#3C4658;margin:9px 0 0">{{ dp.best }}</p>
               </div>
               <div style="border:1px solid #E3E9F2;border-radius:11px;padding:18px">
-                <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2">RECOMMENDED INDUSTRIES</div>
+                <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2">INDUSTRI YANG SESUAI</div>
                 <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:10px">
                   <sc-for list="{{ dp.ind }}" as="i" hint-placeholder-count="3"><span style="font-size:12px;color:#3C4658;background:#F4F7FB;border:1px solid #E9EEF6;padding:4px 9px;border-radius:6px">{{ i }}</span></sc-for>
                 </div>
               </div>
               <div style="border:1px solid #E3E9F2;border-radius:11px;padding:18px">
-                <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2">CAMPAIGN OBJECTIVES</div>
+                <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2">TUJUAN KAMPANYE</div>
                 <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:10px">
                   <sc-for list="{{ dp.obj }}" as="o" hint-placeholder-count="3"><span style="font-size:12px;color:#1769E0;background:#EDF3FD;border:1px solid #D8E5FA;padding:4px 9px;border-radius:6px">{{ o }}</span></sc-for>
                 </div>
               </div>
             </div>
-            <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2;margin-top:28px">HOW THE AUDIENCE EXPERIENCES IT</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2;margin-top:28px">PENGALAMAN AUDIENS</div>
             <div style="display:flex;flex-direction:column;gap:2px;margin-top:12px">
               <sc-for list="{{ dp.exp }}" as="e" hint-placeholder-count="4">
                 <div style="display:flex;align-items:flex-start;gap:13px;padding:13px 0;border-bottom:1px solid #EDF1F7">
@@ -728,16 +705,16 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
               </sc-for>
             </div>
             <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin-top:26px">
-              <div><div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2">ESTIMATED SETUP</div><div style="font-size:14.5px;font-weight:600;margin-top:7px">{{ dp.lead }}</div></div>
-              <div><div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2">DELIVERY METHOD</div><div style="font-size:14.5px;font-weight:600;margin-top:7px">{{ dp.delivery }}</div></div>
-              <div><div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2">AD-BLOCK RESILIENCE</div><div style="font-size:14.5px;font-weight:600;margin-top:7px;color:{{ dp.resFg }}">{{ dp.res }}</div></div>
+              <div><div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2">ESTIMASI SIAP</div><div style="font-size:14.5px;font-weight:600;margin-top:7px">{{ dp.lead }}</div></div>
+              <div><div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2">CARA TAYANG</div><div style="font-size:14.5px;font-weight:600;margin-top:7px">{{ dp.delivery }}</div></div>
+              <div><div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2">KETAHANAN AD BLOCKER</div><div style="font-size:14.5px;font-weight:600;margin-top:7px;color:{{ dp.resFg }}">{{ dp.res }}</div></div>
             </div>
             <div style="margin-top:26px;border:1px solid #E9EEF6;background:#F8FAFD;border-radius:11px;padding:18px">
-              <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2">RELATED KLY PROPERTIES</div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2">PROPERTI KLY</div>
               <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:10px">
                 <sc-for list="{{ dp.props }}" as="pr" hint-placeholder-count="3"><span style="font-size:12.5px;font-weight:500;color:#172033;background:#fff;border:1px solid #E3E9F2;padding:5px 10px;border-radius:7px">{{ pr }}</span></sc-for>
               </div>
-              <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2;margin-top:18px">SIMILAR PRODUCTS</div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2;margin-top:18px">PRODUK SERUPA</div>
               <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:10px">
                 <sc-for list="{{ dp.similar }}" as="sm" hint-placeholder-count="2">
                   <button onClick="{{ sm.open }}" style="font-size:12.5px;font-weight:600;color:#1769E0;background:#fff;border:1px solid #D8E5FA;padding:6px 11px;border-radius:7px" style-hover="background:#EDF3FD">{{ sm.name }}</button>
@@ -752,13 +729,13 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
             <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px">
               <div style="display:flex;background:#F4F7FB;border:1px solid #E3E9F2;border-radius:9px;padding:3px;gap:3px">
                 <button onClick="{{ setDesktop }}" style="display:inline-flex;align-items:center;gap:7px;padding:7px 13px;border:0;border-radius:7px;font-size:12.5px;font-weight:600;background:{{ deskBg }};color:{{ deskFg }}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M8 21h8"></path><path d="M12 17v4"></path></svg>Desktop</button>
-                <button onClick="{{ setMobile }}" style="display:inline-flex;align-items:center;gap:7px;padding:7px 13px;border:0;border-radius:7px;font-size:12.5px;font-weight:600;background:{{ mobBg }};color:{{ mobFg }}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"></rect><path d="M11 18h2"></path></svg>Mobile</button>
+                <button onClick="{{ setPonsel }}" style="display:inline-flex;align-items:center;gap:7px;padding:7px 13px;border:0;border-radius:7px;font-size:12.5px;font-weight:600;background:{{ mobBg }};color:{{ mobFg }}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"></rect><path d="M11 18h2"></path></svg>Ponsel</button>
               </div>
               <button onClick="{{ toggleAdblock }}" style="display:inline-flex;align-items:center;gap:9px;padding:9px 14px;border:1px solid {{ abBorder }};background:{{ abBg }};color:{{ abFg }};border-radius:9px;font-size:12.5px;font-weight:600">
                 <span style="width:30px;height:17px;flex:none;border-radius:999px;background:{{ abTrack }};position:relative;transition:background .18s"><span style="position:absolute;top:2px;left:{{ abKnob }};width:13px;height:13px;border-radius:999px;background:#fff;transition:left .18s"></span></span>
-                Ad blocker simulation
+                Simulasi ad blocker
               </button>
-              <button onClick="{{ resetPreview }}" style="margin-left:auto;padding:9px 14px;border:1px solid #D4DDEA;background:#fff;color:#5A6478;border-radius:9px;font-size:12.5px;font-weight:600" style-hover="color:#1769E0;border-color:#1769E0">Restart preview</button>
+              <button onClick="{{ resetPreview }}" style="margin-left:auto;padding:9px 14px;border:1px solid #D4DDEA;background:#fff;color:#5A6478;border-radius:9px;font-size:12.5px;font-weight:600" style-hover="color:#1769E0;border-color:#1769E0">Ulangi pratinjau</button>
             </div>
 
             <div style="margin-top:18px;display:flex;justify-content:center;background:#F4F7FB;border:1px solid #E3E9F2;border-radius:12px;padding:22px">
@@ -774,13 +751,13 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
 
                   <sc-if value="{{ showTopBanner }}" hint-placeholder-val="{{ true }}">
                     <div style="margin-top:14px;height:64px;border-radius:8px;background:linear-gradient(90deg,#EDF3FD,#F4F7FB);border:1px solid #E3E9F2;display:flex;align-items:center;justify-content:center">
-                      <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#8A94A6">STANDARD BANNER 970×90 — sample data</span>
+                      <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#8A94A6">BANNER STANDAR 970×90 — data contoh</span>
                     </div>
                   </sc-if>
                   <sc-if value="{{ showBlockedTop }}" hint-placeholder-val="{{ false }}">
                     <div style="margin-top:14px;height:44px;border-radius:8px;border:1px dashed #E0A9A4;background:#FDF1F0;display:flex;align-items:center;justify-content:center;gap:8px">
                       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#EF3F35" stroke-width="2.2" stroke-linecap="round"><path d="M18 6L6 18"></path><path d="M6 6l12 12"></path></svg>
-                      <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#C0362E">BANNER BLOCKED — tidak tampil</span>
+                      <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#C0362E">BANNER DIBLOKIR — tidak tampil</span>
                     </div>
                   </sc-if>
 
@@ -796,7 +773,7 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
                       <div style="display:flex;align-items:center;gap:9px;padding:12px 16px;background:#EDF3FD;border-bottom:1px solid #D8E5FA">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1769E0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.4 6.2L21 12l-6.6 2.8L12 21l-2.4-6.2L3 12l6.6-2.8z"></path></svg>
                         <span style="font-size:12.5px;font-weight:600;color:#1257B8">{{ pv.moduleTitle }}</span>
-                        <span style="margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#5A8FDE">FIRST-PARTY EXPERIENCE</span>
+                        <span style="margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#5A8FDE">PENGALAMAN MILIK KLY</span>
                       </div>
                       <div style="padding:18px 16px 20px">
                         <div style="display:flex;align-items:center;gap:8px">
@@ -830,7 +807,7 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
                             </div>
                             <button onClick="{{ pvCtaClick }}" style="margin-top:14px;width:100%;padding:12px;background:#1769E0;border:1px solid #1769E0;color:#fff;border-radius:9px;font-size:13.5px;font-weight:600" style-hover="background:#1257B8">{{ pvCta }}</button>
                             <sc-if value="{{ pvClicked }}" hint-placeholder-val="{{ false }}">
-                              <div style="margin-top:10px;font-size:11.5px;color:#209447;background:#E9F5ED;border-radius:7px;padding:8px 11px">Klik tercatat sebagai commerce/lead event — sample tracking.</div>
+                              <div style="margin-top:10px;font-size:11.5px;color:#209447;background:#E9F5ED;border-radius:7px;padding:8px 11px">Klik tercatat sebagai aktivitas penjualan atau lead.</div>
                             </sc-if>
                           </div>
                         </sc-if>
@@ -842,7 +819,7 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
                     <div style="margin-top:20px;border:1px solid #E3E9F2;border-radius:12px;padding:16px;background:#FCFDFE">
                       <div style="display:flex;align-items:center;gap:9px">
                         <span style="font-size:12.5px;font-weight:600;color:#172033">{{ pv.moduleTitle }}</span>
-                        <span style="margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#8A94A6">FIRST-PARTY EXPERIENCE</span>
+                        <span style="margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#8A94A6">PENGALAMAN MILIK KLY</span>
                       </div>
                       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-top:12px">
                         <sc-for list="{{ pvStripItems }}" as="si" hint-placeholder-count="3">
@@ -854,7 +831,7 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
                         </sc-for>
                       </div>
                       <sc-if value="{{ pvClicked }}" hint-placeholder-val="{{ false }}">
-                        <div style="margin-top:12px;font-size:11.5px;color:#209447;background:#E9F5ED;border-radius:7px;padding:8px 11px">Produk dipilih — commerce click tercatat (sample tracking).</div>
+                        <div style="margin-top:12px;font-size:11.5px;color:#209447;background:#E9F5ED;border-radius:7px;padding:8px 11px">Produk dipilih dan klik tercatat.</div>
                       </sc-if>
                     </div>
                   </sc-if>
@@ -863,12 +840,12 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
 
                   <sc-if value="{{ showMidBanner }}" hint-placeholder-val="{{ true }}">
                     <div style="margin-top:16px;height:{{ midHeight }};border-radius:8px;background:#F4F7FB;border:1px solid #E3E9F2;display:flex;align-items:center;justify-content:center">
-                      <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#8A94A6">IN-ARTICLE DISPLAY 300×250 — sample data</span>
+                      <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#8A94A6">DISPLAY ARTIKEL 300×250 — data contoh</span>
                     </div>
                   </sc-if>
                   <sc-if value="{{ showBlockedMid }}" hint-placeholder-val="{{ false }}">
                     <div style="margin-top:16px;border-radius:8px;border:1px dashed #E0A9A4;background:#FDF1F0;padding:12px;text-align:center">
-                      <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#C0362E">IN-ARTICLE DISPLAY BLOCKED</span>
+                      <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#C0362E">DISPLAY ARTIKEL DIBLOKIR</span>
                     </div>
                   </sc-if>
                 </div>
@@ -881,10 +858,10 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1257B8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c5-1.7 8-4.6 8-9V6l-8-3-8 3v6c0 4.4 3 7.3 8 9z"></path></svg>
                   <span style="font-size:13px;font-weight:700;color:#1257B8">Ad blocker aktif</span>
                 </div>
-                <p style="font-size:13.5px;line-height:1.6;color:#20476F;margin:9px 0 0;max-width:70ch">First-party experience remains available because it is rendered as part of the owned content experience. Actual behavior may vary depending on blocker rules and implementation.</p>
+                <p style="font-size:13.5px;line-height:1.6;color:#20476F;margin:9px 0 0;max-width:70ch">Pengalaman milik KLY tetap dapat tampil tanpa server iklan.</p>
               </div>
             </sc-if>
-            <p style="font-size:11.5px;color:#9AA3B2;margin:12px 0 0">Live preview adalah simulasi antarmuka. Sample data — bukan inventory sebenarnya.</p>
+            <p style="font-size:11.5px;color:#9AA3B2;margin:12px 0 0">Pratinjau ini hanya simulasi.</p>
           </div>
         </sc-if>
 
@@ -897,7 +874,7 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
                 <p style="font-size:14px;line-height:1.6;color:#5A6478;margin:9px 0 0;max-width:68ch">{{ c.text }}</p>
               </div>
             </sc-for>
-            <p style="font-size:11.5px;color:#9AA3B2;margin:0">Illustrative use case — performance estimates require validation</p>
+            <p style="font-size:11.5px;color:#9AA3B2;margin:0">Contoh konsep · hasil perlu divalidasi</p>
           </div>
         </sc-if>
 
@@ -911,12 +888,12 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
                 </div>
               </sc-for>
             </div>
-            <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2;margin-top:24px">REQUIRED BRAND ASSETS</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2;margin-top:24px">ASET YANG DIBUTUHKAN</div>
             <div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:10px">
               <sc-for list="{{ dp.assets }}" as="a" hint-placeholder-count="4"><span style="font-size:12.5px;color:#3C4658;background:#F4F7FB;border:1px solid #E9EEF6;padding:5px 10px;border-radius:7px">{{ a }}</span></sc-for>
             </div>
             <div style="margin-top:24px;border:1px solid #E9EEF6;background:#F8FAFD;border-radius:11px;padding:18px">
-              <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2">AD-BLOCK CONSIDERATION</div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2">CATATAN AD BLOCKER</div>
               <p style="font-size:14px;line-height:1.6;color:#3C4658;margin:9px 0 0;max-width:70ch">{{ dp.adNote }}</p>
             </div>
           </div>
@@ -924,23 +901,23 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
 
         <sc-if value="{{ tabMeasure }}" hint-placeholder-val="{{ false }}">
           <div>
-            <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2">SUGGESTED KPI</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2">KPI UTAMA</div>
             <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:12px">
               <sc-for list="{{ dp.kpi }}" as="k" hint-placeholder-count="3">
                 <div style="border:1px solid #E3E9F2;border-radius:10px;padding:15px 16px">
                   <div style="font-size:14px;font-weight:600">{{ k }}</div>
-                  <div style="font-size:11.5px;color:#9AA3B2;margin-top:6px">Sample data — target ditetapkan bersama tim Sales</div>
+                  <div style="font-size:11.5px;color:#9AA3B2;margin-top:6px">Data contoh — target disepakati bersama tim Sales</div>
                 </div>
               </sc-for>
             </div>
-            <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2;margin-top:26px">MEASUREMENT METHOD</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2;margin-top:26px">CARA UKUR</div>
             <p style="font-size:14.5px;line-height:1.6;color:#3C4658;margin:10px 0 0;max-width:68ch">{{ dp.meas }}</p>
           </div>
         </sc-if>
 
         <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:30px;padding-top:22px;border-top:1px solid #EDF1F7">
           <button onClick="{{ dpToggleCompare }}" style="padding:12px 18px;background:#fff;border:1px solid {{ dp.cmpBorder }};color:{{ dp.cmpFg }};border-radius:9px;font-size:13.5px;font-weight:600">{{ dp.cmpLabel }}</button>
-          <button onClick="{{ openProposal }}" style="padding:12px 18px;background:#1769E0;border:1px solid #1769E0;color:#fff;border-radius:9px;font-size:13.5px;font-weight:600" style-hover="background:#1257B8">Request Proposal</button>
+          <button onClick="{{ openProposal }}" style="padding:12px 18px;background:#1769E0;border:1px solid #1769E0;color:#fff;border-radius:9px;font-size:13.5px;font-weight:600" style-hover="background:#1257B8">Ajukan Proposal</button>
           <button onClick="{{ closeDrawer }}" style="margin-left:auto;padding:12px 18px;background:#fff;border:1px solid #D4DDEA;color:#5A6478;border-radius:9px;font-size:13.5px;font-weight:600">Tutup</button>
         </div>
       </div>
@@ -954,7 +931,7 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
     <div id="planSheet" style="position:relative;width:min(720px,100%);max-height:86vh;overflow:auto;background:#fff;border-radius:14px;border:1px solid #E3E9F2;padding:28px;animation:kfUp .24s ease both">
       <div style="display:flex;align-items:flex-start;gap:14px">
         <div>
-          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;color:#8A94A6">KLY ADS STUDIO · CAMPAIGN PLAN</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;color:#8A94A6">KLY ADS STUDIO · RENCANA KAMPANYE</div>
           <h2 style="font-size:22px;font-weight:600;letter-spacing:-0.018em;margin:10px 0 0">{{ planTitle }}</h2>
         </div>
         <button onClick="{{ closePlan }}" aria-label="Tutup" style="margin-left:auto;width:34px;height:34px;flex:none;display:flex;align-items:center;justify-content:center;border:1px solid #D4DDEA;background:#fff;border-radius:9px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#172033" stroke-width="2.2" stroke-linecap="round"><path d="M18 6L6 18"></path><path d="M6 6l12 12"></path></svg></button>
@@ -967,9 +944,9 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
           </div>
         </sc-for>
       </div>
-      <p style="font-size:11.5px;color:#9AA3B2;margin:14px 0 0">Indicative plan — final scope, pricing, dan benchmark divalidasi oleh tim KLY.</p>
+      <p style="font-size:11.5px;color:#9AA3B2;margin:14px 0 0">Rencana awal · detail final divalidasi tim KLY.</p>
       <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:20px">
-        <button onClick="{{ printPlan }}" style="padding:12px 18px;background:#1769E0;border:1px solid #1769E0;color:#fff;border-radius:9px;font-size:13.5px;font-weight:600" style-hover="background:#1257B8">Print / Save as PDF</button>
+        <button onClick="{{ printPlan }}" style="padding:12px 18px;background:#1769E0;border:1px solid #1769E0;color:#fff;border-radius:9px;font-size:13.5px;font-weight:600" style-hover="background:#1257B8">Cetak / Simpan PDF</button>
         <button onClick="{{ copyPlan }}" style="padding:12px 18px;background:#fff;border:1px solid #D4DDEA;color:#172033;border-radius:9px;font-size:13.5px;font-weight:600" style-hover="border-color:#1769E0;color:#1769E0">{{ copyLabel }}</button>
       </div>
     </div>
@@ -984,31 +961,31 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
         <div>
           <div style="display:flex;align-items:flex-start;gap:14px">
             <div>
-              <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;color:#8A94A6">REQUEST PROPOSAL</div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;color:#8A94A6">AJUKAN PROPOSAL</div>
               <h2 style="font-size:22px;font-weight:600;letter-spacing:-0.018em;margin:10px 0 0">Tim Sales KLY akan menghubungi Anda</h2>
             </div>
             <button onClick="{{ closeProposal }}" aria-label="Tutup" style="margin-left:auto;width:34px;height:34px;flex:none;display:flex;align-items:center;justify-content:center;border:1px solid #D4DDEA;background:#fff;border-radius:9px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#172033" stroke-width="2.2" stroke-linecap="round"><path d="M18 6L6 18"></path><path d="M6 6l12 12"></path></svg></button>
           </div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px">
-            <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:12.5px;font-weight:600;color:#3C4658">Name</span><input value="{{ prop.name }}" onChange="{{ setPName }}" style="padding:11px 13px;border:1px solid #D4DDEA;border-radius:9px;font-size:14px"></label>
-            <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:12.5px;font-weight:600;color:#3C4658">Company</span><input value="{{ prop.company }}" onChange="{{ setPCompany }}" style="padding:11px 13px;border:1px solid #D4DDEA;border-radius:9px;font-size:14px"></label>
-            <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:12.5px;font-weight:600;color:#3C4658">Work email</span><input value="{{ prop.email }}" onChange="{{ setPEmail }}" style="padding:11px 13px;border:1px solid #D4DDEA;border-radius:9px;font-size:14px"></label>
-            <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:12.5px;font-weight:600;color:#3C4658">Phone</span><input value="{{ prop.phone }}" onChange="{{ setPPhone }}" style="padding:11px 13px;border:1px solid #D4DDEA;border-radius:9px;font-size:14px"></label>
+            <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:12.5px;font-weight:600;color:#3C4658">Nama</span><input value="{{ prop.name }}" onChange="{{ setPNama }}" style="padding:11px 13px;border:1px solid #D4DDEA;border-radius:9px;font-size:14px"></label>
+            <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:12.5px;font-weight:600;color:#3C4658">Perusahaan</span><input value="{{ prop.company }}" onChange="{{ setPPerusahaan }}" style="padding:11px 13px;border:1px solid #D4DDEA;border-radius:9px;font-size:14px"></label>
+            <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:12.5px;font-weight:600;color:#3C4658">Email kantor</span><input value="{{ prop.email }}" onChange="{{ setPEmail }}" style="padding:11px 13px;border:1px solid #D4DDEA;border-radius:9px;font-size:14px"></label>
+            <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:12.5px;font-weight:600;color:#3C4658">Telepon</span><input value="{{ prop.phone }}" onChange="{{ setPTelepon }}" style="padding:11px 13px;border:1px solid #D4DDEA;border-radius:9px;font-size:14px"></label>
           </div>
-          <label style="display:flex;flex-direction:column;gap:7px;margin-top:14px"><span style="font-size:12.5px;font-weight:600;color:#3C4658">Preferred contact method</span>
+          <label style="display:flex;flex-direction:column;gap:7px;margin-top:14px"><span style="font-size:12.5px;font-weight:600;color:#3C4658">Pilih cara dihubungi</span>
             <select value="{{ prop.method }}" onChange="{{ setPMethod }}" style="padding:11px 13px;border:1px solid #D4DDEA;border-radius:9px;font-size:14px">
               <sc-for list="{{ contactMethods }}" as="m" hint-placeholder-count="3"><option value="{{ m }}">{{ m }}</option></sc-for>
             </select>
           </label>
-          <label style="display:flex;flex-direction:column;gap:7px;margin-top:14px"><span style="font-size:12.5px;font-weight:600;color:#3C4658">Message</span><textarea value="{{ prop.message }}" onChange="{{ setPMessage }}" rows="3" style="padding:11px 13px;border:1px solid #D4DDEA;border-radius:9px;font-size:14px;resize:vertical;font-family:inherit"></textarea></label>
+          <label style="display:flex;flex-direction:column;gap:7px;margin-top:14px"><span style="font-size:12.5px;font-weight:600;color:#3C4658">Pesan</span><textarea value="{{ prop.message }}" onChange="{{ setPPesan }}" rows="3" style="padding:11px 13px;border:1px solid #D4DDEA;border-radius:9px;font-size:14px;resize:vertical;font-family:inherit"></textarea></label>
           <sc-if value="{{ propError }}" hint-placeholder-val="{{ false }}">
-            <div style="margin-top:12px;font-size:12.5px;color:#C0362E;background:#FDF1F0;border-radius:8px;padding:9px 12px">Nama, perusahaan, dan work email wajib diisi.</div>
+            <div style="margin-top:12px;font-size:12.5px;color:#C0362E;background:#FDF1F0;border-radius:8px;padding:9px 12px">Nama, perusahaan, dan email kantor wajib diisi.</div>
           </sc-if>
           <button onClick="{{ submitProposal }}" disabled="{{ propSending }}" style="margin-top:18px;width:100%;display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px;background:#1769E0;border:1px solid #1769E0;color:#fff;border-radius:10px;font-size:15px;font-weight:600;opacity:{{ propOpacity }}" style-hover="background:#1257B8">
             <sc-if value="{{ propSending }}" hint-placeholder-val="{{ false }}"><span style="width:15px;height:15px;border:2px solid rgba(255,255,255,.35);border-top-color:#fff;border-radius:999px;animation:kfSpin .7s linear infinite"></span></sc-if>
             {{ propButtonLabel }}
           </button>
-          <p style="font-size:11.5px;color:#9AA3B2;margin:12px 0 0">Prototype — data tidak dikirim ke server mana pun.</p>
+          <p style="font-size:11.5px;color:#9AA3B2;margin:12px 0 0">Prototipe — data tidak dikirim ke server.</p>
         </div>
       </sc-if>
       <sc-if value="{{ propSent }}" hint-placeholder-val="{{ false }}">
@@ -1017,7 +994,7 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
           <h2 style="font-size:21px;font-weight:600;letter-spacing:-0.016em;margin:18px 0 0">Permintaan proposal terkirim</h2>
           <p style="font-size:14.5px;line-height:1.6;color:#5A6478;margin:10px auto 0;max-width:40ch">{{ propSuccess }}</p>
           <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:22px">
-            <button onClick="{{ openPlan }}" style="padding:12px 18px;background:#fff;border:1px solid #D4DDEA;color:#172033;border-radius:9px;font-size:13.5px;font-weight:600" style-hover="border-color:#1769E0;color:#1769E0">Lihat campaign plan</button>
+            <button onClick="{{ openPlan }}" style="padding:12px 18px;background:#fff;border:1px solid #D4DDEA;color:#172033;border-radius:9px;font-size:13.5px;font-weight:600" style-hover="border-color:#1769E0;color:#1769E0">Lihat rencana kampanye</button>
             <button onClick="{{ closeProposal }}" style="padding:12px 18px;background:#1769E0;border:1px solid #1769E0;color:#fff;border-radius:9px;font-size:13.5px;font-weight:600" style-hover="background:#1257B8">Selesai</button>
           </div>
         </div>
@@ -1039,13 +1016,13 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
       </div>
       <div style="margin-top:20px;display:flex;flex-direction:column;gap:18px">
         <div><div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2">TANTANGAN BISNIS</div><p style="font-size:14.5px;line-height:1.6;color:#3C4658;margin:8px 0 0">{{ cs.challenge }}</p></div>
-        <div><div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2">SOLUSI CAMPAIGN</div><p style="font-size:14.5px;line-height:1.6;color:#3C4658;margin:8px 0 0">{{ cs.solution }}</p></div>
-        <div><div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2">PRODUCTS USED</div>
+        <div><div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2">SOLUSI KAMPANYE</div><p style="font-size:14.5px;line-height:1.6;color:#3C4658;margin:8px 0 0">{{ cs.solution }}</p></div>
+        <div><div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2">PRODUK YANG DIGUNAKAN</div>
           <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:9px">
             <sc-for list="{{ cs.products }}" as="x" hint-placeholder-count="3"><span style="font-size:12px;color:#3C4658;background:#F4F7FB;border:1px solid #E9EEF6;padding:4px 9px;border-radius:6px">{{ x }}</span></sc-for>
           </div>
         </div>
-        <div><div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2">PERFORMANCE PLACEHOLDERS</div>
+        <div><div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2">CONTOH METRIK</div>
           <div style="display:flex;flex-direction:column;gap:8px;margin-top:9px">
             <sc-for list="{{ cs.metrics }}" as="m" hint-placeholder-count="3"><div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#5A6478;background:#F8FAFD;border:1px solid #EDF1F7;border-radius:8px;padding:10px 12px">{{ m }}</div></sc-for>
           </div>
@@ -1064,10 +1041,10 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
 class Component extends DCLogic {
   state = {
     useCase: null, search: '', view: 'grid',
-    f: { objective: 'All', industry: 'All', property: 'All', type: 'All', budget: 'All', setup: 'All', delivery: 'All', adblock: 'All' },
-    compare: [], drawer: null, tab: 'Overview', device: 'desktop', adblock: false,
+    f: { objective: 'Semua', industry: 'Semua', property: 'Semua', type: 'Semua', budget: 'Semua', setup: 'Semua', delivery: 'Semua', adblock: 'Semua' },
+    compare: [], drawer: null, tab: 'Ringkasan', device: 'desktop', adblock: false,
     pv: { step: 0, done: false, clicked: false, picked: null },
-    brief: { brand: '', industry: 'Beauty', objective: 'Product Launch', audience: '', budget: 'Rp100–300 million', duration: '6 weeks', action: 'Explore product options', context: '' },
+    brief: { brand: '', industry: 'Kecantikan', objective: 'Peluncuran Produk', audience: '', budget: 'Rp100–300 juta', duration: '6 minggu', action: 'Melihat pilihan produk', context: '' },
     ai: 'idle', aiStep: 0, planOpen: false, copied: false,
     propOpen: false, propStage: 'form', propError: false,
     prop: { name: '', company: '', email: '', phone: '', method: 'Email', message: '' },
@@ -1078,114 +1055,114 @@ class Component extends DCLogic {
   DATA = {
     trust: ['Berbasis tujuan bisnis', 'Lintas properti media KLY', 'Pengukuran yang dapat disepakati'],
     mediaBrands: ['Liputan6', 'KapanLagi', 'Fimela', 'Merdeka', 'Brilio', 'Bola.net', 'Dream', 'Otosia'],
-    heroSolutions: [{ n: '01', name: 'Fimela Beauty Finder', match: 'Rekomendasi utama' }, { n: '02', name: 'Seri Review Kreator', match: 'Pendukung' }, { n: '03', name: 'Shoppable Story', match: 'Perluasan' }],
+    heroSolutions: [{ n: '01', name: 'Pemilih Produk Fimela', match: 'Rekomendasi utama' }, { n: '02', name: 'Seri Ulasan Kreator', match: 'Pendukung' }, { n: '03', name: 'Cerita Belanja', match: 'Perluasan' }],
     nav: [['Solusi', 'solutions'], ['Skenario', 'showcase'], ['Galeri Iklan', 'gallery'], ['Studi Kasus', 'casestudies'], ['Cara Kerja', 'howitworks']],
     useCases: [
-      { id: 'launch', title: 'Peluncuran Produk', filter: 'Consideration', icon: ['M12 3l7 4v6c0 4-3 7-7 8-4-1-7-4-7-8V7z', 'M9.5 12l1.8 1.8L15 10'], desc: 'Perkenalkan produk baru melalui editorial, pengalaman interaktif, kreator, dan amplifikasi sosial.', products: ['Interactive Product Finder', 'Branded Editorial', 'Creator Review Series'], kpis: ['Qualified product interest', 'Product exploration', 'Click-to-commerce'] },
-      { id: 'aware', title: 'Awareness & Cerita Brand', filter: 'Awareness', icon: ['M4 12a8 8 0 0 1 16 0', 'M8 17h8'], desc: 'Bangun jangkauan dan daya ingat pesan melalui konten premium, video, placement berdampak, dan kreator.', products: ['Branded Video', 'Premium Native', 'Creator Collaboration', 'Editorial Sponsorship'], kpis: ['Reach', 'Video completion', 'Engaged time'] },
-      { id: 'consider', title: 'Pertimbangan & Edukasi', filter: 'Education', icon: ['M4 6h16', 'M4 12h10'], desc: 'Bantu audience memahami dan membandingkan produk melalui konten dan alat bantu keputusan.', products: ['Comparison Tool', 'Interactive Quiz', 'Calculator', 'Expert Content Series'], kpis: ['Tool completion', 'Product consideration', 'Return visits'] },
-      { id: 'leads', title: 'Pengumpulan Lead', filter: 'Leads', icon: ['M4 19V9l8-5 8 5v10', 'M9 19v-6h6v6'], desc: 'Ubah minat audience relevan menjadi lead yang terukur dan berkualitas.', products: ['Lead Form Experience', 'Consultation Matcher', 'Webinar Registration', 'Product Recommendation Quiz'], kpis: ['Qualified leads', 'Form completion', 'Cost per lead'] },
-      { id: 'commerce', title: 'Commerce & Konversi', filter: 'Commerce', icon: ['M4 5h3l2 11h9', 'M9 20h.01M17 20h.01'], desc: 'Persingkat perjalanan dari menemukan konten hingga melakukan aksi produk.', products: ['Shoppable Story', 'Product Recommendation Module', 'Promo Discovery', 'Affiliate Commerce Module'], kpis: ['Product clicks', 'Add-to-cart intent', 'Transaction value'] },
-      { id: 'community', title: 'Komunitas & Interaksi', filter: 'Engagement', icon: ['M7 20v-2a4 4 0 0 1 4-4h2a4 4 0 0 1 4 4v2', 'M12 4a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z'], desc: 'Bangun partisipasi berulang melalui challenge, sesi live, event, kuis, dan komunitas.', products: ['Interactive Challenge', 'Live Event', 'Community Program', 'Fandom Experience'], kpis: ['Participation', 'Repeat visits', 'Registrations'] }
+      { id: 'launch', title: 'Peluncuran Produk', filter: 'Pertimbangan', icon: ['M12 3l7 4v6c0 4-3 7-7 8-4-1-7-4-7-8V7z', 'M9.5 12l1.8 1.8L15 10'], desc: 'Kenalkan produk baru melalui konten, kreator, dan pengalaman interaktif.', products: ['Pemilih Produk Interaktif', 'Editorial Brand', 'Seri Ulasan Kreator'], kpis: ['Minat produk', 'Eksplorasi produk', 'Klik ke pembelian'] },
+      { id: 'aware', title: 'Jangkauan & Cerita Brand', filter: 'Awareness', icon: ['M4 12a8 8 0 0 1 16 0', 'M8 17h8'], desc: 'Bangun jangkauan melalui konten, video, dan kreator.', products: ['Video Brand', 'Native Premium', 'Kolaborasi Kreator', 'Sponsor Editorial'], kpis: ['Jangkauan', 'Video selesai ditonton', 'Waktu interaksi'] },
+      { id: 'consider', title: 'Pertimbangan & Edukasi', filter: 'Edukasi', icon: ['M4 6h16', 'M4 12h10'], desc: 'Bantu audiens memahami dan membandingkan produk.', products: ['Alat Perbandingan', 'Kuis Interaktif', 'Kalkulator', 'Seri Konten Ahli'], kpis: ['Alat selesai digunakan', 'Minat produk', 'Kunjungan ulang'] },
+      { id: 'leads', title: 'Pengumpulan Lead', filter: 'Lead', icon: ['M4 19V9l8-5 8 5v10', 'M9 19v-6h6v6'], desc: 'Ubah minat audiens menjadi lead yang terukur.', products: ['Formulir Lead', 'Pemilih Konsultasi', 'Pendaftaran Webinar', 'Kuis Rekomendasi Produk'], kpis: ['Lead berkualitas', 'Formulir selesai', 'Biaya per lead'] },
+      { id: 'commerce', title: 'Penjualan & Konversi', filter: 'Commerce', icon: ['M4 5h3l2 11h9', 'M9 20h.01M17 20h.01'], desc: 'Hubungkan konten langsung dengan aksi pembelian.', products: ['Cerita Belanja', 'Modul Rekomendasi Produk', 'Penemuan Promo', 'Modul Afiliasi'], kpis: ['Klik produk', 'Minat belanja', 'Nilai transaksi'] },
+      { id: 'community', title: 'Komunitas & Interaksi', filter: 'Interaksi', icon: ['M7 20v-2a4 4 0 0 1 4-4h2a4 4 0 0 1 4 4v2', 'M12 4a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z'], desc: 'Bangun partisipasi melalui kuis, acara, dan komunitas.', products: ['Tantangan Interaktif', 'Acara Langsung', 'Program Komunitas', 'Pengalaman Penggemar'], kpis: ['Partisipasi', 'Kunjungan ulang', 'Pendaftaran'] }
     ],
     products: [
-      { id: 1, name: 'KLY Product Finder', type: 'Interactive Utility', obj: ['Consideration', 'Leads', 'Commerce'], del: 'First-party CMS experience', res: 'High', desc: 'Interactive questions that help audiences find the most relevant product.', kpi: ['Completion rate', 'Recommendation clicks', 'Qualified interest'], lead: '10–14 days', bud: 'Medium', ind: ['Beauty', 'FMCG', 'Technology', 'Property'], props: ['Fimela', 'KapanLagi', 'Merdeka'], sim: [3, 5], best: 'Peluncuran produk dengan beberapa varian, ketika audience perlu dibantu memilih.', assets: ['Product data & varian', 'Brand guideline', 'Key visual', 'Landing/commerce URL'], meas: 'First-party event tracking pada setiap langkah: start, per-question, result view, dan recommendation click. Dilaporkan mingguan dalam campaign dashboard.', adNote: 'Dirender sebagai bagian dari halaman konten KLY, sehingga tidak bergantung pada ad server. Perilaku aktual dapat berbeda tergantung aturan blocker dan implementasi.', kind: 'interactive',
-        exp: ['Audience membaca artikel editorial di properti KLY.', 'Modul finder muncul inline dengan sponsored disclosure.', 'Audience menjawab 2–3 pertanyaan singkat.', 'Hasil rekomendasi produk brand ditampilkan.', 'CTA mengarah ke halaman brand atau commerce partner.'],
-        cases: [{ tag: 'Beauty', title: 'Skin diagnostic finder', text: 'Audience menjawab tipe kulit dan concern, lalu menerima rekomendasi varian serum beserta tautan pembelian.' }, { tag: 'Property', title: 'Home matcher', text: 'Calon pembeli memilih budget dan lokasi, lalu menerima shortlist unit dan CTA jadwalkan kunjungan.' }],
-        pv: { property: 'Fimela', sponsor: 'Lumière', headline: 'Serum mana yang cocok untuk kulitmu? Jawab 3 pertanyaan ini', byline: 'Tim Fimela · 4 menit baca', intro: 'Memilih serum tidak harus membingungkan. Kenali dulu kondisi kulitmu, lalu cocokkan dengan kandungan yang tepat.', body: 'Rutinitas yang konsisten tetap menjadi kunci. Gunakan hasil rekomendasi di atas sebagai titik awal, lalu sesuaikan dengan respons kulitmu dalam dua minggu pertama.', moduleTitle: 'Beauty Product Finder' },
+      { id: 1, name: 'KLY Pemilih Produk', type: 'Solusi Interaktif', obj: ['Pertimbangan', 'Lead', 'Commerce'], del: 'Halaman milik KLY', res: 'Tinggi', desc: 'Kuis singkat untuk membantu audiens memilih produk.', kpi: ['Tingkat penyelesaian', 'Klik rekomendasi', 'Minat berkualitas'], lead: '10–14 hari', bud: 'Menengah', ind: ['Kecantikan', 'FMCG', 'Teknologi', 'Properti'], props: ['Fimela', 'KapanLagi', 'Merdeka'], sim: [3, 5], best: 'Cocok untuk produk dengan beberapa pilihan atau varian.', assets: ['Data dan varian produk', 'Panduan brand', 'Visual utama', 'Tautan produk'], meas: 'Aktivitas utama di setiap langkah dapat diukur dan dilaporkan berkala.', adNote: 'Tampil sebagai bagian dari halaman KLY sehingga tidak bergantung pada server iklan.', kind: 'interactive',
+        exp: ['Audiens membaca artikel di media KLY.', 'Modul rekomendasi muncul di dalam artikel.', 'Audiens menjawab 2–3 pertanyaan.', 'Rekomendasi produk ditampilkan.', 'Tombol mengarah ke halaman produk.'],
+        cases: [{ tag: 'Kecantikan', title: 'Rekomendasi perawatan kulit', text: 'Audiens menjawab kondisi kulit lalu menerima rekomendasi serum.' }, { tag: 'Properti', title: 'Pemilih hunian', text: 'Calon pembeli memilih anggaran dan lokasi lalu menerima pilihan unit.' }],
+        pv: { property: 'Fimela', sponsor: 'Lumière', headline: 'Serum mana yang cocok untuk kulitmu? Jawab 3 pertanyaan ini', byline: 'Tim Fimela · 4 menit baca', intro: 'Memilih serum tidak harus membingungkan. Kenali dulu kondisi kulitmu, lalu cocokkan dengan kandungan yang tepat.', body: 'Rutinitas yang konsisten tetap menjadi kunci. Gunakan hasil rekomendasi di atas sebagai titik awal, lalu sesuaikan dengan respons kulitmu dalam dua minggu pertama.', moduleTitle: 'Pemilih Produk Kecantikan' },
         flow: { questions: [{ q: 'Bagaimana kondisi kulitmu hari ini?', opts: ['Kering dan kusam', 'Berminyak di area T', 'Kombinasi dan sensitif'] }, { q: 'Apa yang ingin kamu perbaiki lebih dulu?', opts: ['Kecerahan', 'Tekstur dan pori', 'Garis halus'] }, { q: 'Seberapa sering kamu pakai skincare?', opts: ['Pagi dan malam', 'Sekali sehari', 'Belum rutin'] }], result: { title: 'Brightening Serum — varian Gentle', text: 'Cocok untuk kulit kombinasi sensitif yang ingin meningkatkan kecerahan tanpa iritasi.', items: [{ tag: '01', name: 'Brightening Serum Gentle 30ml', note: 'Rekomendasi utama' }, { tag: '02', name: 'Barrier Repair Moisturizer', note: 'Pelengkap rutinitas' }], cta: 'Lihat produk di toko resmi' } } },
-      { id: 2, name: 'KLY Smart Calculator', type: 'Interactive Utility', obj: ['Education', 'Consideration', 'Leads'], del: 'First-party CMS experience', res: 'High', desc: 'Branded calculators for finance, automotive, property, health, and lifestyle decisions.', kpi: ['Calculator completion', 'Result views', 'Lead conversion'], lead: '10–14 days', bud: 'Medium', ind: ['Finance', 'Automotive', 'Property'], props: ['Merdeka', 'Otosia', 'Liputan6 Bisnis'], sim: [1, 3], best: 'Kategori dengan keputusan berbasis angka: kredit, cicilan, biaya kepemilikan, proteksi.', assets: ['Formula & asumsi', 'Product tier data', 'Disclaimer legal', 'Lead form destination'], meas: 'Event tracking per input dan hasil, dengan opsi lead form di akhir kalkulasi. Semua data adalah first-party.', adNote: 'Berjalan sebagai modul konten milik KLY. Tidak memakai ad server untuk render utama.', kind: 'interactive',
-        exp: ['Audience membaca artikel edukasi finansial.', 'Kalkulator muncul inline dengan sponsored disclosure.', 'Audience mengisi 3 parameter utama.', 'Hasil perhitungan dan rekomendasi produk muncul.', 'Opsi konsultasi atau lead form ditawarkan.'],
-        cases: [{ tag: 'Finance', title: 'Financial health check', text: 'Audience menghitung rasio tabungan dan menerima rekomendasi produk proteksi beserta opsi konsultasi.' }, { tag: 'Automotive', title: 'Ownership cost calculator', text: 'Calon pembeli menghitung biaya kepemilikan lima tahun dan dapat mengirim data ke dealer terdekat.' }],
-        pv: { property: 'Merdeka', sponsor: 'Sentra Finance', headline: 'Berapa dana darurat yang ideal untuk keluarga muda?', byline: 'Tim Merdeka Bisnis · 5 menit baca', intro: 'Dana darurat yang cukup menentukan ketahanan keuangan keluarga. Hitung kebutuhanmu dengan tiga parameter sederhana.', body: 'Setelah target dana darurat terpenuhi, langkah berikutnya adalah proteksi kesehatan dan investasi jangka panjang sesuai profil risiko.', moduleTitle: 'Financial Health Calculator' },
-        flow: { questions: [{ q: 'Berapa pengeluaran bulanan rumah tangga?', opts: ['Di bawah Rp5 juta', 'Rp5–12 juta', 'Di atas Rp12 juta'] }, { q: 'Berapa jumlah tanggungan?', opts: ['Belum ada', '1–2 orang', '3 orang atau lebih'] }, { q: 'Sudah punya proteksi kesehatan?', opts: ['Belum', 'Dari kantor saja', 'Sudah, mandiri'] }], result: { title: 'Target dana darurat: 9× pengeluaran bulanan', text: 'Dengan tanggungan dan proteksi saat ini, cadangan sembilan bulan memberi ruang aman.', items: [{ tag: '01', name: 'Reksa dana pasar uang', note: 'Untuk cadangan likuid' }, { tag: '02', name: 'Asuransi kesehatan keluarga', note: 'Menutup risiko terbesar' }], cta: 'Konsultasi gratis dengan advisor' } } },
-      { id: 3, name: 'KLY Comparison Experience', type: 'Decision Tool', obj: ['Consideration'], del: 'First-party CMS experience', res: 'High', desc: 'Help users compare options, features, benefits, and relevant products.', kpi: ['Comparison interaction', 'Engaged time', 'Product clicks'], lead: '14–21 days', bud: 'Medium', ind: ['Automotive', 'Technology', 'Finance', 'Property'], props: ['Otosia', 'Liputan6 Tekno', 'Merdeka'], sim: [1, 2], best: 'Kategori dengan spesifikasi kompleks di mana audience membandingkan sebelum membeli.', assets: ['Spec sheet per produk', 'Comparison logic', 'Product imagery', 'Destination URL'], meas: 'Tracking pilihan perbandingan, atribut yang dibuka, dan klik produk akhir.', adNote: 'Modul first-party, tidak dipanggil melalui ad tag.', kind: 'interactive',
-        exp: ['Audience masuk dari artikel review atau search.', 'Memilih dua hingga tiga opsi untuk dibandingkan.', 'Melihat tabel perbandingan interaktif.', 'Membuka atribut yang relevan.', 'Klik menuju produk atau dealer.'],
-        cases: [{ tag: 'Automotive', title: 'SUV comparison', text: 'Audience membandingkan tiga SUV pada harga, konsumsi bahan bakar, dan fitur keselamatan.' }, { tag: 'Technology', title: 'Laptop picker', text: 'Pembeli membandingkan varian laptop berdasarkan kebutuhan kerja dan anggaran.' }],
-        pv: { property: 'Otosia', sponsor: 'Auriga Motor', headline: 'Membandingkan tiga SUV keluarga di kelas Rp400 juta', byline: 'Tim Otosia · 6 menit baca', intro: 'Selisih harga tipis, tetapi karakter ketiganya berbeda. Bandingkan sendiri berdasarkan prioritasmu.', body: 'Untuk pemakaian harian dalam kota, konsumsi bahan bakar dan radius putar biasanya lebih menentukan daripada tenaga maksimum.', moduleTitle: 'SUV Comparison Tool' },
+      { id: 2, name: 'KLY Kalkulator Pintar', type: 'Solusi Interaktif', obj: ['Edukasi', 'Pertimbangan', 'Lead'], del: 'Halaman milik KLY', res: 'Tinggi', desc: 'Kalkulator untuk membantu keputusan berbasis angka.', kpi: ['Kalkulator selesai', 'Hasil dilihat', 'Konversi lead'], lead: '10–14 hari', bud: 'Menengah', ind: ['Keuangan', 'Otomotif', 'Properti'], props: ['Merdeka', 'Otosia', 'Liputan6 Bisnis'], sim: [1, 3], best: 'Cocok untuk kredit, cicilan, dan biaya kepemilikan.', assets: ['Rumus dan asumsi', 'Data produk', 'Catatan legal', 'Tujuan formulir lead'], meas: 'Input, hasil, dan formulir lead dapat diukur.', adNote: 'Tampil sebagai modul konten KLY tanpa server iklan.', kind: 'interactive',
+        exp: ['Audiens membaca artikel edukasi.', 'Kalkulator muncul di dalam artikel.', 'Audiens mengisi tiga data utama.', 'Hasil dan rekomendasi muncul.', 'Opsi konsultasi ditawarkan.'],
+        cases: [{ tag: 'Keuangan', title: 'Pemeriksaan kondisi keuangan', text: 'Audiens menghitung rasio tabungan dan menerima rekomendasi proteksi.' }, { tag: 'Otomotif', title: 'Kalkulator biaya kepemilikan', text: 'Calon pembeli menghitung biaya kendaraan selama lima tahun.' }],
+        pv: { property: 'Merdeka', sponsor: 'Sentra Finance', headline: 'Berapa dana darurat yang ideal untuk keluarga muda?', byline: 'Tim Merdeka Bisnis · 5 menit baca', intro: 'Dana darurat yang cukup menentukan ketahanan keuangan keluarga. Hitung kebutuhanmu dengan tiga parameter sederhana.', body: 'Setelah target dana darurat terpenuhi, langkah berikutnya adalah proteksi kesehatan dan investasi jangka panjang sesuai profil risiko.', moduleTitle: 'Kalkulator Kondisi Keuangan' },
+        flow: { questions: [{ q: 'Berapa pengeluaran bulanan rumah tangga?', opts: ['Di bawah Rp5 juta', 'Rp5–12 juta', 'Di atas Rp12 juta'] }, { q: 'Berapa jumlah tanggungan?', opts: ['Belum ada', '1–2 orang', '3 orang atau lebih'] }, { q: 'Sudah punya proteksi kesehatan?', opts: ['Belum', 'Dari kantor saja', 'Sudah, mandiri'] }], result: { title: 'Target dana darurat: 9× pengeluaran bulanan', text: 'Dengan tanggungan dan proteksi saat ini, cadangan sembilan bulan memberi ruang aman.', items: [{ tag: '01', name: 'Reksa dana pasar uang', note: 'Untuk cadangan likuid' }, { tag: '02', name: 'Asuransi kesehatan keluarga', note: 'Menutup risiko terbesar' }], cta: 'Konsultasi gratis dengan penasihat' } } },
+      { id: 3, name: 'KLY Perbandingan Produk', type: 'Alat Bantu Keputusan', obj: ['Pertimbangan'], del: 'Halaman milik KLY', res: 'Tinggi', desc: 'Bantu audiens membandingkan fitur dan manfaat produk.', kpi: ['Interaksi perbandingan', 'Waktu interaksi', 'Klik produk'], lead: '14–21 hari', bud: 'Menengah', ind: ['Otomotif', 'Teknologi', 'Keuangan', 'Properti'], props: ['Otosia', 'Liputan6 Tekno', 'Merdeka'], sim: [1, 2], best: 'Cocok untuk produk dengan spesifikasi yang kompleks.', assets: ['Spesifikasi produk', 'Aturan perbandingan', 'Gambar produk', 'Tautan tujuan'], meas: 'Pilihan, atribut, dan klik produk dapat diukur.', adNote: 'Tampil sebagai modul milik KLY tanpa tag iklan.', kind: 'interactive',
+        exp: ['Audiens masuk dari artikel ulasan.', 'Memilih produk untuk dibandingkan.', 'Melihat tabel perbandingan.', 'Membuka atribut yang relevan.', 'Klik menuju produk atau dealer.'],
+        cases: [{ tag: 'Otomotif', title: 'Perbandingan SUV', text: 'Audiens membandingkan harga, konsumsi bahan bakar, dan fitur keselamatan.' }, { tag: 'Teknologi', title: 'Pemilih laptop', text: 'Pembeli membandingkan laptop berdasarkan kebutuhan dan anggaran.' }],
+        pv: { property: 'Otosia', sponsor: 'Auriga Motor', headline: 'Membandingkan tiga SUV keluarga di kelas Rp400 juta', byline: 'Tim Otosia · 6 menit baca', intro: 'Selisih harga tipis, tetapi karakter ketiganya berbeda. Bandingkan sendiri berdasarkan prioritasmu.', body: 'Untuk pemakaian harian dalam kota, konsumsi bahan bakar dan radius putar biasanya lebih menentukan daripada tenaga maksimum.', moduleTitle: 'Alat Perbandingan SUV' },
         flow: { questions: [{ q: 'Prioritas utama kamu?', opts: ['Konsumsi bahan bakar', 'Ruang kabin', 'Fitur keselamatan'] }, { q: 'Pemakaian dominan?', opts: ['Dalam kota', 'Luar kota', 'Campuran'] }], result: { title: 'Auriga Terra 1.5 Turbo paling sesuai', text: 'Kombinasi efisiensi dan fitur keselamatan lengkap pada rentang harga yang sama.', items: [{ tag: '01', name: 'Auriga Terra 1.5 Turbo', note: 'Skor kecocokan tertinggi' }, { tag: '02', name: 'Auriga Terra Hybrid', note: 'Alternatif efisiensi' }], cta: 'Cek harga di dealer terdekat' } } },
-      { id: 4, name: 'KLY Shoppable Story', type: 'Content Commerce', obj: ['Commerce'], del: 'First-party editorial content', res: 'High', desc: 'Editorial storytelling connected to product discovery and commerce actions.', kpi: ['Product clicks', 'Commerce intent', 'Transaction attribution'], lead: '10–14 days', bud: 'Medium', ind: ['Beauty', 'FMCG', 'Entertainment'], props: ['Fimela', 'KapanLagi', 'Bola.net'], sim: [6, 1], best: 'Kampanye yang perlu memperpendek jarak antara konten dan pembelian.', assets: ['Product feed atau daftar SKU', 'Commerce/affiliate link', 'Product imagery', 'Copy points'], meas: 'Klik produk dilacak per SKU, dengan opsi UTM atau affiliate parameter untuk atribusi transaksi.', adNote: 'Product module adalah bagian dari artikel, bukan creative ad server.', kind: 'strip',
-        exp: ['Audience membaca artikel editorial bersponsor.', 'Product module muncul di dalam alur cerita.', 'Audience memilih produk yang relevan.', 'Klik diteruskan ke commerce partner.'],
-        cases: [{ tag: 'FMCG', title: 'Shoppable recipe', text: 'Resep sponsor menautkan bahan ke daftar belanja dan tautan produk.' }, { tag: 'Beauty', title: 'Look of the week', text: 'Artikel tren merangkum lima produk dengan tautan pembelian langsung.' }],
+      { id: 4, name: 'KLY Cerita Belanja', type: 'Konten Penjualan', obj: ['Commerce'], del: 'Konten editorial KLY', res: 'Tinggi', desc: 'Konten editorial yang terhubung langsung ke produk.', kpi: ['Klik produk', 'Minat belanja', 'Atribusi transaksi'], lead: '10–14 hari', bud: 'Menengah', ind: ['Kecantikan', 'FMCG', 'Hiburan'], props: ['Fimela', 'KapanLagi', 'Bola.net'], sim: [6, 1], best: 'Cocok untuk memperpendek perjalanan menuju pembelian.', assets: ['Daftar produk', 'Tautan pembelian', 'Gambar produk', 'Pesan utama'], meas: 'Klik tiap produk dapat dilacak untuk melihat minat dan transaksi.', adNote: 'Modul produk menjadi bagian dari artikel KLY.', kind: 'strip',
+        exp: ['Audiens membaca artikel bersponsor.', 'Modul produk muncul di dalam cerita.', 'Audiens memilih produk.', 'Klik diteruskan ke mitra penjualan.'],
+        cases: [{ tag: 'FMCG', title: 'Shoppable recipe', text: 'Resep sponsor menautkan bahan ke daftar belanja dan tautan produk.' }, { tag: 'Kecantikan', title: 'Look of the week', text: 'Artikel tren merangkum lima produk dengan tautan pembelian langsung.' }],
         pv: { property: 'Fimela', sponsor: 'Lumière', headline: 'Lima langkah rutinitas malam yang realistis untuk pekerja kantor', byline: 'Tim Fimela · 4 menit baca', intro: 'Rutinitas malam tidak harus panjang. Lima langkah ini cukup untuk menjaga barrier kulit tetap sehat.', body: 'Konsistensi lebih penting daripada jumlah produk. Mulai dari tiga langkah, lalu tambahkan sesuai kebutuhan kulit.', moduleTitle: 'Produk dalam artikel ini' },
         strip: [{ name: 'Gentle Cleanser', note: 'Langkah 1' }, { name: 'Brightening Serum', note: 'Langkah 3' }, { name: 'Barrier Cream', note: 'Langkah 5' }] },
-      { id: 5, name: 'KLY Interactive Quiz', type: 'Engagement', obj: ['Engagement', 'Audience Insight'], del: 'First-party CMS experience', res: 'High', desc: 'Branded quizzes that generate engagement and declared audience preferences.', kpi: ['Participation', 'Completion', 'Declared preference data'], lead: '7–10 days', bud: 'Low–Medium', ind: ['Beauty', 'Entertainment', 'FMCG', 'Other'], props: ['KapanLagi', 'Fimela', 'Bola.net'], sim: [1, 3], best: 'Kampanye yang butuh partisipasi tinggi dan data preferensi audience.', assets: ['Tema kuis', 'Brand copy', 'Result mapping', 'Prize/CTA mechanic'], meas: 'Completion rate dan distribusi jawaban menjadi audience insight yang dapat dipakai untuk retargeting internal.', adNote: 'Kuis dirender di halaman konten KLY sebagai first-party experience.', kind: 'interactive',
-        exp: ['Audience menemukan kuis dari artikel atau social post.', 'Menjawab pertanyaan bertema kampanye.', 'Menerima hasil yang dapat dibagikan.', 'Diarahkan ke konten atau produk brand.'],
-        cases: [{ tag: 'Entertainment', title: 'Fandom personality quiz', text: 'Kuis bertema serial baru menghasilkan tipe karakter yang dapat dibagikan ke media sosial.' }, { tag: 'FMCG', title: 'Taste profile quiz', text: 'Audience menemukan varian rasa yang cocok dan menerima promo digital.' }],
-        pv: { property: 'KapanLagi', sponsor: 'Nusa Snack', headline: 'Tipe camilan apa yang paling cocok dengan gaya harimu?', byline: 'Tim KapanLagi · 3 menit baca', intro: 'Jawab tiga pertanyaan singkat dan temukan varian yang paling cocok dengan ritme harianmu.', body: 'Bagikan hasilmu dan bandingkan dengan teman. Setiap tipe punya rekomendasi varian yang berbeda.', moduleTitle: 'Snack Personality Quiz' },
-        flow: { questions: [{ q: 'Kapan kamu paling sering ngemil?', opts: ['Pagi saat kerja', 'Sore setelah aktivitas', 'Malam sambil nonton'] }, { q: 'Rasa favoritmu?', opts: ['Gurih', 'Manis', 'Pedas'] }], result: { title: 'Kamu tipe Evening Unwinder', text: 'Camilan gurih dengan porsi kecil paling cocok untuk momen santai malammu.', items: [{ tag: '01', name: 'Nusa Snack Savory Bites', note: 'Rekomendasi utama' }, { tag: '02', name: 'Nusa Snack Mini Pack', note: 'Porsi terkontrol' }], cta: 'Klaim promo varian ini' } } },
-      { id: 6, name: 'KLY Branded Editorial', type: 'Content', obj: ['Awareness', 'Education'], del: 'First-party editorial content', res: 'High', desc: "Brand storytelling produced within KLY's trusted editorial environment.", kpi: ['Article views', 'Engaged time', 'Content completion'], lead: '7–14 days', bud: 'Low–Medium', ind: ['Beauty', 'Finance', 'Technology', 'Property', 'Other'], props: ['Liputan6', 'Merdeka', 'Fimela', 'Otosia'], sim: [4, 8], best: 'Membangun kredibilitas dan pemahaman kategori sebelum mendorong aksi.', assets: ['Key message', 'Brand facts', 'Spokesperson (opsional)', 'Visual assets'], meas: 'Article views, engaged time, scroll completion, dan klik keluar ke properti brand.', adNote: 'Konten milik KLY; distribusi organik dan on-site promo tidak bergantung pada ad server.', kind: 'strip',
-        exp: ['Audience menemukan artikel dari homepage atau search.', 'Membaca narasi brand dalam konteks editorial.', 'Melihat sponsored disclosure yang jelas.', 'Melanjutkan ke artikel seri atau properti brand.'],
-        cases: [{ tag: 'Finance', title: 'Literacy series', text: 'Seri empat artikel edukasi menjadi fondasi kampanye consideration.' }, { tag: 'Property', title: 'Neighborhood guide', text: 'Panduan kawasan hunian memperkenalkan proyek baru secara kontekstual.' }],
+      { id: 5, name: 'KLY Kuis Interaktif', type: 'Interaksi', obj: ['Interaksi', 'Insight Audience'], del: 'Halaman milik KLY', res: 'Tinggi', desc: 'Kuis brand untuk memahami preferensi audiens.', kpi: ['Partisipasi', 'Tingkat penyelesaian', 'Data preferensi'], lead: '7–10 hari', bud: 'Rendah–Menengah', ind: ['Kecantikan', 'Hiburan', 'FMCG', 'Lainnya'], props: ['KapanLagi', 'Fimela', 'Bola.net'], sim: [1, 3], best: 'Cocok untuk kampanye yang membutuhkan partisipasi.', assets: ['Tema kuis', 'Naskah brand', 'Pemetaan hasil', 'Hadiah atau ajakan'], meas: 'Jawaban dan tingkat penyelesaian dapat menjadi insight audiens.', adNote: 'Kuis tampil langsung di halaman KLY.', kind: 'interactive',
+        exp: ['Audiens menemukan kuis dari artikel atau media sosial.', 'Menjawab pertanyaan kampanye.', 'Menerima hasil yang dapat dibagikan.', 'Diarahkan ke konten atau produk.'],
+        cases: [{ tag: 'Hiburan', title: 'Kuis karakter penggemar', text: 'Kuis serial menghasilkan tipe karakter yang dapat dibagikan.' }, { tag: 'FMCG', title: 'Kuis profil rasa', text: 'Audiens menemukan varian rasa dan menerima promo digital.' }],
+        pv: { property: 'KapanLagi', sponsor: 'Nusa Snack', headline: 'Tipe camilan apa yang paling cocok dengan gaya harimu?', byline: 'Tim KapanLagi · 3 menit baca', intro: 'Jawab tiga pertanyaan singkat dan temukan varian yang paling cocok dengan ritme harianmu.', body: 'Bagikan hasilmu dan bandingkan dengan teman. Setiap tipe punya rekomendasi varian yang berbeda.', moduleTitle: 'Kuis Kepribadian Camilan' },
+        flow: { questions: [{ q: 'Kapan kamu paling sering ngemil?', opts: ['Pagi saat kerja', 'Sore setelah aktivitas', 'Malam sambil nonton'] }, { q: 'Rasa favoritmu?', opts: ['Gurih', 'Manis', 'Pedas'] }], result: { title: 'Kamu tipe Penikmat Malam', text: 'Camilan gurih dengan porsi kecil paling cocok untuk momen santai malammu.', items: [{ tag: '01', name: 'Nusa Snack Gurih', note: 'Rekomendasi utama' }, { tag: '02', name: 'Nusa Snack Mini', note: 'Porsi terkontrol' }], cta: 'Klaim promo varian ini' } } },
+      { id: 6, name: 'KLY Editorial Brand', type: 'Konten', obj: ['Awareness', 'Edukasi'], del: 'Konten editorial KLY', res: 'Tinggi', desc: "Cerita brand dalam lingkungan editorial KLY.", kpi: ['Artikel dilihat', 'Waktu interaksi', 'Konten selesai dibaca'], lead: '7–14 hari', bud: 'Rendah–Menengah', ind: ['Kecantikan', 'Keuangan', 'Teknologi', 'Properti', 'Lainnya'], props: ['Liputan6', 'Merdeka', 'Fimela', 'Otosia'], sim: [4, 8], best: 'Cocok untuk membangun kredibilitas sebelum mendorong aksi.', assets: ['Pesan utama', 'Fakta brand', 'Narasumber', 'Aset visual'], meas: 'Jumlah pembaca, waktu baca, dan klik dapat diukur.', adNote: 'Konten dan distribusi organik berada di properti KLY.', kind: 'strip',
+        exp: ['Audiens menemukan artikel di media KLY.', 'Membaca cerita brand dalam konteks editorial.', 'Melihat penanda sponsor yang jelas.', 'Melanjutkan ke artikel seri atau halaman brand.'],
+        cases: [{ tag: 'Keuangan', title: 'Seri literasi', text: 'Empat artikel edukasi membangun pertimbangan audiens.' }, { tag: 'Properti', title: 'Panduan kawasan', text: 'Panduan hunian memperkenalkan proyek secara kontekstual.' }],
         pv: { property: 'Liputan6', sponsor: 'Sentra Finance', headline: 'Mengelola gaji pertama: kerangka sederhana yang bisa langsung dipakai', byline: 'Tim Liputan6 Bisnis · 6 menit baca', intro: 'Alokasi yang jelas sejak bulan pertama membuat kebiasaan finansial lebih mudah dijaga.', body: 'Setelah pola alokasi berjalan tiga bulan, tinjau kembali porsi tabungan dan sesuaikan dengan target jangka menengah.', moduleTitle: 'Baca juga dalam seri ini' },
         strip: [{ name: 'Bagian 2: Menyiapkan dana darurat', note: 'Artikel seri' }, { name: 'Bagian 3: Memilih proteksi', note: 'Artikel seri' }, { name: 'Bagian 4: Mulai investasi', note: 'Artikel seri' }] },
-      { id: 7, name: 'KLY Creator Network', type: 'Creator Marketing', obj: ['Awareness', 'Consideration'], del: 'Social and creator channels', res: 'High', desc: 'Creator-led storytelling matched with KLY audience segments and media properties.', kpi: ['Video views', 'Engagement', 'Sentiment', 'Product interest'], lead: '14–30 days', bud: 'Medium–High', ind: ['Beauty', 'FMCG', 'Entertainment', 'Technology'], props: ['KLY Creator Network', 'Fimela', 'KapanLagi'], sim: [8, 10], best: 'Kampanye yang butuh kredibilitas personal dan demonstrasi produk.', assets: ['Product sample', 'Brief & talking points', 'Do & don\'t list', 'Approval timeline'], meas: 'Metrik platform per creator ditambah brand lift survey opsional. Sentiment dinilai manual pada komentar.', adNote: 'Konten berjalan di kanal creator, di luar ad server, sehingga tidak terpengaruh display blocker.', kind: 'strip',
-        exp: ['Audience melihat konten creator di kanal masing-masing.', 'Creator mendemonstrasikan penggunaan produk.', 'Audience berinteraksi melalui komentar dan share.', 'Tautan menuju artikel KLY atau commerce.'],
-        cases: [{ tag: 'Beauty', title: 'Review series', text: 'Tiga creator meninjau varian produk dengan sudut pandang berbeda.' }, { tag: 'FMCG', title: 'Cooking collab', text: 'Creator memasak resep bersponsor dan menautkan daftar bahan.' }],
-        pv: { property: 'KLY Creator Network', sponsor: 'Lumière', headline: 'Tiga creator, tiga tipe kulit, satu rangkaian produk', byline: 'Creator campaign · 3 konten', intro: 'Setiap creator menjalankan rutinitas empat minggu dan membagikan hasilnya secara terbuka.', body: 'Konten creator diamplifikasi ke audience KLY yang relevan dan ditautkan ke artikel review di Fimela.', moduleTitle: 'Konten dalam kampanye ini' },
-        strip: [{ name: 'Creator A · Beauty', note: '820K followers — sample' }, { name: 'Creator B · Lifestyle', note: '540K followers — sample' }, { name: 'Creator C · Review', note: '310K followers — sample' }] },
-      { id: 8, name: 'KLY Branded Video Series', type: 'Video', obj: ['Awareness', 'Education'], del: 'KLY and social channels', res: 'Medium–High', desc: 'Short-form or episodic branded video distributed across relevant KLY properties.', kpi: ['Video completion', 'Reach', 'Engagement'], lead: '21–30 days', bud: 'High', ind: ['Automotive', 'Technology', 'Finance', 'Entertainment'], props: ['Liputan6', 'Otosia', 'KapanLagi', 'YouTube KLY'], sim: [7, 6], best: 'Cerita brand yang butuh demonstrasi visual atau narasi bertahap.', assets: ['Brand brief', 'Talent approval', 'Product unit', 'Legal review'], meas: 'View-through rate per episode, completion, dan engagement lintas kanal distribusi.', adNote: 'Video player dapat terpengaruh blocker tertentu; distribusi social dan on-site tetap tersedia.', kind: 'media',
-        exp: ['Audience menemukan episode dari properti KLY atau social.', 'Menonton konten bermerek berdurasi 2–6 menit.', 'Melanjutkan ke episode berikutnya.', 'Diarahkan ke artikel atau microsite brand.'],
-        cases: [{ tag: 'Automotive', title: 'Test drive series', text: 'Empat episode menguji varian kendaraan pada rute berbeda.' }, { tag: 'Technology', title: 'Founder story', text: 'Seri dua episode memperkenalkan visi produk baru.' }],
-        pv: { property: 'Otosia', sponsor: 'Auriga Motor', headline: 'Episode 2: Menguji Auriga Terra di jalur pegunungan', byline: 'Otosia Video · 6 menit', intro: 'Rute menanjak menjadi ujian nyata untuk transmisi dan konsumsi bahan bakar.', body: 'Episode berikutnya menguji kenyamanan kabin pada perjalanan keluarga jarak jauh.', moduleTitle: 'Video series' },
+      { id: 7, name: 'KLY Jaringan Kreator', type: 'Kreator', obj: ['Awareness', 'Pertimbangan'], del: 'Kanal sosial dan kreator', res: 'Tinggi', desc: 'Cerita kreator yang sesuai dengan audiens KLY.', kpi: ['Video dilihat', 'Interaksi', 'Sentimen', 'Minat produk'], lead: '14–30 hari', bud: 'Menengah–Tinggi', ind: ['Kecantikan', 'FMCG', 'Hiburan', 'Teknologi'], props: ['KLY Jaringan Kreator', 'Fimela', 'KapanLagi'], sim: [8, 10], best: 'Cocok untuk demonstrasi produk yang membutuhkan kepercayaan.', assets: ['Contoh produk', 'Brief dan pesan utama', 'Panduan konten', 'Jadwal persetujuan'], meas: 'Tayangan, interaksi, dan sentimen dapat dilaporkan per kreator.', adNote: 'Konten berjalan di kanal kreator, bukan melalui iklan display.', kind: 'strip',
+        exp: ['Audiens melihat konten di kanal kreator.', 'Kreator memperagakan produk.', 'Audiens berinteraksi melalui komentar dan bagikan.', 'Tautan menuju artikel atau produk.'],
+        cases: [{ tag: 'Kecantikan', title: 'Seri ulasan', text: 'Tiga kreator mengulas varian produk dari sudut berbeda.' }, { tag: 'FMCG', title: 'Kolaborasi memasak', text: 'Kreator membuat resep bersponsor dan menautkan bahan.' }],
+        pv: { property: 'KLY Jaringan Kreator', sponsor: 'Lumière', headline: 'Tiga kreator, tiga tipe kulit, satu rangkaian produk', byline: 'Kampanye kreator · 3 konten', intro: 'Setiap kreator menjalankan rutinitas empat minggu dan membagikan hasilnya.', body: 'Konten diperluas ke audiens KLY dan ditautkan ke ulasan Fimela.', moduleTitle: 'Konten dalam kampanye ini' },
+        strip: [{ name: 'Kreator A · Kecantikan', note: '820 ribu pengikut — contoh' }, { name: 'Kreator B · Gaya Hidup', note: '540 ribu pengikut — contoh' }, { name: 'Kreator C · Ulasan', note: '310 ribu pengikut — contoh' }] },
+      { id: 8, name: 'KLY Seri Video Brand', type: 'Video', obj: ['Awareness', 'Edukasi'], del: 'Kanal KLY dan sosial', res: 'Menengah–Tinggi', desc: 'Video brand yang didistribusikan di properti KLY.', kpi: ['Video selesai ditonton', 'Jangkauan', 'Interaksi'], lead: '21–30 hari', bud: 'Tinggi', ind: ['Otomotif', 'Teknologi', 'Keuangan', 'Hiburan'], props: ['Liputan6', 'Otosia', 'KapanLagi', 'YouTube KLY'], sim: [7, 6], best: 'Cocok untuk demonstrasi visual atau cerita bertahap.', assets: ['Brief brand', 'Persetujuan talent', 'Produk', 'Tinjauan legal'], meas: 'Tayangan, penyelesaian video, dan interaksi dapat diukur.', adNote: 'Pemutar video dapat terpengaruh blocker, tetapi distribusi sosial tetap tersedia.', kind: 'media',
+        exp: ['Audiens menemukan episode di media KLY atau sosial.', 'Menonton video brand berdurasi 2–6 menit.', 'Melanjutkan ke episode berikutnya.', 'Diarahkan ke artikel atau halaman brand.'],
+        cases: [{ tag: 'Otomotif', title: 'Seri uji kendaraan', text: 'Empat episode menguji kendaraan pada rute berbeda.' }, { tag: 'Teknologi', title: 'Cerita pendiri', text: 'Dua episode memperkenalkan visi produk baru.' }],
+        pv: { property: 'Otosia', sponsor: 'Auriga Motor', headline: 'Episode 2: Menguji Auriga Terra di jalur pegunungan', byline: 'Video Otosia · 6 menit', intro: 'Rute menanjak menjadi ujian nyata untuk transmisi dan konsumsi bahan bakar.', body: 'Episode berikutnya menguji kenyamanan kabin pada perjalanan keluarga jarak jauh.', moduleTitle: 'Seri Video' },
         strip: [] },
-      { id: 9, name: 'KLY Live & Event', type: 'Experience', obj: ['Community', 'Leads'], del: 'Event and owned platform', res: 'High', desc: 'Online or offline activations combining content, speakers, creators, and audience participation.', kpi: ['Registration', 'Attendance', 'Participation', 'Leads'], lead: '30+ days', bud: 'High', ind: ['Finance', 'Property', 'Technology', 'Entertainment'], props: ['Liputan6', 'Merdeka', 'KLY Events'], sim: [2, 7], best: 'Kampanye yang butuh interaksi langsung dan pengumpulan lead berkualitas.', assets: ['Tema & agenda', 'Speaker brand', 'Booth/asset produksi', 'Lead handling flow'], meas: 'Funnel registrasi hingga kehadiran, ditambah kualifikasi lead pasca-acara.', adNote: 'Registrasi berjalan di platform milik KLY, tidak melalui ad server.', kind: 'strip',
-        exp: ['Audience melihat pengumuman acara di properti KLY.', 'Mendaftar melalui form first-party.', 'Mengikuti sesi live atau offline.', 'Menerima follow-up dan penawaran brand.'],
-        cases: [{ tag: 'Finance', title: 'Financial planning day', text: 'Sesi live dengan advisor menghasilkan lead terkualifikasi.' }, { tag: 'Property', title: 'Property expo talk', text: 'Talkshow kawasan hunian menggabungkan konten dan konsultasi langsung.' }],
-        pv: { property: 'Merdeka', sponsor: 'Sentra Finance', headline: 'Financial Planning Day 2026: sesi gratis bersama advisor', byline: 'KLY Events · Registrasi dibuka', intro: 'Empat sesi dalam satu hari, membahas dana darurat hingga proteksi keluarga.', body: 'Peserta terdaftar menerima ringkasan sesi dan opsi konsultasi lanjutan tanpa biaya.', moduleTitle: 'Pilih sesi yang ingin diikuti' },
+      { id: 9, name: 'KLY Acara Langsung', type: 'Pengalaman', obj: ['Komunitas', 'Lead'], del: 'Acara dan platform KLY', res: 'Tinggi', desc: 'Aktivasi daring atau luring bersama audiens.', kpi: ['Pendaftaran', 'Kehadiran', 'Partisipasi', 'Lead'], lead: '30+ hari', bud: 'Tinggi', ind: ['Keuangan', 'Properti', 'Teknologi', 'Hiburan'], props: ['Liputan6', 'Merdeka', 'KLY Events'], sim: [2, 7], best: 'Cocok untuk interaksi langsung dan pengumpulan lead.', assets: ['Tema dan agenda', 'Pembicara', 'Aset produksi', 'Alur lead'], meas: 'Pendaftaran, kehadiran, dan kualitas lead dapat diukur.', adNote: 'Pendaftaran berjalan di platform KLY.', kind: 'strip',
+        exp: ['Audiens melihat pengumuman acara.', 'Mendaftar melalui formulir KLY.', 'Mengikuti sesi daring atau luring.', 'Menerima tindak lanjut brand.'],
+        cases: [{ tag: 'Keuangan', title: 'Hari perencanaan keuangan', text: 'Sesi langsung dengan penasihat menghasilkan lead berkualitas.' }, { tag: 'Properti', title: 'Bincang pameran properti', text: 'Bincang hunian menggabungkan konten dan konsultasi.' }],
+        pv: { property: 'Merdeka', sponsor: 'Sentra Finance', headline: 'Hari Perencanaan Keuangan 2026: sesi gratis bersama penasihat', byline: 'Acara KLY · Pendaftaran dibuka', intro: 'Empat sesi dalam satu hari, membahas dana darurat hingga proteksi keluarga.', body: 'Peserta menerima ringkasan sesi dan opsi konsultasi tanpa biaya.', moduleTitle: 'Pilih sesi yang ingin diikuti' },
         strip: [{ name: 'Sesi 1 · Dana darurat', note: '10.00 WIB' }, { name: 'Sesi 2 · Proteksi', note: '13.00 WIB' }, { name: 'Sesi 3 · Investasi', note: '15.00 WIB' }] },
-      { id: 10, name: 'KLY Social Amplification', type: 'Social Distribution', obj: ['Reach', 'Engagement'], del: 'Social platforms', res: 'High', desc: "Campaign distribution through KLY's segmented social audiences.", kpi: ['Reach', 'Engagement', 'Video views', 'Clicks'], lead: '5–10 days', bud: 'Low–Medium', ind: ['Beauty', 'FMCG', 'Entertainment', 'Other'], props: ['Instagram KLY', 'TikTok KLY', 'X KLY'], sim: [7, 11], best: 'Menambah jangkauan kampanye yang sudah punya aset konten.', assets: ['Aset visual social', 'Caption copy', 'Hashtag & mention', 'Destination link'], meas: 'Metrik native platform per kanal, dikonsolidasikan dalam satu laporan kampanye.', adNote: 'Distribusi berjalan di platform social, di luar jangkauan display blocker on-site.', kind: 'strip',
-        exp: ['Audience melihat konten di feed kanal KLY.', 'Berinteraksi melalui like, komentar, dan share.', 'Klik menuju artikel atau properti brand.'],
-        cases: [{ tag: 'Entertainment', title: 'Teaser rollout', text: 'Tiga fase teaser meningkatkan awareness sebelum peluncuran.' }, { tag: 'FMCG', title: 'Promo push', text: 'Amplifikasi promo mingguan ke audience segmentasi kuliner.' }],
-        pv: { property: 'Instagram KLY', sponsor: 'Nusa Snack', headline: 'Konten kampanye di kanal social KLY', byline: 'Social distribution · 3 kanal', intro: 'Konten yang sama diadaptasi untuk feed, reels, dan story sesuai karakter audience tiap kanal.', body: 'Amplifikasi dijalankan bertahap selama dua minggu dengan pengukuran mingguan.', moduleTitle: 'Kanal distribusi' },
-        strip: [{ name: 'Feed post', note: 'Instagram KLY' }, { name: 'Reels', note: 'TikTok KLY' }, { name: 'Story series', note: 'Instagram KLY' }] },
-      { id: 11, name: 'KLY Premium Native', type: 'Native Media', obj: ['Awareness', 'Traffic'], del: 'Ad server/native placement', res: 'Medium', desc: 'Native promotion integrated with relevant KLY content environments.', kpi: ['Viewability', 'CTR', 'Landing-page visits'], lead: '5–7 days', bud: 'Low–Medium', ind: ['Technology', 'Finance', 'Automotive', 'Other'], props: ['Liputan6', 'Merdeka', 'Bola.net'], sim: [12, 6], best: 'Menambah traffic ke konten atau landing page brand dengan biaya efisien.', assets: ['Headline copy', 'Thumbnail', 'Landing page URL', 'Tracking tag'], meas: 'Viewability dan CTR dari ad server, divalidasi dengan analytics landing page.', adNote: 'Dikirim melalui ad server sehingga sebagian impresi dapat terblokir. Pertimbangkan kombinasi dengan first-party experience.', kind: 'media',
-        exp: ['Audience melihat unit native di dalam alur konten.', 'Judul dan thumbnail menyerupai konteks editorial.', 'Klik menuju landing page brand.'],
-        cases: [{ tag: 'Technology', title: 'Product launch traffic', text: 'Native unit mengarahkan traffic ke microsite peluncuran.' }, { tag: 'Finance', title: 'Promo distribution', text: 'Native promo mendorong kunjungan ke halaman penawaran.' }],
-        pv: { property: 'Liputan6', sponsor: 'Sentra Finance', headline: 'Cara memilih asuransi kesehatan keluarga tanpa bingung', byline: 'Tim Liputan6 · 5 menit baca', intro: 'Perbandingan manfaat sering lebih penting daripada perbedaan premi bulanan.', body: 'Unit native di bawah artikel mengarahkan pembaca ke halaman penawaran brand.', moduleTitle: 'Native placement' },
+      { id: 10, name: 'KLY Amplifikasi Sosial', type: 'Distribusi Sosial', obj: ['Jangkauan', 'Interaksi'], del: 'Platform sosial', res: 'Tinggi', desc: "Distribusi kampanye melalui kanal sosial KLY.", kpi: ['Jangkauan', 'Interaksi', 'Video dilihat', 'Klik'], lead: '5–10 hari', bud: 'Rendah–Menengah', ind: ['Kecantikan', 'FMCG', 'Hiburan', 'Lainnya'], props: ['Instagram KLY', 'TikTok KLY', 'X KLY'], sim: [7, 11], best: 'Cocok untuk memperluas jangkauan aset konten.', assets: ['Aset visual', 'Teks unggahan', 'Tagar dan mention', 'Tautan tujuan'], meas: 'Metrik tiap kanal dirangkum dalam satu laporan.', adNote: 'Distribusi berjalan di platform sosial, bukan iklan display KLY.', kind: 'strip',
+        exp: ['Audiens melihat konten di kanal KLY.', 'Berinteraksi melalui suka, komentar, dan bagikan.', 'Klik menuju artikel atau halaman brand.'],
+        cases: [{ tag: 'Hiburan', title: 'Rangkaian teaser', text: 'Tiga fase teaser membangun jangkauan sebelum peluncuran.' }, { tag: 'FMCG', title: 'Dorongan promo', text: 'Promo mingguan menjangkau audiens kuliner.' }],
+        pv: { property: 'Instagram KLY', sponsor: 'Nusa Snack', headline: 'Konten kampanye di kanal sosial KLY', byline: 'Distribusi sosial · 3 kanal', intro: 'Konten disesuaikan untuk feed, reels, dan story tiap kanal.', body: 'Amplifikasi berjalan dua minggu dengan pengukuran mingguan.', moduleTitle: 'Kanal distribusi' },
+        strip: [{ name: 'Unggahan feed', note: 'Instagram KLY' }, { name: 'Reels', note: 'TikTok KLY' }, { name: 'Seri story', note: 'Instagram KLY' }] },
+      { id: 11, name: 'KLY Native Premium', type: 'Media Native', obj: ['Awareness', 'Kunjungan'], del: 'Server iklan dan native', res: 'Menengah', desc: 'Promosi native di dalam konten KLY yang relevan.', kpi: ['Keterlihatan', 'CTR', 'Kunjungan halaman'], lead: '5–7 hari', bud: 'Rendah–Menengah', ind: ['Teknologi', 'Keuangan', 'Otomotif', 'Lainnya'], props: ['Liputan6', 'Merdeka', 'Bola.net'], sim: [12, 6], best: 'Cocok untuk menambah kunjungan secara efisien.', assets: ['Judul', 'Gambar mini', 'Tautan halaman', 'Tag pelacakan'], meas: 'Keterlihatan, CTR, dan kunjungan halaman dapat diukur.', adNote: 'Sebagian impresi dapat terblokir karena memakai server iklan.', kind: 'media',
+        exp: ['Audiens melihat unit native di dalam konten.', 'Judul dan gambar menyatu dengan konteks editorial.', 'Klik menuju halaman brand.'],
+        cases: [{ tag: 'Teknologi', title: 'Kunjungan peluncuran produk', text: 'Unit native mengarahkan audiens ke halaman peluncuran.' }, { tag: 'Keuangan', title: 'Distribusi promo', text: 'Promo native mendorong kunjungan ke halaman penawaran.' }],
+        pv: { property: 'Liputan6', sponsor: 'Sentra Finance', headline: 'Cara memilih asuransi kesehatan keluarga tanpa bingung', byline: 'Tim Liputan6 · 5 menit baca', intro: 'Perbandingan manfaat sering lebih penting daripada perbedaan premi bulanan.', body: 'Unit native di bawah artikel mengarahkan pembaca ke halaman penawaran brand.', moduleTitle: 'Penempatan Native' },
         strip: [] },
-      { id: 12, name: 'KLY Premium Display', type: 'Display Media', obj: ['Reach'], del: 'Ad server', res: 'Lower', desc: 'Premium display inventory across selected KLY properties.', kpi: ['Impressions', 'Viewability', 'Reach', 'CTR'], lead: '3–7 days', bud: 'Flexible', ind: ['Automotive', 'FMCG', 'Finance', 'Other'], props: ['Liputan6', 'Merdeka', 'Bola.net', 'KapanLagi'], sim: [11, 10], best: 'Menambah jangkauan cepat dengan biaya per impresi yang efisien.', assets: ['Banner creative set', 'Click URL', 'Tracking tag', 'Flight schedule'], meas: 'Impresi, viewability, dan CTR dari ad server, dengan opsi third-party verification.', adNote: 'Paling rentan terhadap ad blocker. Gunakan sebagai pelengkap, bukan tulang punggung kampanye.', kind: 'media',
-        exp: ['Audience membuka halaman properti KLY.', 'Banner tampil pada slot premium.', 'Klik menuju landing page brand.'],
-        cases: [{ tag: 'FMCG', title: 'Seasonal reach', text: 'Kampanye musiman memakai display untuk menambah jangkauan cepat.' }, { tag: 'Automotive', title: 'Launch takeover', text: 'Homepage takeover pada hari peluncuran menambah eksposur.' }],
-        pv: { property: 'Bola.net', sponsor: 'Auriga Motor', headline: 'Hasil pertandingan tadi malam dan klasemen terbaru', byline: 'Tim Bola.net · 2 menit baca', intro: 'Ringkasan pertandingan dan pergerakan klasemen setelah pekan ke-24.', body: 'Slot display premium tampil di atas dan di dalam artikel dengan frekuensi terkontrol.', moduleTitle: 'Display placement' },
+      { id: 12, name: 'KLY Display Premium', type: 'Media Display', obj: ['Jangkauan'], del: 'Server iklan', res: 'Rendah', desc: 'Iklan display premium di properti KLY terpilih.', kpi: ['Impresi', 'Keterlihatan', 'Jangkauan', 'CTR'], lead: '3–7 hari', bud: 'Fleksibel', ind: ['Otomotif', 'FMCG', 'Keuangan', 'Lainnya'], props: ['Liputan6', 'Merdeka', 'Bola.net', 'KapanLagi'], sim: [11, 10], best: 'Cocok untuk menambah jangkauan dengan cepat.', assets: ['Aset banner', 'Tautan klik', 'Tag pelacakan', 'Jadwal tayang'], meas: 'Impresi, keterlihatan, dan CTR dapat diukur.', adNote: 'Paling rentan terhadap ad blocker; gunakan sebagai pelengkap.', kind: 'media',
+        exp: ['Audiens membuka halaman media KLY.', 'Banner tampil pada posisi premium.', 'Klik menuju halaman brand.'],
+        cases: [{ tag: 'FMCG', title: 'Jangkauan musiman', text: 'Iklan display menambah jangkauan kampanye musiman.' }, { tag: 'Otomotif', title: 'Dominasi halaman peluncuran', text: 'Penguasaan halaman utama menambah eksposur saat peluncuran.' }],
+        pv: { property: 'Bola.net', sponsor: 'Auriga Motor', headline: 'Hasil pertandingan tadi malam dan klasemen terbaru', byline: 'Tim Bola.net · 2 menit baca', intro: 'Ringkasan pertandingan dan pergerakan klasemen setelah pekan ke-24.', body: 'Slot display premium tampil di atas dan di dalam artikel dengan frekuensi terkontrol.', moduleTitle: 'Penempatan Display' },
         strip: [] }
     ],
     scenarios: [
-      { tag: 'Kecantikan', title: 'Peluncuran Produk Kecantikan', challenge: 'Membantu perempuan muda memahami varian produk yang sesuai kebutuhannya.', solution: ['Seri editorial Fimela', 'Kuis diagnostik kulit', 'Review kreator', 'Rekomendasi produk', 'Amplifikasi sosial'], journey: ['Temukan artikel', 'Isi kuis', 'Terima rekomendasi', 'Jelajahi produk', 'Kunjungi commerce'], metrics: ['Penyelesaian kuis', 'Klik rekomendasi', 'Minat produk', 'Klik commerce'] },
-      { tag: 'Otomotif', title: 'Pertimbangan Produk Otomotif', challenge: 'Membantu pembeli pertama memilih kendaraan berdasarkan kebutuhan dan anggaran.', solution: ['Car matcher Otosia', 'Kalkulator biaya kepemilikan', 'Konten ahli', 'Form lead dealer'], journey: ['Baca ulasan', 'Gunakan matcher', 'Hitung biaya', 'Kirim lead'], metrics: ['Penyelesaian matcher', 'Interaksi kalkulator', 'Lead berkualitas'] },
-      { tag: 'FMCG', title: 'Inspirasi Resep yang Terukur', challenge: 'Mengubah inspirasi resep menjadi pertimbangan produk yang dapat diukur.', solution: ['Resep bersponsor', 'Meal planner', 'Daftar belanja otomatis', 'Tautan produk', 'Video kreator'], journey: ['Lihat resep', 'Simpan rencana', 'Buat daftar belanja', 'Klik produk'], metrics: ['Resep tersimpan', 'Daftar belanja', 'Klik produk', 'Kunjungan ulang'] },
+      { tag: 'Kecantikan', title: 'Peluncuran Produk Kecantikan', challenge: 'Membantu perempuan muda memahami varian produk yang sesuai.', solution: ['Seri editorial Fimela', 'Kuis kulit', 'Ulasan kreator', 'Rekomendasi produk', 'Amplifikasi sosial'], journey: ['Temukan artikel', 'Isi kuis', 'Terima rekomendasi', 'Jelajahi produk', 'Kunjungi toko'], metrics: ['Kuis selesai', 'Klik rekomendasi', 'Minat produk', 'Klik produk'] },
+      { tag: 'Otomotif', title: 'Pertimbangan Produk Otomotif', challenge: 'Membantu pembeli memilih kendaraan sesuai kebutuhan dan anggaran.', solution: ['Pemilih mobil Otosia', 'Kalkulator biaya', 'Konten ahli', 'Formulir dealer'], journey: ['Baca ulasan', 'Pilih kendaraan', 'Hitung biaya', 'Kirim data'], metrics: ['Pilihan selesai', 'Interaksi kalkulator', 'Lead berkualitas'] },
+      { tag: 'FMCG', title: 'Inspirasi Resep yang Terukur', challenge: 'Mengubah inspirasi resep menjadi minat produk yang terukur.', solution: ['Resep bersponsor', 'Perencana menu', 'Daftar belanja', 'Tautan produk', 'Video kreator'], journey: ['Lihat resep', 'Simpan rencana', 'Buat daftar belanja', 'Klik produk'], metrics: ['Resep tersimpan', 'Daftar belanja', 'Klik produk', 'Kunjungan ulang'] },
       { tag: 'Finansial', title: 'Edukasi Finansial', challenge: 'Mengedukasi keluarga muda sekaligus mengenali minat terhadap produk finansial.', solution: ['Kalkulator kesehatan finansial', 'Seri artikel edukasi', 'Hasil personal', 'Form konsultasi'], journey: ['Baca artikel', 'Gunakan kalkulator', 'Lihat hasil', 'Minta konsultasi'], metrics: ['Penyelesaian kalkulator', 'Interaksi hasil', 'Lead berkualitas'] }
     ],
     caseStudies: [
-      { category: 'Perawatan kulit', title: 'High-impact display untuk awareness', challenge: 'Membangun awareness produk perawatan tubuh pada audience yang relevan.', solution: 'Kombinasi desktop masthead, mobile masthead, dan mobile puller pada ekosistem KLY.', products: ['Desktop Masthead', 'Mobile Masthead', 'Mobile Puller'], metrics: ['5 juta+ delivered impressions', 'CTR 0,86%', '295% CTR uplift'] },
-      { category: 'Healthcare', title: 'Campaign healthcare melampaui benchmark', challenge: 'Menjangkau audience kesehatan dengan placement yang relevan dan terukur.', solution: 'Distribusi campaign digital melalui inventori media dalam ekosistem Emtek Digital/KLY.', products: ['Premium Display', 'Audience Targeting', 'Campaign Optimization'], metrics: ['6,1 juta impressions', '141% CTR uplift', 'Data dari publikasi Liputan6'] },
-      { category: 'Internet provider', title: 'Programmatic untuk audience berkualitas', challenge: 'Memperluas jangkauan sekaligus mempertahankan respons audience.', solution: 'Kombinasi Bottom Frame, Exposer, Headline, dan Showcase.', products: ['Bottom Frame', 'Exposer', 'Headline & Showcase'], metrics: ['697 ribu impressions', '340 ribu+ audience reach', '200% CTR uplift'] }
+      { category: 'Perawatan kulit', title: 'Display premium untuk membangun jangkauan', challenge: 'Menjangkau audiens perawatan tubuh yang relevan.', solution: 'Kombinasi masthead desktop dan ponsel di ekosistem KLY.', products: ['Masthead Desktop', 'Masthead Ponsel', 'Puller Ponsel'], metrics: ['5 juta+ impresi', 'CTR 0,86%', 'Kenaikan CTR 295%'] },
+      { category: 'Kesehatan', title: 'Kampanye kesehatan melampaui tolok ukur', challenge: 'Menjangkau audiens kesehatan secara relevan dan terukur.', solution: 'Distribusi digital melalui inventori Emtek Digital dan KLY.', products: ['Display Premium', 'Targeting Audiens', 'Optimasi Kampanye'], metrics: ['6,1 juta impresi', 'Kenaikan CTR 141%', 'Data publikasi Liputan6'] },
+      { category: 'Penyedia internet', title: 'Programatik untuk audiens berkualitas', challenge: 'Memperluas jangkauan dan menjaga respons audiens.', solution: 'Kombinasi Bottom Frame, Exposer, Headline, dan Showcase.', products: ['Bottom Frame', 'Exposer', 'Headline dan Showcase'], metrics: ['697 ribu impresi', '340 ribu+ audiens terjangkau', 'Kenaikan CTR 200%'] }
     ],
     steps: [
-      { n: '01', title: 'Sampaikan tujuan', text: 'Masukkan kebutuhan, audience, budget, dan timeline.' },
-      { n: '02', title: 'Dapatkan pilihan awal', text: 'Sistem mencocokkan brief dengan audience, konteks konten, dan produk KLY.' },
-      { n: '03', title: 'Lihat dan bandingkan', text: 'Lihat experience, bandingkan solusi, dan pilih kombinasi campaign.' },
-      { n: '04', title: 'Validasi bersama KLY', text: 'Kirim brief kepada Sales dan Production untuk proposal final.' }
+      { n: '01', title: 'Sampaikan tujuan', text: 'Masukkan kebutuhan, audiens, anggaran, dan jadwal.' },
+      { n: '02', title: 'Dapatkan pilihan awal', text: 'Sistem mencocokkan kebutuhan dengan solusi KLY.' },
+      { n: '03', title: 'Lihat dan bandingkan', text: 'Bandingkan solusi dan pilih kombinasi kampanye.' },
+      { n: '04', title: 'Validasi bersama KLY', text: 'Kirim kebutuhan untuk proposal akhir.' }
     ],
     capabilities: [
-      { name: 'Audience', text: 'Jangkauan tersegmentasi di berbagai media KLY.' },
+      { name: 'Audiens', text: 'Jangkauan tersegmentasi di berbagai media KLY.' },
       { name: 'Konten', text: 'Editorial dan storytelling dalam konteks tepercaya.' },
       { name: 'Kreator', text: 'Suara dan komunitas yang relevan.' },
-      { name: 'Data', text: 'Sinyal kontekstual dan first-party audience.' },
-      { name: 'Pengalaman', text: 'Solusi interaktif, commerce, sosial, dan event.' }
+      { name: 'Data', text: 'Sinyal kontekstual dan data audiens milik KLY.' },
+      { name: 'Pengalaman', text: 'Solusi interaktif, penjualan, sosial, dan acara.' }
     ],
     footer: [
-      { title: 'SOLUTIONS', links: ['Interactive Utility', 'Content Commerce', 'Creator Marketing', 'Native & Display'] },
-      { title: 'KLY PROPERTIES', links: ['Liputan6', 'Merdeka', 'Fimela', 'Otosia', 'KapanLagi', 'Bola.net'] },
-      { title: 'RESOURCES', links: ['Campaign playbook', 'Measurement guide', 'Brand safety', 'Spec library'] },
-      { title: 'CONTACT', links: ['sales@kly.example', 'Jakarta · Indonesia', '+62 21 000 0000'] }
+      { title: 'SOLUSI', links: ['Solusi Interaktif', 'Konten Penjualan', 'Kreator', 'Native & Display'] },
+      { title: 'MEDIA KLY', links: ['Liputan6', 'Merdeka', 'Fimela', 'Otosia', 'KapanLagi', 'Bola.net'] },
+      { title: 'PANDUAN', links: ['Panduan kampanye', 'Panduan pengukuran', 'Keamanan brand', 'Spesifikasi'] },
+      { title: 'KONTAK', links: ['sales@kly.example', 'Jakarta · Indonesia', '+62 21 000 0000'] }
     ],
-    industries: ['Beauty', 'Automotive', 'FMCG', 'Finance', 'Technology', 'Entertainment', 'Property', 'Other'],
-    objectives: ['Product Launch', 'Awareness & Brand Storytelling', 'Consideration & Education', 'Lead Generation', 'Commerce & Conversion', 'Community & Engagement'],
-    budgets: ['Under Rp100 million', 'Rp100–300 million', 'Rp300–750 million', 'Above Rp750 million'],
-    durations: ['2 weeks', '4 weeks', '6 weeks', '3 months', '6 months'],
-    actions: ['Explore product options', 'Read and understand', 'Register or submit data', 'Buy or click to commerce', 'Join a community activity'],
-    anchorInteractive: { Beauty: 'Beauty Product Finder', Automotive: 'Otosia Car Matcher', FMCG: 'Recipe & Meal Planner', Finance: 'Financial Health Calculator', Technology: 'Comparison Experience', Entertainment: 'Fandom Quiz Experience', Property: 'Ownership Cost Calculator', Other: 'Interactive Product Finder' }
+    industries: ['Kecantikan', 'Otomotif', 'FMCG', 'Keuangan', 'Teknologi', 'Hiburan', 'Properti', 'Lainnya'],
+    objectives: ['Peluncuran Produk', 'Jangkauan & Cerita Brand', 'Pertimbangan & Edukasi', 'Pengumpulan Lead', 'Penjualan & Konversi', 'Komunitas & Interaksi'],
+    budgets: ['Di bawah Rp100 juta', 'Rp100–300 juta', 'Rp300–750 juta', 'Di atas Rp750 juta'],
+    durations: ['2 minggu', '4 minggu', '6 minggu', '3 bulan', '6 bulan'],
+    actions: ['Melihat pilihan produk', 'Membaca dan memahami', 'Mendaftar atau mengisi data', 'Membeli produk', 'Mengikuti aktivitas'],
+    anchorInteractive: { Kecantikan: 'Pemilih Produk Kecantikan', Otomotif: 'Otosia Car Matcher', FMCG: 'Perencana Menu', Keuangan: 'Kalkulator Finansial', Teknologi: 'Perbandingan Produk', Hiburan: 'Kuis Penggemar', Properti: 'Kalkulator Kepemilikan', Lainnya: 'Pemilih Produk Interaktif' }
   };
 
   componentWillUnmount() { this.timers.forEach(clearTimeout); }
@@ -1198,14 +1175,14 @@ class Component extends DCLogic {
   jump = (id) => (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ menu: false }); this.scrollTo(id); };
 
   resBadge(res) {
-    if (res === 'High') return { bg: '#E9F5ED', fg: '#1A7A3B', label: 'Ad-block: High' };
-    if (res === 'Medium–High') return { bg: '#E9F5ED', fg: '#1A7A3B', label: 'Ad-block: Med–High' };
-    if (res === 'Medium') return { bg: '#FEF4E2', fg: '#B87800', label: 'Ad-block: Medium' };
-    return { bg: '#FDF1F0', fg: '#C0362E', label: 'Ad-block: Lower' };
+    if (res === 'Tinggi') return { bg: '#E9F5ED', fg: '#1A7A3B', label: 'Ad blocker: Tinggi' };
+    if (res === 'Menengah–Tinggi') return { bg: '#E9F5ED', fg: '#1A7A3B', label: 'Ad blocker: Cukup tinggi' };
+    if (res === 'Menengah') return { bg: '#FEF4E2', fg: '#B87800', label: 'Ad blocker: Menengah' };
+    return { bg: '#FDF1F0', fg: '#C0362E', label: 'Ad blocker: Rendah' };
   }
   typeBadge(t) {
-    const first = ['Interactive Utility', 'Decision Tool', 'Engagement'].indexOf(t) >= 0;
-    const media = ['Native Media', 'Display Media'].indexOf(t) >= 0;
+    const first = ['Solusi Interaktif', 'Alat Bantu Keputusan', 'Interaksi'].indexOf(t) >= 0;
+    const media = ['Media Native', 'Media Display'].indexOf(t) >= 0;
     if (first) return { bg: '#EDF3FD', fg: '#1257B8' };
     if (media) return { bg: '#F4F7FB', fg: '#5A6478' };
     return { bg: '#F0F6F2', fg: '#1A7A3B' };
@@ -1218,21 +1195,21 @@ class Component extends DCLogic {
       const hay = (p.name + ' ' + p.desc + ' ' + p.type + ' ' + p.obj.join(' ') + ' ' + p.ind.join(' ') + ' ' + p.props.join(' ')).toLowerCase();
       if (hay.indexOf(q) < 0) return false;
     }
-    if (f.objective !== 'All' && p.obj.indexOf(f.objective) < 0) return false;
-    if (f.industry !== 'All' && p.ind.indexOf(f.industry) < 0) return false;
-    if (f.property !== 'All' && p.props.indexOf(f.property) < 0) return false;
-    if (f.type !== 'All' && p.type !== f.type) return false;
-    if (f.budget !== 'All' && p.bud !== f.budget) return false;
-    if (f.setup !== 'All' && p.lead !== f.setup) return false;
-    if (f.delivery !== 'All' && p.del !== f.delivery) return false;
-    if (f.adblock !== 'All') {
+    if (f.objective !== 'Semua' && p.obj.indexOf(f.objective) < 0) return false;
+    if (f.industry !== 'Semua' && p.ind.indexOf(f.industry) < 0) return false;
+    if (f.property !== 'Semua' && p.props.indexOf(f.property) < 0) return false;
+    if (f.type !== 'Semua' && p.type !== f.type) return false;
+    if (f.budget !== 'Semua' && p.bud !== f.budget) return false;
+    if (f.setup !== 'Semua' && p.lead !== f.setup) return false;
+    if (f.delivery !== 'Semua' && p.del !== f.delivery) return false;
+    if (f.adblock !== 'Semua') {
       const d = p.del;
-      const firstParty = d.indexOf('First-party') === 0;
-      const off = d.indexOf('Social') === 0 || d.indexOf('Event') === 0 || d.indexOf('KLY and social') === 0;
-      const std = d.indexOf('Ad server') === 0;
-      if (f.adblock === 'First-party experience' && !firstParty) return false;
-      if (f.adblock === 'Off-platform' && !off) return false;
-      if (f.adblock === 'Standard ad delivery' && !std) return false;
+      const firstParty = d.indexOf('Halaman milik KLY') === 0 || d.indexOf('Konten editorial') === 0;
+      const off = d.indexOf('Kanal sosial') === 0 || d.indexOf('Acara') === 0 || d.indexOf('Kanal KLY') === 0 || d.indexOf('Platform sosial') === 0;
+      const std = d.indexOf('Server iklan') === 0;
+      if (f.adblock === 'Pengalaman milik KLY' && !firstParty) return false;
+      if (f.adblock === 'Di luar platform' && !off) return false;
+      if (f.adblock === 'Iklan standar' && !std) return false;
     }
     return true;
   }
@@ -1249,7 +1226,7 @@ class Component extends DCLogic {
       return { compare: s.compare.concat([id]) };
     });
   };
-  openProduct = (id, tab) => () => this.setState({ drawer: id, tab: tab || 'Overview', pv: { step: 0, done: false, clicked: false, picked: null }, adblock: false });
+  openProduct = (id, tab) => () => this.setState({ drawer: id, tab: tab || 'Ringkasan', pv: { step: 0, done: false, clicked: false, picked: null }, adblock: false });
 
   generate = () => {
     this.timers.forEach(clearTimeout); this.timers = [];
@@ -1260,37 +1237,37 @@ class Component extends DCLogic {
 
   buildPackages() {
     const b = this.state.brief;
-    const anchor = this.DATA.anchorInteractive[b.industry] || 'Interactive Product Finder';
+    const anchor = this.DATA.anchorInteractive[b.industry] || 'Pemilih Produk Interaktif';
     const rank = this.budgetRank(b.budget) || 2;
     const objMap = {
-      'Product Launch': { obj: 'Qualified product interest', kpi: 'Product exploration + click-to-commerce' },
-      'Awareness & Brand Storytelling': { obj: 'Reach & message recall', kpi: 'Reach, video completion, engaged time' },
-      'Consideration & Education': { obj: 'Consideration & understanding', kpi: 'Tool completion, return visits' },
-      'Lead Generation': { obj: 'Qualified leads', kpi: 'Form completion, cost per lead' },
-      'Commerce & Conversion': { obj: 'Commerce action', kpi: 'Product clicks, add-to-cart intent' },
-      'Community & Engagement': { obj: 'Participation', kpi: 'Participation, repeat visits' }
+      'Peluncuran Produk': { obj: 'Minat produk', kpi: 'Eksplorasi dan klik produk' },
+      'Jangkauan & Cerita Brand': { obj: 'Jangkauan', kpi: 'Jangkauan dan interaksi konten' },
+      'Pertimbangan & Edukasi': { obj: 'Pemahaman produk', kpi: 'Alat selesai digunakan dan kunjungan ulang' },
+      'Pengumpulan Lead': { obj: 'Lead berkualitas', kpi: 'Formulir selesai dan biaya per lead' },
+      'Penjualan & Konversi': { obj: 'Aksi pembelian', kpi: 'Klik dan minat belanja' },
+      'Komunitas & Interaksi': { obj: 'Partisipasi', kpi: 'Partisipasi dan kunjungan ulang' }
     };
-    const om = objMap[b.objective] || objMap['Product Launch'];
+    const om = objMap[b.objective] || objMap['Peluncuran Produk'];
     const fit = (tier) => {
-      if (tier === rank) return { fit: 'Sesuai budget', color: '#209447' };
+      if (tier === rank) return { fit: 'Sesuai anggaran', color: '#209447' };
       if (tier < rank) return { fit: 'Di bawah alokasi', color: '#1769E0' };
-      return { fit: 'Di atas budget', color: '#F5A000' };
+      return { fit: 'Di atas anggaran', color: '#F5A000' };
     };
     const ind = b.industry;
     const base = [
-      { name: 'Essential Package', tier: 1, items: ['Branded Editorial', 'Contextual Native', 'Social Amplification'], setup: '10–14 days', why: 'Paket dasar untuk membangun pemahaman kategori ' + ind.toLowerCase() + ' dengan biaya paling efisien.' },
-      { name: 'Engagement Package', tier: 2, items: [anchor, 'Creator Content', 'Branded Editorial', 'Social Amplification'], setup: '14–21 days', why: 'Menggabungkan first-party experience dan kredibilitas creator — cocok untuk ' + (b.objective || 'objective').toLowerCase() + '.' },
-      { name: 'Full Journey Package', tier: 3, items: ['Interactive Utility', 'Creator Network', 'Shoppable Content', 'Event or Community Activation', 'Social Amplification'], setup: '30+ days', why: 'Menutup seluruh perjalanan audience dari awareness hingga aksi komersial dan komunitas.' }
+      { name: 'Paket Dasar', tier: 1, items: ['Editorial Brand', 'Native Kontekstual', 'Amplifikasi Sosial'], setup: '10–14 hari', why: 'Pilihan efisien untuk membangun pemahaman kategori ' + ind.toLowerCase() + '.' },
+      { name: 'Paket Interaktif', tier: 2, items: [anchor, 'Konten Kreator', 'Editorial Brand', 'Amplifikasi Sosial'], setup: '14–21 hari', why: 'Menggabungkan pengalaman interaktif dan kepercayaan kreator.' },
+      { name: 'Paket Terpadu', tier: 3, items: ['Solusi Interaktif', 'Jaringan Kreator', 'Konten Belanja', 'Aktivasi Komunitas', 'Amplifikasi Sosial'], setup: '30+ hari', why: 'Mendukung perjalanan audiens dari jangkauan hingga aksi.' }
     ];
     let bestTier = 2;
-    if (b.objective === 'Awareness & Brand Storytelling' && rank <= 2) bestTier = 1;
-    if (b.objective === 'Community & Engagement' || rank >= 4) bestTier = 3;
-    if (b.action === 'Buy or click to commerce' && rank >= 3) bestTier = 3;
+    if (b.objective === 'Jangkauan & Cerita Brand' && rank <= 2) bestTier = 1;
+    if (b.objective === 'Komunitas & Interaksi' || rank >= 4) bestTier = 3;
+    if (b.action === 'Membeli produk' && rank >= 3) bestTier = 3;
     return base.map(p => {
       const f = fit(p.tier);
       const best = p.tier === bestTier;
       return {
-        name: best ? p.name + ' — Recommended' : p.name,
+        name: best ? p.name + ' — Pilihan Utama' : p.name,
         items: p.items, why: p.why, setup: p.setup, objective: om.obj, kpi: om.kpi,
         fit: f.fit, fitColor: f.color, best: best,
         border: best ? '#1769E0' : '#E3E9F2',
@@ -1303,19 +1280,19 @@ class Component extends DCLogic {
     const b = this.state.brief, pk = this.buildPackages().filter(p => p.best)[0];
     const sel = this.state.compare.map(id => this.DATA.products.filter(p => p.id === id)[0].name).join(', ');
     const rows = [
-      ['Brand', b.brand || '—'], ['Industry', b.industry], ['Tujuan campaign', b.objective],
-      ['Target audience', b.audience || '—'], ['Budget range', b.budget], ['Duration', b.duration],
-      ['Desired action', b.action], ['Recommended package', pk ? pk.name : '—'],
-      ['Package contents', pk ? pk.items.join(', ') : '—'], ['Estimated setup', pk ? pk.setup : '—'],
-      ['Suggested KPI', pk ? pk.kpi : '—'], ['Shortlisted solutions', sel || '—'],
-      ['Additional context', b.context || '—']
+      ['Brand', b.brand || '—'], ['Industri', b.industry], ['Tujuan', b.objective],
+      ['Audiens', b.audience || '—'], ['Anggaran', b.budget], ['Durasi', b.duration],
+      ['Aksi audiens', b.action], ['Paket rekomendasi', pk ? pk.name : '—'],
+      ['Isi paket', pk ? pk.items.join(', ') : '—'], ['Waktu siap', pk ? pk.setup : '—'],
+      ['KPI utama', pk ? pk.kpi : '—'], ['Solusi pilihan', sel || '—'],
+      ['Catatan', b.context || '—']
     ];
     return rows.map((r, i) => ({ k: r[0], v: r[1], bg: i % 2 ? '#FCFDFE' : '#fff' }));
   }
 
   copyPlan = () => {
     const text = this.planRows().map(r => r.k + ': ' + r.v).join('\n');
-    try { navigator.clipboard.writeText('KLY ADS STUDIO — CAMPAIGN PLAN\n\n' + text); } catch (e) {}
+    try { navigator.clipboard.writeText('KLY ADS STUDIO — RENCANA KAMPANYE\n\n' + text); } catch (e) {}
     this.setState({ copied: true });
     this.timers.push(setTimeout(() => this.setState({ copied: false }), 1600));
   };
@@ -1343,17 +1320,12 @@ class Component extends DCLogic {
     const uc = D.useCases.filter(u => u.id === s.useCase)[0];
     const dp = D.products.filter(p => p.id === s.drawer)[0];
     const packages = s.ai === 'done' ? this.buildPackages() : [];
-    const loadLabels = ['Understanding your objective', 'Matching KLY audiences', 'Selecting relevant products', 'Preparing your campaign shortlist'];
+    const loadLabels = ['Memahami tujuan', 'Mencocokkan audiens', 'Memilih solusi', 'Menyiapkan rekomendasi'];
     const uniq = (a) => a.filter((v, i) => a.indexOf(v) === i);
     const facetDefs = [
-      ['OBJECTIVE', 'objective', uniq([].concat.apply([], D.products.map(p => p.obj))).sort()],
-      ['INDUSTRY', 'industry', D.industries],
-      ['KLY PROPERTY', 'property', uniq([].concat.apply([], D.products.map(p => p.props))).sort()],
-      ['SOLUTION TYPE', 'type', uniq(D.products.map(p => p.type)).sort()],
-      ['BUDGET RANGE', 'budget', uniq(D.products.map(p => p.bud))],
-      ['SETUP TIME', 'setup', uniq(D.products.map(p => p.lead))],
-      ['DELIVERY MODEL', 'delivery', uniq(D.products.map(p => p.del))],
-      ['AD-BLOCK RESILIENCE', 'adblock', ['First-party experience', 'Off-platform', 'Standard ad delivery']]
+      ['INDUSTRI', 'industry', D.industries],
+      ['JENIS SOLUSI', 'type', uniq(D.products.map(p => p.type)).sort()],
+      ['AD BLOCKER', 'adblock', ['Pengalaman milik KLY', 'Di luar platform', 'Iklan standar']]
     ];
 
     const productCard = (p) => {
@@ -1373,11 +1345,9 @@ class Component extends DCLogic {
     };
 
     const rowDefs = [
-      ['Best objective', p => p.obj.join(', ')], ['Audience action', p => p.best],
-      ['Delivery method', p => p.del], ['Ad-block resilience', p => p.res],
-      ['Setup time', p => p.lead], ['Budget level', p => p.bud],
-      ['Primary KPI', p => p.kpi.join(', ')], ['Required assets', p => p.assets.join(', ')],
-      ['Recommended industries', p => p.ind.join(', ')]
+      ['Tujuan', p => p.obj.join(', ')], ['Cocok untuk', p => p.best],
+      ['Cara tayang', p => p.del], ['Ad blocker', p => p.res],
+      ['Waktu siap', p => p.lead], ['Anggaran', p => p.bud]
     ];
 
     const pvProduct = dp || D.products[0];
@@ -1391,7 +1361,7 @@ class Component extends DCLogic {
       pick: () => this.setState(st => ({ pv: Object.assign({}, st.pv, { picked: i, clicked: true }) }))
     }));
 
-    const tabList = ['Overview', 'Live Preview', 'Use Cases', 'Specifications', 'Measurement'];
+    const tabList = ['Ringkasan', 'Pratinjau', 'Contoh', 'Spesifikasi', 'Pengukuran'];
 
     return {
       navItems: D.nav.map(n => ({ label: n[0], href: '#' + n[1], go: this.jump(n[1]) })),
@@ -1407,44 +1377,44 @@ class Component extends DCLogic {
           border: active ? '#1769E0' : '#E3E9F2',
           shadow: active ? '0 14px 34px -26px rgba(23,105,224,.6)' : 'none',
           iconBg: active ? '#1769E0' : '#EDF3FD', iconFg: active ? '#fff' : '#1769E0',
-          select: () => { this.setState(st => ({ useCase: st.useCase === u.id ? null : u.id, view: 'grid', f: Object.assign({}, st.f, { objective: st.useCase === u.id ? 'All' : u.filter }) })); },
+          select: () => { this.setState(st => ({ useCase: st.useCase === u.id ? null : u.id, view: 'grid', f: Object.assign({}, st.f, { objective: st.useCase === u.id ? 'Semua' : u.filter }) })); },
           view: (e) => { if (e && e.stopPropagation) e.stopPropagation(); this.scrollTo('gallery'); }
         });
       }),
 
       brief: s.brief, industryOptions: D.industries, objectiveOptions: D.objectives,
       budgetOptions: D.budgets, durationOptions: D.durations, actionOptions: D.actions,
-      setBrand: this.setB('brand'), setIndustry: this.setB('industry'), setObjective: this.setB('objective'),
+      setBrand: this.setB('brand'), setIndustri: this.setB('industry'), setTujuan: this.setB('objective'),
       setAudience: this.setB('audience'), setBudget: this.setB('budget'), setDuration: this.setB('duration'),
       setAction: this.setB('action'), setContext: this.setB('context'),
       generate: this.generate, generating: s.ai === 'loading', genOpacity: s.ai === 'loading' ? 0.75 : 1,
-      generateLabel: s.ai === 'loading' ? 'Menyiapkan pilihan…' : (s.ai === 'done' ? 'Buat Ulang Rekomendasi' : 'Buat Rekomendasi Campaign'),
+      generateLabel: s.ai === 'loading' ? 'Menyiapkan pilihan…' : (s.ai === 'done' ? 'Buat Ulang Rekomendasi' : 'Buat Rekomendasi Kampanye'),
       aiIdle: s.ai === 'idle', aiDone: s.ai === 'done',
       loadSteps: loadLabels.map((l, i) => ({
         label: l, done: s.aiStep > i, opacity: s.aiStep >= i ? 1 : 0.4,
         ring: s.aiStep > i ? '#209447' : '#C3CDDB', fill: s.aiStep > i ? '#209447' : 'transparent'
       })),
       packages,
-      resultBrandLabel: s.brief.brand ? s.brief.brand : 'brief Anda',
+      resultBrandLabel: s.brief.brand ? s.brief.brand : 'kebutuhan Anda',
       resultMeta: s.brief.industry + ' · ' + s.brief.budget + ' · ' + s.brief.duration,
-      previewRecommended: () => { this.setState({ drawer: 1, tab: 'Live Preview', pv: { step: 0, done: false, clicked: false, picked: null }, adblock: false }); },
+      previewRecommended: () => { this.setState({ drawer: 1, tab: 'Pratinjau', pv: { step: 0, done: false, clicked: false, picked: null }, adblock: false }); },
       openPlan: () => this.setState({ planOpen: true, propOpen: false }),
       closePlan: () => this.setState({ planOpen: false }),
-      planOpen: s.planOpen, planTitle: (s.brief.brand || 'Campaign') + ' · ' + s.brief.objective,
+      planOpen: s.planOpen, planTitle: (s.brief.brand || 'Kampanye') + ' · ' + s.brief.objective,
       planRows: this.planRows(), printPlan: () => window.print(), copyPlan: this.copyPlan,
-      copyLabel: s.copied ? 'Copied to clipboard' : 'Copy summary',
+      copyLabel: s.copied ? 'Tersalin' : 'Salin ringkasan',
 
       search: s.search, hasSearch: s.search.length > 0,
       setSearch: (e) => this.setState({ search: e.target.value }),
       clearSearch: () => this.setState({ search: '' }),
       facets: facetDefs.map(f => ({
-        label: f[0], value: s.f[f[1]], options: ['All'].concat(f[2]), onChange: this.setF(f[1]),
-        color: s.f[f[1]] === 'All' ? '#5A6478' : '#1257B8'
+        label: f[0], value: s.f[f[1]], options: ['Semua'].concat(f[2]), onChange: this.setF(f[1]),
+        color: s.f[f[1]] === 'Semua' ? '#5A6478' : '#1257B8'
       })),
       resultLabel: filtered.length + ' dari ' + D.products.length + ' solusi',
-      useCaseFilterOn: !!uc, useCaseName: uc ? uc.title : '',
-      clearUseCase: () => this.setState(st => ({ useCase: null, f: Object.assign({}, st.f, { objective: 'All' }) })),
-      resetFilters: () => this.setState({ search: '', useCase: null, f: { objective: 'All', industry: 'All', property: 'All', type: 'All', budget: 'All', setup: 'All', delivery: 'All', adblock: 'All' } }),
+      useCaseFilterOn: !!uc, useCaseNama: uc ? uc.title : '',
+      clearUseCase: () => this.setState(st => ({ useCase: null, f: Object.assign({}, st.f, { objective: 'Semua' }) })),
+      resetFilters: () => this.setState({ search: '', useCase: null, f: { objective: 'Semua', industry: 'Semua', property: 'Semua', type: 'Semua', budget: 'Semua', setup: 'Semua', delivery: 'Semua', adblock: 'Semua' } }),
       showGrid: s.view === 'grid', showCompare: s.view === 'compare',
       gridBg: s.view === 'grid' ? '#fff' : 'transparent', gridFg: s.view === 'grid' ? '#172033' : '#5A6478',
       cmpBg: s.view === 'compare' ? '#fff' : 'transparent', cmpFg: s.view === 'compare' ? '#172033' : '#5A6478',
@@ -1457,17 +1427,17 @@ class Component extends DCLogic {
       openCompare: () => { this.setState({ view: 'compare' }); this.scrollTo('gallery'); },
       addToBrief: () => {
         const names = compareProducts.map(p => p.name).join(', ');
-        this.setState(st => ({ brief: Object.assign({}, st.brief, { context: (st.brief.context ? st.brief.context + ' · ' : '') + 'Shortlist: ' + names }) }));
+        this.setState(st => ({ brief: Object.assign({}, st.brief, { context: (st.brief.context ? st.brief.context + ' · ' : '') + 'Pilihan: ' + names }) }));
         this.scrollTo('advisor');
       },
-      barVisible: s.compare.length > 0, barLabel: s.compare.length + (s.compare.length === 1 ? ' solution selected' : ' solutions selected'),
+      barVisible: s.compare.length > 0, barLabel: s.compare.length + ' solusi dipilih',
       barDisabled: s.compare.length < 2, barOpacity: s.compare.length < 2 ? 0.55 : 1,
       bottomSpace: s.compare.length > 0 ? '96px' : '0px',
 
-      scenarios: D.scenarios.map(sc => ({
+      scenarios: D.scenarios.slice(0, 3).map(sc => ({
         tag: sc.tag, tagBg: '#F4F7FB', tagFg: '#3C4658', title: sc.title, challenge: sc.challenge,
-        solution: sc.solution, metrics: sc.metrics,
-        journey: sc.journey.map((j, i) => ({ step: j, arrow: i < sc.journey.length - 1 }))
+        solution: sc.solution.slice(0, 3), metrics: sc.metrics.slice(0, 3),
+        journey: sc.journey.slice(0, 3).map((j, i) => ({ step: j, arrow: i < Math.min(sc.journey.length, 3) - 1 }))
       })),
       caseStudies: D.caseStudies.map((c, i) => Object.assign({}, c, { open: () => this.setState({ caseOpen: i }) })),
       caseOpen: s.caseOpen !== null, cs: s.caseOpen !== null ? D.caseStudies[s.caseOpen] : D.caseStudies[0],
@@ -1479,21 +1449,21 @@ class Component extends DCLogic {
         label: t, select: () => this.setState({ tab: t }),
         color: s.tab === t ? '#1769E0' : '#5A6478', underline: s.tab === t ? '#1769E0' : 'transparent'
       })),
-      tabOverview: s.tab === 'Overview', tabPreview: s.tab === 'Live Preview', tabCases: s.tab === 'Use Cases',
-      tabSpecs: s.tab === 'Specifications', tabMeasure: s.tab === 'Measurement',
+      tabOverview: s.tab === 'Ringkasan', tabPreview: s.tab === 'Pratinjau', tabCases: s.tab === 'Contoh',
+      tabSpecs: s.tab === 'Spesifikasi', tabMeasure: s.tab === 'Pengukuran',
       dp: dp ? Object.assign({}, dp, {
         typeBg: this.typeBadge(dp.type).bg, typeFg: this.typeBadge(dp.type).fg,
         resFg: this.resBadge(dp.res).fg, delivery: dp.del, adNote: dp.adNote,
         exp: dp.exp.map((t, i) => ({ n: String(i + 1), text: t })),
         similar: dp.sim.map(id => { const p = D.products.filter(x => x.id === id)[0]; return { name: p.name, open: this.openProduct(id) }; }),
         specs: [
-          ['Solution type', dp.type], ['Delivery model', dp.del], ['Ad-block resilience', dp.res],
-          ['Estimated setup', dp.lead], ['Budget level', dp.bud], ['Compatible objectives', dp.obj.join(', ')],
-          ['Recommended industries', dp.ind.join(', ')], ['Related properties', dp.props.join(', ')]
+          ['Jenis solusi', dp.type], ['Cara tayang', dp.del], ['Ketahanan ad blocker', dp.res],
+          ['Waktu siap', dp.lead], ['Tingkat anggaran', dp.bud], ['Tujuan yang sesuai', dp.obj.map(x => ({ Awareness: 'Jangkauan', Commerce: 'Penjualan', 'Insight Audience': 'Insight Audiens' }[x] || x)).join(', ')],
+          ['Industri yang sesuai', dp.ind.join(', ')], ['Media KLY terkait', dp.props.join(', ')]
         ].map((r, i) => ({ k: r[0], v: r[1], bg: i % 2 ? '#FCFDFE' : '#fff' })),
         cmpBorder: s.compare.indexOf(dp.id) >= 0 ? '#1769E0' : '#D4DDEA',
         cmpFg: s.compare.indexOf(dp.id) >= 0 ? '#1257B8' : '#172033',
-        cmpLabel: s.compare.indexOf(dp.id) >= 0 ? 'Remove from comparison' : 'Add to comparison'
+        cmpLabel: s.compare.indexOf(dp.id) >= 0 ? 'Hapus dari perbandingan' : 'Tambahkan ke perbandingan'
       }) : null,
       dpToggleCompare: dp ? this.toggleCompare(dp.id) : () => {},
 
@@ -1502,7 +1472,7 @@ class Component extends DCLogic {
       frameWidth: s.device === 'mobile' ? '390px' : '100%',
       frameRadius: s.device === 'mobile' ? '22px' : '10px',
       framePad: s.device === 'mobile' ? '16px' : '24px',
-      setDesktop: () => this.setState({ device: 'desktop' }), setMobile: () => this.setState({ device: 'mobile' }),
+      setDesktop: () => this.setState({ device: 'desktop' }), setPonsel: () => this.setState({ device: 'mobile' }),
       deskBg: s.device === 'desktop' ? '#fff' : 'transparent', deskFg: s.device === 'desktop' ? '#172033' : '#5A6478',
       mobBg: s.device === 'mobile' ? '#fff' : 'transparent', mobFg: s.device === 'mobile' ? '#172033' : '#5A6478',
       adblockOn: s.adblock, toggleAdblock: () => this.setState(st => ({ adblock: !st.adblock })),
@@ -1529,9 +1499,9 @@ class Component extends DCLogic {
       propSending: s.propStage === 'sending', propOpacity: s.propStage === 'sending' ? 0.75 : 1,
       propButtonLabel: s.propStage === 'sending' ? 'Mengirim…' : 'Kirim request proposal',
       propButtonDisabled: s.propStage === 'sending',
-      propError: s.propError, prop: s.prop, contactMethods: ['Email', 'Phone', 'WhatsApp'],
-      setPName: this.setP('name'), setPCompany: this.setP('company'), setPEmail: this.setP('email'),
-      setPPhone: this.setP('phone'), setPMethod: this.setP('method'), setPMessage: this.setP('message'),
+      propError: s.propError, prop: s.prop, contactMethods: ['Email', 'Telepon', 'WhatsApp'],
+      setPNama: this.setP('name'), setPPerusahaan: this.setP('company'), setPEmail: this.setP('email'),
+      setPTelepon: this.setP('phone'), setPMethod: this.setP('method'), setPPesan: this.setP('message'),
       propSuccess: 'Tim Sales KLY akan menghubungi ' + (s.prop.name || 'Anda') + ' melalui ' + s.prop.method.toLowerCase() + ' dalam 1×24 jam kerja.',
       submitProposal: this.submitProposal
     };
