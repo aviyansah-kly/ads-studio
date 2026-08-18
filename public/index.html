@@ -193,7 +193,13 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
       <div style="background:#fff;border-radius:16px;padding:18px"><strong style="font-size:27px">45 juta</strong><div style="font-size:13px;color:#5A6478;margin-top:4px">pengikut media sosial</div></div>
       <div style="background:#fff;border-radius:16px;padding:18px"><strong style="font-size:27px">200+</strong><div style="font-size:13px;color:#5A6478;margin-top:4px">brand telah bekerja sama dengan KLY</div></div>
     </div>
-    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:16px"><sc-for list="{{ mediaBrands }}" as="brand" hint-placeholder-count="8"><span style="font-size:12px;font-weight:600;background:#fff;border:1px solid #E3E9F2;border-radius:999px;padding:7px 11px">{{ brand }}</span></sc-for></div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-top:18px">
+      <sc-for list="{{ mediaBrands }}" as="brand" hint-placeholder-count="7">
+        <div style="min-height:72px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #E3E9F2;border-radius:14px;padding:16px">
+          <img src="{{ brand.src }}" alt="{{ brand.name }}" loading="lazy" style="display:block;width:100%;height:34px;max-width:150px;object-fit:contain">
+        </div>
+      </sc-for>
+    </div>
   </div>
 </section>
 
@@ -1055,7 +1061,15 @@ class Component extends DCLogic {
 
   DATA = {
     trust: ['Berbasis tujuan bisnis', 'Lintas properti media KLY', 'Pengukuran yang dapat disepakati'],
-    mediaBrands: ['Liputan6', 'KapanLagi', 'Fimela', 'Merdeka', 'Brilio', 'Bola.net', 'Dream', 'Otosia'],
+    mediaBrands: [
+      { name: 'Liputan6', src: '/logo-liputan6.png' },
+      { name: 'KapanLagi', src: '/logo-kapanlagi.png' },
+      { name: 'Fimela', src: '/logo-fimela.png' },
+      { name: 'Merdeka', src: '/logo-merdeka.png' },
+      { name: 'Brilio', src: '/logo-brilio.png' },
+      { name: 'Bola.com', src: '/logo-bola-com.png' },
+      { name: 'Bola.net', src: '/logo-bola-net.png' }
+    ],
     heroSolutions: [{ n: '01', name: 'Pemilih Produk Fimela', match: 'Rekomendasi utama' }, { n: '02', name: 'Seri Ulasan Kreator', match: 'Pendukung' }, { n: '03', name: 'Cerita Belanja', match: 'Perluasan' }],
     nav: [['Solusi', 'solutions'], ['Skenario', 'showcase'], ['Galeri Iklan', 'gallery'], ['Studi Kasus', 'casestudies'], ['Cara Kerja', 'howitworks']],
     useCases: [
