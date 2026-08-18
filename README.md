@@ -1,6 +1,6 @@
 # KLY Ads Studio
 
-Homepage prototype that helps brands discover KLY advertising products by campaign objective, preview formats, compare options, and prepare a campaign brief.
+KLY Ads Discovery Hub prototype. It helps brands define a campaign brief, receive recommended solutions, explore and compare products, test interactive previews, review use cases, and request a proposal.
 
 ## Local development
 
