@@ -27,6 +27,6 @@ The static production output is generated in `dist/`.
 
 ## Cloudflare Workers deployment
 
-The repository includes `wrangler.jsonc`. Cloudflare should deploy the latest
-`main` commit with `npx wrangler deploy`; Wrangler runs `npm run build` and
-publishes the static files from `dist/`.
+The repository is a framework-free static Worker. Cloudflare can deploy the
+latest `main` commit directly with `npx wrangler deploy`; Wrangler publishes
+the files in `public/` without a separate framework build.
