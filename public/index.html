@@ -476,20 +476,20 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
   <div style="max-width:1260px;margin:0 auto">
     <div class="galleryHeader" style="display:flex;flex-wrap:wrap;gap:20px;align-items:flex-end;justify-content:space-between">
       <div style="max-width:60ch">
-        <div style="font-family:'IBM Plex Mono',monospace;font-size:14px;letter-spacing:.12em;color:#8A94A6">03 — GALERI SOLUSI</div>
-        <h2 style="font-size:clamp(27px,3vw,38px);line-height:1.12;letter-spacing:-0.024em;font-weight:600;margin:14px 0 0">Temukan format yang tepat.</h2>
-        <p style="font-size:16.5px;line-height:1.6;color:#4A5568;margin:16px 0 0">Cari berdasarkan tujuan, industri, atau cara tayang—lalu bandingkan pilihan terbaik.</p>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:14px;letter-spacing:.12em;color:#8A94A6">03 — SOLUTION GALLERY</div>
+        <h2 style="font-size:clamp(27px,3vw,38px);line-height:1.12;letter-spacing:-0.024em;font-weight:600;margin:14px 0 0">Temukan ad format yang tepat.</h2>
+        <p style="font-size:16.5px;line-height:1.6;color:#4A5568;margin:16px 0 0">Cari berdasarkan campaign objective, industri, atau delivery channel—lalu bandingkan pilihan terbaik.</p>
       </div>
       <div style="display:flex;background:#F4F7FB;border:1px solid #E3E9F2;border-radius:10px;padding:3px;gap:3px">
-        <button onClick="{{ setGrid }}" style="padding:8px 15px;border:0;border-radius:8px;font-size:13px;font-weight:600;background:{{ gridBg }};color:{{ gridFg }}">Galeri</button>
-        <button onClick="{{ setCompareView }}" style="padding:8px 15px;border:0;border-radius:8px;font-size:13px;font-weight:600;background:{{ cmpBg }};color:{{ cmpFg }}">Bandingkan</button>
+        <button onClick="{{ setGrid }}" style="padding:8px 15px;border:0;border-radius:8px;font-size:13px;font-weight:600;background:{{ gridBg }};color:{{ gridFg }}">Semua Format</button>
+        <button onClick="{{ setCompareView }}" style="padding:8px 15px;border:0;border-radius:8px;font-size:13px;font-weight:600;background:{{ cmpBg }};color:{{ cmpFg }}">Compare</button>
       </div>
     </div>
 
     <div class="galleryToolbar" style="margin-top:28px;border:1px solid #E3E9F2;border-radius:12px;padding:18px;background:#FCFDFE">
       <div class="gallerySearch" style="display:flex;align-items:center;gap:12px;border:1px solid #D4DDEA;background:#fff;border-radius:9px;padding:11px 13px">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A94A6" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.8-3.8"></path></svg>
-        <input value="{{ search }}" onChange="{{ setSearch }}" aria-label="Cari solusi iklan" placeholder="Cari format, tujuan, industri, atau media KLY…" style="border:0;outline:0;flex:1;font-size:14px;background:transparent">
+        <input value="{{ search }}" onChange="{{ setSearch }}" aria-label="Cari solusi iklan" placeholder="Cari ad format, campaign objective, industri, atau media KLY…" style="border:0;outline:0;flex:1;font-size:14px;background:transparent">
         <sc-if value="{{ hasSearch }}" hint-placeholder-val="{{ false }}">
           <button onClick="{{ clearSearch }}" aria-label="Hapus pencarian" style="border:0;background:transparent;display:flex;color:#8A94A6" style-hover="color:#172033"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6L6 18"></path><path d="M6 6l12 12"></path></svg></button>
         </sc-if>
@@ -509,7 +509,7 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
         <sc-if value="{{ useCaseFilterOn }}" hint-placeholder-val="{{ false }}">
           <span style="display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:500;color:#1769E0;background:#EDF3FD;border:1px solid #D8E5FA;padding:5px 10px;border-radius:999px">Tujuan: {{ useCaseNama }}<button onClick="{{ clearUseCase }}" aria-label="Hapus filter tujuan" style="border:0;background:transparent;display:flex;color:#1769E0"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M18 6L6 18"></path><path d="M6 6l12 12"></path></svg></button></span>
         </sc-if>
-        <button onClick="{{ resetFilters }}" style="margin-left:auto;padding:8px 14px;background:#fff;border:1px solid #D4DDEA;border-radius:8px;font-size:12.5px;font-weight:600;color:#5A6478" style-hover="border-color:#1769E0;color:#1769E0">Atur ulang</button>
+        <button onClick="{{ resetFilters }}" style="margin-left:auto;padding:8px 14px;background:#fff;border:1px solid #D4DDEA;border-radius:8px;font-size:12.5px;font-weight:600;color:#5A6478" style-hover="border-color:#1769E0;color:#1769E0">Reset Filter</button>
       </div>
     </div>
 
@@ -533,17 +533,17 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
               </div>
               <h3 style="font-size:17.5px;font-weight:600;letter-spacing:-0.012em;margin:15px 0 0">{{ p.name }}</h3>
               <p style="font-size:13.5px;line-height:1.55;color:#5A6478;margin:8px 0 0">{{ p.desc }}</p>
-              <div class="galleryBestFor"><strong>Cocok untuk:</strong> {{ p.bestFor }}</div>
+              <div class="galleryBestFor"><strong>Best for:</strong> {{ p.bestFor }}</div>
               <div class="galleryCardMeta" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px;padding-top:14px;border-top:1px solid #EDF1F7">
-                <div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;color:#8A94A6">ANGGARAN</div><div style="font-size:14px;font-weight:600;margin-top:5px">{{ p.budget }}</div></div>
-                <div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;color:#8A94A6">WAKTU SIAP</div><div style="font-size:14px;font-weight:600;margin-top:5px">{{ p.lead }}</div></div>
+                <div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;color:#8A94A6">BUDGET LEVEL</div><div style="font-size:14px;font-weight:600;margin-top:5px">{{ p.budget }}</div></div>
+                <div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;color:#8A94A6">SETUP TIME</div><div style="font-size:14px;font-weight:600;margin-top:5px">{{ p.lead }}</div></div>
               </div>
               <div class="galleryCardActions" style="display:flex;align-items:center;gap:10px;margin-top:18px">
-                <button onClick="{{ p.open }}" style="flex:1;padding:11px;background:#fff;border:1px solid #1769E0;color:#1769E0;border-radius:9px;font-size:13.5px;font-weight:600" style-hover="background:#1769E0;color:#fff" style-active="background:#1257B8">Lihat Detail</button>
+                <button onClick="{{ p.open }}" style="flex:1;padding:11px;background:#fff;border:1px solid #1769E0;color:#1769E0;border-radius:9px;font-size:13.5px;font-weight:600" style-hover="background:#1769E0;color:#fff" style-active="background:#1257B8">View Details</button>
                 <button onClick="{{ p.toggleCompare }}" disabled="{{ p.cmpDisabled }}" style="display:inline-flex;align-items:center;gap:8px;padding:11px 13px;border:1px solid {{ p.cmpBorder }};background:{{ p.cmpBg }};color:{{ p.cmpFg }};border-radius:9px;font-size:13px;font-weight:600;opacity:{{ p.cmpOpacity }}">
                   <span style="width:15px;height:15px;display:flex;align-items:center;justify-content:center;border:1.5px solid {{ p.boxBorder }};background:{{ p.boxBg }};border-radius:4px;color:#fff">
                     <sc-if value="{{ p.selected }}" hint-placeholder-val="{{ false }}"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg></sc-if>
-                  </span>Bandingkan
+                  </span>Compare
                 </button>
               </div>
             </div>
@@ -554,9 +554,9 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
       <sc-if value="{{ empty }}" hint-placeholder-val="{{ false }}">
         <div style="margin-top:22px;border:1px dashed #CBD6E5;border-radius:12px;padding:56px 28px;text-align:center;background:#FCFDFE">
           <span style="display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:12px;background:#F4F7FB;color:#8A94A6"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.8-3.8"></path></svg></span>
-          <h3 style="font-size:17px;font-weight:600;margin:14px 0 0">Tidak ada solusi yang sesuai</h3>
-          <p style="font-size:14px;color:#5A6478;margin:8px 0 0">Coba ubah atau hapus filter.</p>
-          <button onClick="{{ resetFilters }}" style="margin-top:18px;padding:11px 18px;background:#1769E0;border:1px solid #1769E0;color:#fff;border-radius:9px;font-size:13.5px;font-weight:600" style-hover="background:#1257B8">Atur ulang</button>
+          <h3 style="font-size:17px;font-weight:600;margin:14px 0 0">Tidak ada ad format yang sesuai</h3>
+          <p style="font-size:14px;color:#5A6478;margin:8px 0 0">Coba ubah keyword atau filter.</p>
+          <button onClick="{{ resetFilters }}" style="margin-top:18px;padding:11px 18px;background:#1769E0;border:1px solid #1769E0;color:#fff;border-radius:9px;font-size:13.5px;font-weight:600" style-hover="background:#1257B8">Reset Filter</button>
         </div>
       </sc-if>
     </sc-if>
@@ -1315,11 +1315,11 @@ class Component extends DCLogic {
     return { bg: '#F0F6F2', fg: '#1A7A3B' };
   }
   galleryVisual(t) {
-    if (['Solusi Interaktif', 'Alat Bantu Keputusan', 'Interaksi'].indexOf(t) >= 0) return { bg: 'linear-gradient(135deg,#ECEAFF 0%,#DCD8FF 100%)', fg: '#5548FF', label: 'Pengalaman interaktif' };
-    if (['Konten', 'Konten Penjualan', 'Media Native'].indexOf(t) >= 0) return { bg: 'linear-gradient(135deg,#EAF7F0 0%,#D5EFE1 100%)', fg: '#198754', label: 'Konten kontekstual' };
-    if (['Kreator', 'Video', 'Distribusi Sosial'].indexOf(t) >= 0) return { bg: 'linear-gradient(135deg,#FFF0F7 0%,#F8DCEB 100%)', fg: '#CE397C', label: 'Cerita dan distribusi' };
-    if (t === 'Pengalaman') return { bg: 'linear-gradient(135deg,#FFF4E5 0%,#FFE3B9 100%)', fg: '#C97800', label: 'Aktivasi audiens' };
-    return { bg: 'linear-gradient(135deg,#EEF2F8 0%,#DDE5F1 100%)', fg: '#4F6078', label: 'Media premium' };
+    if (['Solusi Interaktif', 'Alat Bantu Keputusan', 'Interaksi'].indexOf(t) >= 0) return { bg: 'linear-gradient(135deg,#ECEAFF 0%,#DCD8FF 100%)', fg: '#5548FF', label: 'Interactive Experience' };
+    if (['Konten', 'Konten Penjualan', 'Media Native'].indexOf(t) >= 0) return { bg: 'linear-gradient(135deg,#EAF7F0 0%,#D5EFE1 100%)', fg: '#198754', label: 'Contextual Content' };
+    if (['Kreator', 'Video', 'Distribusi Sosial'].indexOf(t) >= 0) return { bg: 'linear-gradient(135deg,#FFF0F7 0%,#F8DCEB 100%)', fg: '#CE397C', label: 'Creator & Distribution' };
+    if (t === 'Pengalaman') return { bg: 'linear-gradient(135deg,#FFF4E5 0%,#FFE3B9 100%)', fg: '#C97800', label: 'Audience Activation' };
+    return { bg: 'linear-gradient(135deg,#EEF2F8 0%,#DDE5F1 100%)', fg: '#4F6078', label: 'Premium Media' };
   }
   budgetRank(b) { return this.DATA.budgets.indexOf(b) + 1; }
 
@@ -1460,8 +1460,8 @@ class Component extends DCLogic {
     const uniq = (a) => a.filter((v, i) => a.indexOf(v) === i);
     const facetDefs = [
       ['INDUSTRI', 'industry', D.industries],
-      ['JENIS SOLUSI', 'type', uniq(D.products.map(p => p.type)).sort()],
-      ['CARA TAYANG', 'adblock', ['Pengalaman milik KLY', 'Di luar platform', 'Iklan standar']]
+      ['AD FORMAT', 'type', uniq(D.products.map(p => p.type)).sort()],
+      ['DELIVERY CHANNEL', 'adblock', ['Pengalaman milik KLY', 'Di luar platform', 'Iklan standar']]
     ];
 
     const productCard = (p) => {
