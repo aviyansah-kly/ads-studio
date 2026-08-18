@@ -83,6 +83,39 @@ button{border-radius:999px!important;font-weight:650!important}
 .advisorIdle>span{width:54px!important;height:54px!important;border-radius:16px!important;background:rgba(255,255,255,.14)!important;color:#fff!important;border:1px solid rgba(255,255,255,.2)}
 .advisorIdle h3{font-size:23px!important;color:#fff!important;margin-top:22px!important}
 .advisorIdle p{font-size:16px!important;color:rgba(255,255,255,.76)!important}
+.galleryHeader{display:grid!important;grid-template-columns:minmax(0,1fr) auto;align-items:end!important;gap:28px!important}
+.galleryToolbar{margin-top:32px!important;border:1px solid #E1E6F0!important;border-radius:22px!important;padding:18px!important;background:#F7F8FC!important;box-shadow:0 14px 40px rgba(23,21,47,.05)}
+.gallerySearch{min-height:58px;border:1px solid #C9D1E0!important;border-radius:14px!important;padding:0 18px!important;background:#fff!important;box-shadow:0 7px 20px rgba(23,21,47,.04);transition:border-color .18s,box-shadow .18s}
+.gallerySearch:focus-within{border-color:#7065FF!important;box-shadow:0 0 0 4px rgba(88,77,252,.1)}
+.gallerySearch svg{width:20px;height:20px;flex:none;stroke:#5548FF}
+.gallerySearch input{min-height:56px;font-size:16px!important;font-weight:500}
+.gallerySearch input::placeholder{color:#7D8698}
+.galleryFilters{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:12px!important;margin-top:14px!important}
+.galleryFilters label>span{font-size:12px!important;color:#6D7688!important}
+.galleryFilters label:has(>select){position:relative}
+.galleryFilters label:has(>select):after{content:"";position:absolute;right:18px;bottom:19px;width:7px;height:7px;pointer-events:none;border-right:2px solid #5A6478;border-bottom:2px solid #5A6478;transform:rotate(45deg);transform-origin:center}
+.galleryFilters select{min-height:46px;background-image:none!important;background-color:#fff!important;border-color:#D5DBE7!important;border-radius:11px!important;padding:11px 46px 11px 13px!important;font-size:14px!important}
+.galleryResultBar{margin-top:15px!important;padding:0 2px}
+.galleryGrid{display:grid!important;grid-template-columns:repeat(auto-fill,minmax(340px,1fr))!important;gap:20px!important;margin-top:24px!important}
+.galleryCard{overflow:hidden;padding:0!important;border-color:#E2E6EF!important;border-radius:22px!important;transition:transform .2s,border-color .2s,box-shadow .2s!important}
+.galleryCard:hover{transform:translateY(-3px);border-color:#BEB8FF!important;box-shadow:0 18px 46px rgba(42,40,102,.1)!important}
+.galleryCardVisual{position:relative;isolation:isolate;min-height:118px;padding:18px 20px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.galleryCardVisual:before{content:"";position:absolute;z-index:-1;width:180px;height:180px;border-radius:50%;right:-58px;top:-88px;background:currentColor;opacity:.1}
+.galleryCardVisual:after{content:"";position:absolute;z-index:-1;width:110px;height:70px;right:22px;bottom:-28px;border:1px solid currentColor;border-radius:18px;opacity:.18;transform:rotate(-8deg)}
+.galleryVisualTop{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.galleryVisualType{font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.galleryVisualGoal{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;background:rgba(255,255,255,.68);border:1px solid rgba(255,255,255,.7);border-radius:999px;font-size:12px;font-weight:650;color:#302A78;backdrop-filter:blur(8px)}
+.galleryVisualMark{display:flex;align-items:flex-end;gap:6px;height:30px}
+.galleryVisualMark i{display:block;width:7px;border-radius:999px;background:currentColor;opacity:.68}
+.galleryVisualMark i:nth-child(1){height:14px}.galleryVisualMark i:nth-child(2){height:23px}.galleryVisualMark i:nth-child(3){height:30px}
+.galleryCardBody{padding:20px;display:flex;flex:1;flex-direction:column}
+.galleryCardBody h3{font-size:21px!important;line-height:1.2!important;margin-top:16px!important}
+.galleryCardBody>p{font-size:15px!important;line-height:1.5!important;min-height:46px}
+.galleryBestFor{font-size:14px;line-height:1.45;color:#3F4859;margin-top:14px;padding:12px 13px;border-radius:11px;background:#F7F8FC}
+.galleryBestFor strong{color:#17152F}
+.galleryCardMeta{margin-top:16px!important;padding-top:15px!important}
+.galleryCardActions{margin-top:auto!important;padding-top:18px}
+.galleryCardActions button:first-child{background:#5548FF!important;border-color:#5548FF!important;color:#fff!important}
 #solutions [role="button"]{padding:24px!important;min-height:270px}
 #gallery>div>div:nth-child(2){background:#F5F5F8!important;border:0!important;padding:16px!important}
 #showcase>div>div:nth-child(2)>div,#casestudies [style*="display:flex;flex-direction:column"]{box-shadow:0 12px 36px rgba(23,21,47,.06)}
@@ -125,8 +158,9 @@ header [style*="background:#fff"]{background:rgba(255,255,255,.1)!important;bord
 section[style*="background:#172033"]{background:#17152F!important}
 section[style*="padding:84px"]>div{background:#5548FF!important;color:#fff!important;border:0!important;border-radius:28px!important}
 section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
-@media(max-width:980px){.goalIntro{grid-template-columns:1fr;gap:18px}.goalGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.advisorIntro{grid-template-columns:1fr;gap:20px}.advisorMeta{justify-content:flex-start}.advisorGrid{grid-template-columns:1fr!important}.advisorIdle{min-height:360px}}
+@media(max-width:980px){.goalIntro{grid-template-columns:1fr;gap:18px}.goalGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.advisorIntro{grid-template-columns:1fr;gap:20px}.advisorMeta{justify-content:flex-start}.advisorGrid{grid-template-columns:1fr!important}.advisorIdle{min-height:360px}.galleryHeader{grid-template-columns:1fr}.galleryHeader>div:last-child{justify-self:start}.galleryGrid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 @media(max-width:700px){h1{font-size:44px!important}h2{font-size:34px!important}header{top:10px;width:calc(100% - 20px)}header>div:first-child{padding-inline:14px!important}#top{margin-top:-72px;padding-top:150px!important;padding-bottom:130px!important}.gradient{filter:blur(4px) saturate(103%) brightness(.96)}.klyTrustSection{margin-top:0!important;padding-top:48px!important}.klyEcosystemStats{grid-template-columns:repeat(2,1fr);gap:18px 10px;margin-top:32px}.klyEcosystemStat{min-height:88px;padding:8px}.klyMediaLogos{margin-top:16px;mask-image:linear-gradient(90deg,transparent 0,#000 14%,#000 86%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 14%,#000 86%,transparent 100%)}.klyMediaTrack{animation-duration:22s}.klyMediaGroup{gap:42px;padding-right:42px}.klyMediaLogo{width:124px;flex-basis:124px}.klyMediaLogo img{height:30px}.goalGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.goalCard{min-height:220px}#top>div{grid-template-columns:1fr!important}#solutions,#gallery,#showcase,#casestudies,#howitworks{padding-inline:18px!important}#advisor{padding:64px 18px!important}.advisorFields{grid-template-columns:1fr!important}.advisorForm{padding:22px!important}.advisorFormHead{margin-bottom:20px}.advisorMeta span{font-size:13px}.advisorIdle{min-height:320px;padding:42px 22px!important}}
+@media(max-width:620px){.galleryFilters{grid-template-columns:1fr!important}.galleryGrid{grid-template-columns:1fr!important}.galleryToolbar{padding:14px!important}.galleryCardBody>p{min-height:0}}
 @media(max-width:460px){.goalGrid{grid-template-columns:1fr}.goalCard{min-height:190px}}
 @media(prefers-reduced-motion:reduce){.klyMediaTrack{animation:none}}
 </style>
@@ -440,11 +474,11 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
 
 <section id="gallery" style="padding:80px 28px 0;scroll-margin-top:80px">
   <div style="max-width:1260px;margin:0 auto">
-    <div style="display:flex;flex-wrap:wrap;gap:20px;align-items:flex-end;justify-content:space-between">
+    <div class="galleryHeader" style="display:flex;flex-wrap:wrap;gap:20px;align-items:flex-end;justify-content:space-between">
       <div style="max-width:60ch">
-        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:#8A94A6">03 — GALERI SOLUSI</div>
-        <h2 style="font-size:clamp(27px,3vw,38px);line-height:1.12;letter-spacing:-0.024em;font-weight:600;margin:14px 0 0">Jelajahi seluruh solusi.</h2>
-        <p style="font-size:16.5px;line-height:1.6;color:#4A5568;margin:16px 0 0">Lihat dan bandingkan solusi KLY.</p>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:14px;letter-spacing:.12em;color:#8A94A6">03 — GALERI SOLUSI</div>
+        <h2 style="font-size:clamp(27px,3vw,38px);line-height:1.12;letter-spacing:-0.024em;font-weight:600;margin:14px 0 0">Temukan format yang tepat.</h2>
+        <p style="font-size:16.5px;line-height:1.6;color:#4A5568;margin:16px 0 0">Cari berdasarkan tujuan, industri, atau cara tayang—lalu bandingkan pilihan terbaik.</p>
       </div>
       <div style="display:flex;background:#F4F7FB;border:1px solid #E3E9F2;border-radius:10px;padding:3px;gap:3px">
         <button onClick="{{ setGrid }}" style="padding:8px 15px;border:0;border-radius:8px;font-size:13px;font-weight:600;background:{{ gridBg }};color:{{ gridFg }}">Galeri</button>
@@ -452,15 +486,15 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
       </div>
     </div>
 
-    <div style="margin-top:28px;border:1px solid #E3E9F2;border-radius:12px;padding:18px;background:#FCFDFE">
-      <div style="display:flex;align-items:center;gap:10px;border:1px solid #D4DDEA;background:#fff;border-radius:9px;padding:11px 13px">
+    <div class="galleryToolbar" style="margin-top:28px;border:1px solid #E3E9F2;border-radius:12px;padding:18px;background:#FCFDFE">
+      <div class="gallerySearch" style="display:flex;align-items:center;gap:12px;border:1px solid #D4DDEA;background:#fff;border-radius:9px;padding:11px 13px">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A94A6" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.8-3.8"></path></svg>
-        <input value="{{ search }}" onChange="{{ setSearch }}" placeholder="Cari solusi atau tujuan" style="border:0;outline:0;flex:1;font-size:14px;background:transparent">
+        <input value="{{ search }}" onChange="{{ setSearch }}" aria-label="Cari solusi iklan" placeholder="Cari format, tujuan, industri, atau media KLY…" style="border:0;outline:0;flex:1;font-size:14px;background:transparent">
         <sc-if value="{{ hasSearch }}" hint-placeholder-val="{{ false }}">
           <button onClick="{{ clearSearch }}" aria-label="Hapus pencarian" style="border:0;background:transparent;display:flex;color:#8A94A6" style-hover="color:#172033"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6L6 18"></path><path d="M6 6l12 12"></path></svg></button>
         </sc-if>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:14px">
+      <div class="galleryFilters" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:14px">
         <sc-for list="{{ facets }}" as="f" hint-placeholder-count="8">
           <label style="display:flex;flex-direction:column;gap:6px">
             <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:#9AA3B2">{{ f.label }}</span>
@@ -470,7 +504,7 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
           </label>
         </sc-for>
       </div>
-      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:16px">
+      <div class="galleryResultBar" style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:16px">
         <span style="font-size:13px;color:#5A6478">{{ resultLabel }}</span>
         <sc-if value="{{ useCaseFilterOn }}" hint-placeholder-val="{{ false }}">
           <span style="display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:500;color:#1769E0;background:#EDF3FD;border:1px solid #D8E5FA;padding:5px 10px;border-radius:999px">Tujuan: {{ useCaseNama }}<button onClick="{{ clearUseCase }}" aria-label="Hapus filter tujuan" style="border:0;background:transparent;display:flex;color:#1769E0"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M18 6L6 18"></path><path d="M6 6l12 12"></path></svg></button></span>
@@ -480,28 +514,38 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
     </div>
 
     <sc-if value="{{ showGrid }}" hint-placeholder-val="{{ true }}">
-      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:18px;margin-top:22px">
+      <div class="galleryGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:18px;margin-top:22px">
         <sc-for list="{{ products }}" as="p" hint-placeholder-count="6">
-          <div style="display:flex;flex-direction:column;border:1px solid #E3E9F2;border-radius:12px;background:#fff;padding:20px;transition:border-color .18s,box-shadow .18s;border-color:{{ p.border }};box-shadow:{{ p.shadow }}" style-hover="border-color:#B9CFF0">
-            <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
-              <span style="font-size:11.5px;font-weight:600;letter-spacing:.02em;color:{{ p.typeFg }};background:{{ p.typeBg }};padding:5px 10px;border-radius:7px">{{ p.type }}</span>
-              <span style="display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;color:{{ p.resFg }};background:{{ p.resBg }};padding:5px 9px;border-radius:999px">
-                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c5-1.7 8-4.6 8-9V6l-8-3-8 3v6c0 4.4 3 7.3 8 9z"></path></svg>{{ p.resLabel }}
-              </span>
+          <div class="galleryCard" style="display:flex;flex-direction:column;border:1px solid #E3E9F2;border-radius:12px;background:#fff;padding:20px;transition:border-color .18s,box-shadow .18s;border-color:{{ p.border }};box-shadow:{{ p.shadow }}" style-hover="border-color:#B9CFF0">
+            <div class="galleryCardVisual" style="background:{{ p.visualBg }};color:{{ p.visualFg }}">
+              <div class="galleryVisualTop">
+                <span class="galleryVisualType">{{ p.visualLabel }}</span>
+                <span class="galleryVisualGoal">{{ p.primaryObjective }}</span>
+              </div>
+              <div class="galleryVisualMark" aria-hidden="true"><i></i><i></i><i></i></div>
             </div>
-            <h3 style="font-size:17.5px;font-weight:600;letter-spacing:-0.012em;margin:15px 0 0">{{ p.name }}</h3>
-            <p style="font-size:13.5px;line-height:1.55;color:#5A6478;margin:8px 0 0">{{ p.desc }}</p>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px;padding-top:14px;border-top:1px solid #EDF1F7">
-              <div><div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;color:#9AA3B2">ANGGARAN</div><div style="font-size:13px;font-weight:500;margin-top:4px">{{ p.budget }}</div></div>
-              <div><div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;color:#9AA3B2">WAKTU SIAP</div><div style="font-size:13px;font-weight:500;margin-top:4px">{{ p.lead }}</div></div>
-            </div>
-            <div style="display:flex;align-items:center;gap:10px;margin-top:18px">
-              <button onClick="{{ p.open }}" style="flex:1;padding:11px;background:#fff;border:1px solid #1769E0;color:#1769E0;border-radius:9px;font-size:13.5px;font-weight:600" style-hover="background:#1769E0;color:#fff" style-active="background:#1257B8">Lihat Detail</button>
-              <button onClick="{{ p.toggleCompare }}" disabled="{{ p.cmpDisabled }}" style="display:inline-flex;align-items:center;gap:8px;padding:11px 13px;border:1px solid {{ p.cmpBorder }};background:{{ p.cmpBg }};color:{{ p.cmpFg }};border-radius:9px;font-size:13px;font-weight:600;opacity:{{ p.cmpOpacity }}">
-                <span style="width:15px;height:15px;display:flex;align-items:center;justify-content:center;border:1.5px solid {{ p.boxBorder }};background:{{ p.boxBg }};border-radius:4px;color:#fff">
-                  <sc-if value="{{ p.selected }}" hint-placeholder-val="{{ false }}"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg></sc-if>
-                </span>Compare
-              </button>
+            <div class="galleryCardBody">
+              <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
+                <span style="font-size:12px;font-weight:600;letter-spacing:.02em;color:{{ p.typeFg }};background:{{ p.typeBg }};padding:5px 10px;border-radius:7px">{{ p.type }}</span>
+                <span style="display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:{{ p.resFg }};background:{{ p.resBg }};padding:5px 9px;border-radius:999px">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c5-1.7 8-4.6 8-9V6l-8-3-8 3v6c0 4.4 3 7.3 8 9z"></path></svg>{{ p.resLabel }}
+                </span>
+              </div>
+              <h3 style="font-size:17.5px;font-weight:600;letter-spacing:-0.012em;margin:15px 0 0">{{ p.name }}</h3>
+              <p style="font-size:13.5px;line-height:1.55;color:#5A6478;margin:8px 0 0">{{ p.desc }}</p>
+              <div class="galleryBestFor"><strong>Cocok untuk:</strong> {{ p.bestFor }}</div>
+              <div class="galleryCardMeta" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px;padding-top:14px;border-top:1px solid #EDF1F7">
+                <div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;color:#8A94A6">ANGGARAN</div><div style="font-size:14px;font-weight:600;margin-top:5px">{{ p.budget }}</div></div>
+                <div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;color:#8A94A6">WAKTU SIAP</div><div style="font-size:14px;font-weight:600;margin-top:5px">{{ p.lead }}</div></div>
+              </div>
+              <div class="galleryCardActions" style="display:flex;align-items:center;gap:10px;margin-top:18px">
+                <button onClick="{{ p.open }}" style="flex:1;padding:11px;background:#fff;border:1px solid #1769E0;color:#1769E0;border-radius:9px;font-size:13.5px;font-weight:600" style-hover="background:#1769E0;color:#fff" style-active="background:#1257B8">Lihat Detail</button>
+                <button onClick="{{ p.toggleCompare }}" disabled="{{ p.cmpDisabled }}" style="display:inline-flex;align-items:center;gap:8px;padding:11px 13px;border:1px solid {{ p.cmpBorder }};background:{{ p.cmpBg }};color:{{ p.cmpFg }};border-radius:9px;font-size:13px;font-weight:600;opacity:{{ p.cmpOpacity }}">
+                  <span style="width:15px;height:15px;display:flex;align-items:center;justify-content:center;border:1.5px solid {{ p.boxBorder }};background:{{ p.boxBg }};border-radius:4px;color:#fff">
+                    <sc-if value="{{ p.selected }}" hint-placeholder-val="{{ false }}"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg></sc-if>
+                  </span>Bandingkan
+                </button>
+              </div>
             </div>
           </div>
         </sc-for>
@@ -1258,10 +1302,10 @@ class Component extends DCLogic {
   jump = (id) => (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ menu: false }); this.scrollTo(id); };
 
   resBadge(res) {
-    if (res === 'Tinggi') return { bg: '#E9F5ED', fg: '#1A7A3B', label: 'Ad blocker: Tinggi' };
-    if (res === 'Menengah–Tinggi') return { bg: '#E9F5ED', fg: '#1A7A3B', label: 'Ad blocker: Cukup tinggi' };
-    if (res === 'Menengah') return { bg: '#FEF4E2', fg: '#B87800', label: 'Ad blocker: Menengah' };
-    return { bg: '#FDF1F0', fg: '#C0362E', label: 'Ad blocker: Rendah' };
+    if (res === 'Tinggi') return { bg: '#E9F5ED', fg: '#1A7A3B', label: 'Tahan blocker' };
+    if (res === 'Menengah–Tinggi') return { bg: '#E9F5ED', fg: '#1A7A3B', label: 'Cukup tahan' };
+    if (res === 'Menengah') return { bg: '#FEF4E2', fg: '#B87800', label: 'Ketahanan sedang' };
+    return { bg: '#FDF1F0', fg: '#C0362E', label: 'Rentan blocker' };
   }
   typeBadge(t) {
     const first = ['Solusi Interaktif', 'Alat Bantu Keputusan', 'Interaksi'].indexOf(t) >= 0;
@@ -1270,12 +1314,19 @@ class Component extends DCLogic {
     if (media) return { bg: '#F4F7FB', fg: '#5A6478' };
     return { bg: '#F0F6F2', fg: '#1A7A3B' };
   }
+  galleryVisual(t) {
+    if (['Solusi Interaktif', 'Alat Bantu Keputusan', 'Interaksi'].indexOf(t) >= 0) return { bg: 'linear-gradient(135deg,#ECEAFF 0%,#DCD8FF 100%)', fg: '#5548FF', label: 'Pengalaman interaktif' };
+    if (['Konten', 'Konten Penjualan', 'Media Native'].indexOf(t) >= 0) return { bg: 'linear-gradient(135deg,#EAF7F0 0%,#D5EFE1 100%)', fg: '#198754', label: 'Konten kontekstual' };
+    if (['Kreator', 'Video', 'Distribusi Sosial'].indexOf(t) >= 0) return { bg: 'linear-gradient(135deg,#FFF0F7 0%,#F8DCEB 100%)', fg: '#CE397C', label: 'Cerita dan distribusi' };
+    if (t === 'Pengalaman') return { bg: 'linear-gradient(135deg,#FFF4E5 0%,#FFE3B9 100%)', fg: '#C97800', label: 'Aktivasi audiens' };
+    return { bg: 'linear-gradient(135deg,#EEF2F8 0%,#DDE5F1 100%)', fg: '#4F6078', label: 'Media premium' };
+  }
   budgetRank(b) { return this.DATA.budgets.indexOf(b) + 1; }
 
   matches(p) {
     const s = this.state, f = s.f, q = s.search.trim().toLowerCase();
     if (q) {
-      const hay = (p.name + ' ' + p.desc + ' ' + p.type + ' ' + p.obj.join(' ') + ' ' + p.ind.join(' ') + ' ' + p.props.join(' ')).toLowerCase();
+      const hay = (p.name + ' ' + p.desc + ' ' + p.best + ' ' + p.type + ' ' + p.del + ' ' + p.obj.join(' ') + ' ' + p.ind.join(' ') + ' ' + p.props.join(' ') + ' ' + p.kpi.join(' ')).toLowerCase();
       if (hay.indexOf(q) < 0) return false;
     }
     const goal = this.DATA.useCases.filter(u => u.id === s.useCase)[0];
@@ -1410,15 +1461,20 @@ class Component extends DCLogic {
     const facetDefs = [
       ['INDUSTRI', 'industry', D.industries],
       ['JENIS SOLUSI', 'type', uniq(D.products.map(p => p.type)).sort()],
-      ['AD BLOCKER', 'adblock', ['Pengalaman milik KLY', 'Di luar platform', 'Iklan standar']]
+      ['CARA TAYANG', 'adblock', ['Pengalaman milik KLY', 'Di luar platform', 'Iklan standar']]
     ];
 
     const productCard = (p) => {
       const t = this.typeBadge(p.type), r = this.resBadge(p.res);
+      const v = this.galleryVisual(p.type);
+      const objectiveNames = { Awareness: 'Jangkauan', Commerce: 'Penjualan', 'Insight Audience': 'Insight audiens' };
       const sel = s.compare.indexOf(p.id) >= 0;
       const full = !sel && s.compare.length >= 3;
       return Object.assign({}, p, {
         objectives: p.obj, delivery: p.del, budget: p.bud, resLabel: r.label, resBg: r.bg, resFg: r.fg,
+        visualBg: v.bg, visualFg: v.fg, visualLabel: v.label,
+        primaryObjective: objectiveNames[p.obj[0]] || p.obj[0],
+        bestFor: p.best.replace(/^Cocok untuk\s*/i, '').replace(/\.$/, ''),
         typeBg: t.bg, typeFg: t.fg, selected: sel,
         border: sel ? '#1769E0' : '#E3E9F2',
         shadow: sel ? '0 12px 30px -24px rgba(23,105,224,.55)' : 'none',
@@ -1431,7 +1487,7 @@ class Component extends DCLogic {
 
     const rowDefs = [
       ['Tujuan', p => p.obj.join(', ')], ['Cocok untuk', p => p.best],
-      ['Cara tayang', p => p.del], ['Ad blocker', p => p.res],
+      ['Cara tayang', p => p.del], ['Ketahanan ad blocker', p => this.resBadge(p.res).label],
       ['Waktu siap', p => p.lead], ['Anggaran', p => p.bud]
     ];
 
