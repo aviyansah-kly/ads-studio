@@ -79,7 +79,7 @@ header [style*="background:#fff"]{background:rgba(255,255,255,.1)!important;bord
 .klyEcosystemStat{min-height:96px;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:10px;text-align:center}
 .klyEcosystemStat strong{font-size:clamp(30px,3vw,42px);line-height:1;letter-spacing:-.04em}
 .klyEcosystemStat span{font-size:14px;line-height:1.45;color:#667085;margin-top:9px}
-.klyMediaLogos{position:relative;overflow:hidden;margin-top:34px;padding:10px 0 16px;mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 91%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 91%,transparent 100%)}
+.klyMediaLogos{position:relative;overflow:hidden;margin-top:20px;padding:8px 0 16px;mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 91%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 91%,transparent 100%)}
 .klyMediaTrack{display:flex;width:max-content;will-change:transform;animation:klyLogoMarquee 28s linear infinite}
 .klyMediaGroup{display:flex;flex-shrink:0;align-items:center;gap:72px;padding-right:72px}
 .klyMediaLogo{width:148px;flex:0 0 148px;display:flex;align-items:center;justify-content:center;padding:8px 0}
@@ -89,14 +89,14 @@ header [style*="background:#fff"]{background:rgba(255,255,255,.1)!important;bord
 .goalIntro p{margin:0!important}
 .goalGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:30px}
 .goalCard{min-height:205px;display:flex;flex-direction:column;border-radius:16px!important;padding:20px!important}
-.goalCard h3{font-size:16px!important;line-height:1.25!important;margin-top:18px!important}
-.goalCard p{font-size:14px!important;line-height:1.48!important;margin-top:8px!important}
+.goalCard h3{font-size:20px!important;line-height:1.24!important;margin-top:18px!important}
+.goalCard p{font-size:16px!important;line-height:1.5!important;margin-top:9px!important}
 .goalLink{margin-top:auto!important;padding:14px 0 0!important;background:transparent!important;border:0!important;color:#1769E0!important;font-size:14px!important;font-weight:650!important;text-align:left!important;width:auto!important;justify-content:flex-start!important}
 section[style*="background:#172033"]{background:#17152F!important}
 section[style*="padding:84px"]>div{background:#5548FF!important;color:#fff!important;border:0!important;border-radius:28px!important}
 section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
 @media(max-width:980px){.goalIntro{grid-template-columns:1fr;gap:18px}.goalGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:700px){h1{font-size:44px!important}h2{font-size:34px!important}header{top:10px;width:calc(100% - 20px)}header>div:first-child{padding-inline:14px!important}#top{margin-top:-72px;padding-top:150px!important;padding-bottom:130px!important}.gradient{filter:blur(4px) saturate(103%) brightness(.96)}.klyTrustSection{margin-top:0!important;padding-top:48px!important}.klyEcosystemStats{grid-template-columns:repeat(2,1fr);gap:18px 10px;margin-top:32px}.klyEcosystemStat{min-height:88px;padding:8px}.klyMediaLogos{margin-top:26px;mask-image:linear-gradient(90deg,transparent 0,#000 14%,#000 86%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 14%,#000 86%,transparent 100%)}.klyMediaTrack{animation-duration:22s}.klyMediaGroup{gap:42px;padding-right:42px}.klyMediaLogo{width:124px;flex-basis:124px}.klyMediaLogo img{height:30px}.goalGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.goalCard{min-height:210px}#top>div{grid-template-columns:1fr!important}#solutions,#gallery,#showcase,#casestudies,#howitworks{padding-inline:18px!important}}
+@media(max-width:700px){h1{font-size:44px!important}h2{font-size:34px!important}header{top:10px;width:calc(100% - 20px)}header>div:first-child{padding-inline:14px!important}#top{margin-top:-72px;padding-top:150px!important;padding-bottom:130px!important}.gradient{filter:blur(4px) saturate(103%) brightness(.96)}.klyTrustSection{margin-top:0!important;padding-top:48px!important}.klyEcosystemStats{grid-template-columns:repeat(2,1fr);gap:18px 10px;margin-top:32px}.klyEcosystemStat{min-height:88px;padding:8px}.klyMediaLogos{margin-top:16px;mask-image:linear-gradient(90deg,transparent 0,#000 14%,#000 86%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 14%,#000 86%,transparent 100%)}.klyMediaTrack{animation-duration:22s}.klyMediaGroup{gap:42px;padding-right:42px}.klyMediaLogo{width:124px;flex-basis:124px}.klyMediaLogo img{height:30px}.goalGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.goalCard{min-height:220px}#top>div{grid-template-columns:1fr!important}#solutions,#gallery,#showcase,#casestudies,#howitworks{padding-inline:18px!important}}
 @media(max-width:460px){.goalGrid{grid-template-columns:1fr}.goalCard{min-height:190px}}
 @media(prefers-reduced-motion:reduce){.klyMediaTrack{animation:none}}
 </style>
@@ -212,9 +212,6 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
       <div class="klyEcosystemStat"><strong>113 juta</strong><span>pengunjung unik per bulan</span></div>
       <div class="klyEcosystemStat"><strong>45 juta</strong><span>pengikut media sosial</span></div>
       <div class="klyEcosystemStat"><strong>200+</strong><span>brand telah bekerja sama dengan KLY</span></div>
-    </div>
-    <div style="text-align:center;margin-top:32px">
-      <span style="font-family:'IBM Plex Mono',monospace;font-size:14px;letter-spacing:.12em;color:#8A94A6">MEDIA DALAM EKOSISTEM KLY</span>
     </div>
     <div class="klyMediaLogos" aria-label="Media dalam ekosistem KLY">
       <div class="klyMediaTrack">
