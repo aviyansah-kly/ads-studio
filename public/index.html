@@ -62,9 +62,9 @@ header a,header span,header nav a{color:rgba(255,255,255,.8)!important}
 header nav a:hover{color:#fff!important}
 header [style*="background:#1769E0"]{background:#fff!important;border-color:#fff!important;color:#17152F!important}
 header [style*="background:#fff"]{background:rgba(255,255,255,.1)!important;border-color:rgba(255,255,255,.3)!important;color:#fff!important}
-#top{position:relative;isolation:isolate;overflow:hidden;margin-top:-72px;padding-top:180px!important;padding-bottom:150px!important;min-height:820px;background:#102567;color:#fff}
+#top{position:relative;isolation:isolate;overflow:hidden;margin-top:-72px;padding-top:180px!important;padding-bottom:150px!important;min-height:820px;background:#000;color:#fff}
 #top:before{content:"";position:absolute;inset:0;z-index:-3;background-image:linear-gradient(rgba(255,255,255,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.09) 1px,transparent 1px);background-size:96px 96px;mask-image:linear-gradient(to bottom,black 0%,transparent 82%)}
-.gradient{position:absolute;inset:-5%;width:110%;height:110%;z-index:-2;pointer-events:none;filter:blur(28px) saturate(112%);transform:scale(1.035);opacity:.98}
+.gradient{position:absolute;inset:-3%;width:106%;height:106%;z-index:-2;pointer-events:none;filter:blur(10px) saturate(108%);transform:scale(1.02);opacity:1}
 #top:after{content:"";position:absolute;z-index:-1;left:0;right:0;bottom:-1px;height:210px;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.03) 18%,rgba(255,255,255,.24) 48%,rgba(255,255,255,.72) 76%,#fff 100%)}
 #top h1,#top h2,#top h3{color:#fff!important}
 #top p,#top span{color:rgba(255,255,255,.78)!important}
@@ -1505,17 +1505,23 @@ class Component extends DCLogic {
 }
 </script>
 <script type="module">
-  import { WaveGradient } from '/wavegradient.js';
+  import { ShaderGradient } from '/shadergradient.js';
   const canvasElement = document.querySelector('.gradient');
-  new WaveGradient(canvasElement, {
-    debug: false,
-    colors: ['#2941CB', '#6348DE', '#2941CB', '#0e1a75'],
-    fps: 60,
-    seed: 0,
-    density: [0.03, 0.08],
-    speed: 0.6,
-    amplitude: 320,
-    time: 0
+  new ShaderGradient(canvasElement, {
+    animate: 'on',
+    bgColor1: '#000000',
+    bgColor2: '#000000',
+    brightness: 1.2,
+    color1: '#6164ff',
+    color2: '#7a36c7',
+    color3: '#ea9dfd',
+    pixelDensity: 1,
+    rotationZ: 225,
+    uDensity: 1.8,
+    uFrequency: 5.5,
+    uSpeed: 0.2,
+    uStrength: 3,
+    uTime: 0.2
   });
 </script>
 </body>
