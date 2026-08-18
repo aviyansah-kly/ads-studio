@@ -39,22 +39,32 @@ export class WaveGradient {
     const amp = Math.min(this.options.amplitude, this.height * 0.43);
     const frequency = this.options.density[0] +
       (this.options.density[1] - this.options.density[0]) * (index / 4);
-    ctx.beginPath();
-    ctx.moveTo(-40, this.height + 40);
-    for (let x = -40; x <= this.width + 40; x += 14) {
-      const y = baseline +
+    const points = [];
+    for (let x = -80; x <= this.width + 80; x += 28) {
+      points.push({ x, y: baseline +
         Math.sin(x * frequency * 0.16 + phase) * amp * (0.20 + index * 0.035) +
-        Math.cos(x * frequency * 0.075 - phase * 0.7) * amp * 0.16;
-      ctx.lineTo(x, y);
+        Math.cos(x * frequency * 0.075 - phase * 0.7) * amp * 0.16 });
     }
-    ctx.lineTo(this.width + 40, this.height + 40);
+    ctx.beginPath();
+    ctx.moveTo(-80, this.height + 80);
+    ctx.lineTo(points[0].x, points[0].y);
+    for (let i = 1; i < points.length - 1; i++) {
+      const p = points[i];
+      const next = points[i + 1];
+      ctx.quadraticCurveTo(p.x, p.y, (p.x + next.x) / 2, (p.y + next.y) / 2);
+    }
+    const last = points[points.length - 1];
+    ctx.lineTo(last.x, last.y);
+    ctx.lineTo(this.width + 80, this.height + 80);
     ctx.closePath();
     const g = ctx.createLinearGradient(0, baseline - amp, this.width, this.height);
     g.addColorStop(0, color);
     g.addColorStop(1, this.options.colors[(index + 1) % this.options.colors.length]);
     ctx.globalAlpha = opacity;
+    ctx.filter = 'blur(18px)';
     ctx.fillStyle = g;
     ctx.fill();
+    ctx.filter = 'none';
   }
 
   draw() {
@@ -68,10 +78,11 @@ export class WaveGradient {
     ctx.fillStyle = bg;
     ctx.fillRect(0, 0, this.width, this.height);
     ctx.globalCompositeOperation = 'screen';
-    this.wave(0, colors[1], this.time + 0.8, this.height * 0.28, 0.72);
-    this.wave(1, colors[0], this.time * 0.82 + 2.3, this.height * 0.48, 0.68);
-    this.wave(2, colors[1], this.time * 1.12 + 4.1, this.height * 0.67, 0.50);
-    this.wave(3, colors[2], this.time * 0.68 + 5.4, this.height * 0.84, 0.48);
+    this.wave(0, colors[1], this.time + 0.8, this.height * 0.22, 0.58);
+    this.wave(1, colors[0], this.time * 0.82 + 2.3, this.height * 0.42, 0.54);
+    this.wave(2, colors[1], this.time * 1.12 + 4.1, this.height * 0.61, 0.43);
+    this.wave(3, colors[2], this.time * 0.68 + 5.4, this.height * 0.80, 0.40);
+    this.wave(4, colors[1], this.time * 0.56 + 7.1, this.height * 0.96, 0.28);
     ctx.globalCompositeOperation = 'source-over';
     ctx.globalAlpha = 1;
   }
@@ -79,7 +90,7 @@ export class WaveGradient {
   frame(now) {
     const interval = 1000 / this.options.fps;
     if (!this.last || now - this.last >= interval) {
-      if (!this.reduceMotion) this.time += 0.008 * this.options.speed;
+      if (!this.reduceMotion) this.time += 0.006 * this.options.speed;
       this.draw();
       this.last = now;
     }
