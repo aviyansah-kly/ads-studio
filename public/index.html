@@ -62,19 +62,22 @@ header a,header span,header nav a{color:rgba(255,255,255,.8)!important}
 header nav a:hover{color:#fff!important}
 header [style*="background:#1769E0"]{background:#fff!important;border-color:#fff!important;color:#17152F!important}
 header [style*="background:#fff"]{background:rgba(255,255,255,.1)!important;border-color:rgba(255,255,255,.3)!important;color:#fff!important}
-#top{position:relative;isolation:isolate;overflow:hidden;margin-top:-72px;padding-top:180px!important;min-height:760px;background:#102567;color:#fff}
+#top{position:relative;isolation:isolate;overflow:hidden;margin-top:-72px;padding-top:180px!important;padding-bottom:150px!important;min-height:820px;background:#102567;color:#fff}
 #top:before{content:"";position:absolute;inset:0;z-index:-3;background-image:linear-gradient(rgba(255,255,255,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.09) 1px,transparent 1px);background-size:96px 96px;mask-image:linear-gradient(to bottom,black 0%,transparent 82%)}
-.gradient{position:absolute;inset:0;width:100%;height:100%;z-index:-2;pointer-events:none}
+.gradient{position:absolute;inset:-5%;width:110%;height:110%;z-index:-2;pointer-events:none;filter:blur(28px) saturate(112%);transform:scale(1.035);opacity:.98}
+#top:after{content:"";position:absolute;z-index:-1;left:0;right:0;bottom:-1px;height:210px;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.03) 18%,rgba(255,255,255,.24) 48%,rgba(255,255,255,.72) 76%,#fff 100%)}
 #top h1,#top h2,#top h3{color:#fff!important}
 #top p,#top span{color:rgba(255,255,255,.78)!important}
 #top>div{position:relative;z-index:1}
 #top>div>div:last-child>div{background:rgba(255,255,255,.86)!important;backdrop-filter:blur(20px);border-color:rgba(255,255,255,.45)!important;box-shadow:0 28px 80px rgba(5,15,48,.28)!important}
 #top>div>div:last-child p,#top>div>div:last-child span,#top>div>div:last-child div{color:#17152F!important}
 #top [style*="border-top:1px solid #E6ECF4"]{border-top-color:rgba(255,255,255,.25)!important}
+.klyTrustSection{position:relative;z-index:4;margin-top:-92px!important;padding-top:0!important}
+.klyTrustSection>div{box-shadow:0 26px 70px rgba(20,31,73,.12);background:rgba(247,247,251,.88)!important;backdrop-filter:blur(18px) saturate(130%);border-color:rgba(255,255,255,.72)!important}
 section[style*="background:#172033"]{background:#17152F!important}
 section[style*="padding:84px"]>div{background:#5548FF!important;color:#fff!important;border:0!important;border-radius:28px!important}
 section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
-@media(max-width:700px){h1{font-size:44px!important}h2{font-size:34px!important}header{top:10px;width:calc(100% - 20px)}header>div:first-child{padding-inline:14px!important}#top{margin-top:-72px;padding-top:150px!important}#top>div{grid-template-columns:1fr!important}#solutions,#gallery,#showcase,#casestudies,#howitworks{padding-inline:18px!important}}
+@media(max-width:700px){h1{font-size:44px!important}h2{font-size:34px!important}header{top:10px;width:calc(100% - 20px)}header>div:first-child{padding-inline:14px!important}#top{margin-top:-72px;padding-top:150px!important;padding-bottom:130px!important}.gradient{filter:blur(22px) saturate(110%)}.klyTrustSection{margin-top:-72px!important}#top>div{grid-template-columns:1fr!important}#solutions,#gallery,#showcase,#casestudies,#howitworks{padding-inline:18px!important}}
 </style>
 </helmet>
 
@@ -177,7 +180,7 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
   </div>
 </section>
 
-<section aria-label="Jangkauan KLY" style="padding:26px 28px 0">
+<section class="klyTrustSection" aria-label="Jangkauan KLY" style="padding:26px 28px 0">
   <div style="max-width:1260px;margin:0 auto;border:1px solid #E3E9F2;border-radius:24px;padding:26px;background:#F7F7FB">
     <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:10px">
       <div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;color:#5548FF">JANGKAUAN EKOSISTEM KLY</div><h2 style="font-size:24px!important;letter-spacing:-.02em!important;margin:8px 0 0">Satu akses ke audience lintas minat.</h2></div>
