@@ -8,7 +8,7 @@ export class WaveGradient {
       fps: 60,
       seed: 0,
       density: [0.018, 0.046],
-      speed: 0.34,
+      speed: 0.26,
       amplitude: 280,
       time: 0
     }, options);
@@ -34,7 +34,7 @@ export class WaveGradient {
     this.draw();
   }
 
-  wave(index, color, phase, baseline, opacity) {
+  wave(index, color, phase, baseline, opacity, endColor) {
     const ctx = this.ctx;
     const amp = Math.min(this.options.amplitude, this.height * 0.36);
     const frequency = this.options.density[0] +
@@ -59,9 +59,9 @@ export class WaveGradient {
     ctx.closePath();
     const g = ctx.createLinearGradient(0, baseline - amp, this.width, this.height);
     g.addColorStop(0, color);
-    g.addColorStop(1, this.options.colors[(index + 1) % this.options.colors.length]);
+    g.addColorStop(1, endColor || this.options.colors[(index + 1) % this.options.colors.length]);
     ctx.globalAlpha = opacity;
-    ctx.filter = 'blur(38px)';
+    ctx.filter = 'blur(20px)';
     ctx.fillStyle = g;
     ctx.fill();
     ctx.filter = 'none';
@@ -95,13 +95,13 @@ export class WaveGradient {
     ctx.fillStyle = bg;
     ctx.fillRect(0, 0, this.width, this.height);
     ctx.globalCompositeOperation = 'screen';
-    this.blob(0, colors[1], this.time + 0.4, 0.18);
-    this.blob(1, colors[2], this.time + 3.2, 0.16);
-    this.blob(2, colors[1], this.time + 6.1, 0.12);
-    this.wave(0, colors[1], this.time + 0.8, this.height * 0.24, 0.30);
-    this.wave(1, colors[0], this.time * 0.82 + 2.3, this.height * 0.46, 0.28);
-    this.wave(2, colors[1], this.time * 1.08 + 4.1, this.height * 0.68, 0.23);
-    this.wave(3, colors[2], this.time * 0.64 + 5.4, this.height * 0.88, 0.20);
+    this.blob(0, colors[1], this.time + 0.4, 0.16);
+    this.blob(1, colors[2], this.time + 3.2, 0.13);
+    this.blob(2, colors[1], this.time + 6.1, 0.10);
+    ctx.globalCompositeOperation = 'source-over';
+    this.wave(0, '#101E70', this.time * 0.48 + 0.8, this.height * 0.50, 0.78, '#172B8F');
+    this.wave(1, '#17277D', this.time * 0.36 + 2.9, this.height * 0.67, 0.70, '#233A9F');
+    this.wave(2, '#213BA8', this.time * 0.27 + 5.1, this.height * 0.84, 0.58, '#2948B8');
     ctx.globalCompositeOperation = 'source-over';
     ctx.globalAlpha = 1;
   }
