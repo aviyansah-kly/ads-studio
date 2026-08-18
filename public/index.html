@@ -65,7 +65,7 @@ header [style*="background:#1769E0"]{background:#fff!important;border-color:#fff
 header [style*="background:#fff"]{background:rgba(255,255,255,.1)!important;border-color:rgba(255,255,255,.3)!important;color:#fff!important}
 #top{position:relative;isolation:isolate;overflow:hidden;margin-top:-72px;padding-top:180px!important;padding-bottom:150px!important;min-height:820px;background:#1F36A7;color:#fff}
 #top:before{content:"";position:absolute;inset:0;z-index:-3;background-image:linear-gradient(rgba(255,255,255,.065) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.065) 1px,transparent 1px);background-size:96px 96px;mask-image:linear-gradient(to bottom,black 0%,transparent 76%);opacity:.42}
-.gradient{position:absolute;inset:-4%;width:108%;height:108%;z-index:-2;pointer-events:none;filter:blur(14px) saturate(106%) brightness(.92);transform:scale(1.025);opacity:1}
+.gradient{position:absolute;inset:-3%;width:106%;height:106%;z-index:-2;pointer-events:none;filter:saturate(106%) brightness(.96);transform:scale(1.018);opacity:1}
 #top:after{content:"";position:absolute;z-index:-1;left:0;right:0;bottom:-1px;height:148px;pointer-events:none;background:linear-gradient(180deg,rgba(230,235,255,0) 0%,rgba(230,235,255,.08) 38%,rgba(235,239,255,.48) 72%,rgba(247,248,255,.9) 91%,#fff 100%)}
 #top h1,#top h2,#top h3{color:#fff!important}
 #top p,#top span{color:rgba(255,255,255,.92)!important}
@@ -88,7 +88,7 @@ header [style*="background:#fff"]{background:rgba(255,255,255,.1)!important;bord
 section[style*="background:#172033"]{background:#17152F!important}
 section[style*="padding:84px"]>div{background:#5548FF!important;color:#fff!important;border:0!important;border-radius:28px!important}
 section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
-@media(max-width:700px){h1{font-size:44px!important}h2{font-size:34px!important}header{top:10px;width:calc(100% - 20px)}header>div:first-child{padding-inline:14px!important}#top{margin-top:-72px;padding-top:150px!important;padding-bottom:130px!important}.gradient{filter:blur(10px) saturate(104%) brightness(.92)}.klyTrustSection{margin-top:0!important;padding-top:48px!important}.klyEcosystemStats{grid-template-columns:repeat(2,1fr);gap:18px 10px;margin-top:32px}.klyEcosystemStat{min-height:88px;padding:8px}.klyMediaLogos{margin-top:26px;mask-image:linear-gradient(90deg,transparent 0,#000 14%,#000 86%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 14%,#000 86%,transparent 100%)}.klyMediaTrack{animation-duration:22s}.klyMediaGroup{gap:42px;padding-right:42px}.klyMediaLogo{width:124px;flex-basis:124px}.klyMediaLogo img{height:30px}#top>div{grid-template-columns:1fr!important}#solutions,#gallery,#showcase,#casestudies,#howitworks{padding-inline:18px!important}}
+@media(max-width:700px){h1{font-size:44px!important}h2{font-size:34px!important}header{top:10px;width:calc(100% - 20px)}header>div:first-child{padding-inline:14px!important}#top{margin-top:-72px;padding-top:150px!important;padding-bottom:130px!important}.gradient{filter:saturate(104%) brightness(.96)}.klyTrustSection{margin-top:0!important;padding-top:48px!important}.klyEcosystemStats{grid-template-columns:repeat(2,1fr);gap:18px 10px;margin-top:32px}.klyEcosystemStat{min-height:88px;padding:8px}.klyMediaLogos{margin-top:26px;mask-image:linear-gradient(90deg,transparent 0,#000 14%,#000 86%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 14%,#000 86%,transparent 100%)}.klyMediaTrack{animation-duration:22s}.klyMediaGroup{gap:42px;padding-right:42px}.klyMediaLogo{width:124px;flex-basis:124px}.klyMediaLogo img{height:30px}#top>div{grid-template-columns:1fr!important}#solutions,#gallery,#showcase,#casestudies,#howitworks{padding-inline:18px!important}}
 @media(prefers-reduced-motion:reduce){.klyMediaTrack{animation:none}}
 </style>
 </helmet>
@@ -1550,7 +1550,7 @@ class Component extends DCLogic {
   new WaveGradient(canvasElement, {
     debug: false,
     colors: ['#233EB8', '#3D56D6', '#2948B8', '#172B8F'],
-    fps: 60,
+    fps: 36,
     seed: 0,
     density: [0.018, 0.046],
     speed: 0.26,

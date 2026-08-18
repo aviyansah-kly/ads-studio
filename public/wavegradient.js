@@ -5,7 +5,7 @@ export class WaveGradient {
     this.ctx = canvas.getContext('2d', { alpha: false });
     this.options = Object.assign({
       colors: ['#233EB8', '#3D56D6', '#2948B8', '#172B8F'],
-      fps: 60,
+      fps: 36,
       seed: 0,
       density: [0.018, 0.046],
       speed: 0.26,
@@ -25,7 +25,7 @@ export class WaveGradient {
 
   resize() {
     const box = this.canvas.getBoundingClientRect();
-    const dpr = Math.min(devicePixelRatio || 1, 1.5);
+    const dpr = Math.min(devicePixelRatio || 1, 1);
     this.width = Math.max(1, box.width);
     this.height = Math.max(1, box.height);
     this.canvas.width = Math.round(this.width * dpr);
@@ -40,7 +40,7 @@ export class WaveGradient {
     const frequency = this.options.density[0] +
       (this.options.density[1] - this.options.density[0]) * (index / 4);
     const points = [];
-    for (let x = -100; x <= this.width + 100; x += 36) {
+    for (let x = -120; x <= this.width + 120; x += 44) {
       points.push({ x, y: baseline +
         Math.sin(x * frequency * 0.13 + phase) * amp * (0.16 + index * 0.026) +
         Math.cos(x * frequency * 0.058 - phase * 0.58) * amp * 0.12 });
@@ -61,7 +61,7 @@ export class WaveGradient {
     g.addColorStop(0, color);
     g.addColorStop(1, endColor || this.options.colors[(index + 1) % this.options.colors.length]);
     ctx.globalAlpha = opacity;
-    ctx.filter = 'blur(20px)';
+    ctx.filter = 'blur(10px)';
     ctx.fillStyle = g;
     ctx.fill();
     ctx.filter = 'none';
@@ -78,7 +78,7 @@ export class WaveGradient {
     gradient.addColorStop(1, 'rgba(0,0,0,0)');
     ctx.save();
     ctx.globalAlpha = opacity;
-    ctx.filter = 'blur(52px)';
+    ctx.filter = 'blur(24px)';
     ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, this.width, this.height);
     ctx.restore();
@@ -88,20 +88,19 @@ export class WaveGradient {
     const ctx = this.ctx;
     const colors = this.options.colors;
     const bg = ctx.createLinearGradient(0, 0, this.width, this.height);
-    bg.addColorStop(0, colors[3]);
-    bg.addColorStop(0.46, colors[0]);
-    bg.addColorStop(1, '#1D329D');
+    bg.addColorStop(0, '#2D4CCB');
+    bg.addColorStop(0.48, '#3556D3');
+    bg.addColorStop(1, '#2948B8');
     ctx.globalAlpha = 1;
     ctx.fillStyle = bg;
     ctx.fillRect(0, 0, this.width, this.height);
     ctx.globalCompositeOperation = 'screen';
-    this.blob(0, colors[1], this.time + 0.4, 0.16);
-    this.blob(1, colors[2], this.time + 3.2, 0.13);
-    this.blob(2, colors[1], this.time + 6.1, 0.10);
+    this.blob(0, colors[1], this.time + 0.4, 0.12);
+    this.blob(1, colors[2], this.time + 3.2, 0.10);
     ctx.globalCompositeOperation = 'source-over';
-    this.wave(0, '#101E70', this.time * 0.48 + 0.8, this.height * 0.50, 0.78, '#172B8F');
-    this.wave(1, '#17277D', this.time * 0.36 + 2.9, this.height * 0.67, 0.70, '#233A9F');
-    this.wave(2, '#213BA8', this.time * 0.27 + 5.1, this.height * 0.84, 0.58, '#2948B8');
+    this.wave(0, '#091861', this.time * 0.48 + 0.8, this.height * 0.47, 0.92, '#132779');
+    this.wave(1, '#122675', this.time * 0.36 + 2.9, this.height * 0.67, 0.82, '#1C3593');
+    this.wave(2, '#1B3599', this.time * 0.27 + 5.1, this.height * 0.86, 0.70, '#2948B8');
     ctx.globalCompositeOperation = 'source-over';
     ctx.globalAlpha = 1;
   }
