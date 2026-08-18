@@ -737,7 +737,7 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
       <sc-for list="{{ caseStudies }}" as="cs" hint-placeholder-count="3">
         <article class="resultCard">
           <div class="resultImage">
-            <img src="{{ cs.image }}" alt="{{ cs.imageAlt }}" loading="lazy">
+            <img src="{{ cs.image }}" alt="{{ cs.imageAlt }}" decoding="async">
             <span class="resultCategory">{{ cs.category }}</span>
             <span class="resultImageNote">Public case</span>
           </div>
