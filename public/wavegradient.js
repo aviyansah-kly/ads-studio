@@ -5,7 +5,7 @@ export class WaveGradient {
     this.ctx = canvas.getContext('2d', { alpha: false });
     this.options = Object.assign({
       colors: ['#233EB8', '#3D56D6', '#2948B8', '#172B8F'],
-      fps: 36,
+      fps: 30,
       seed: 0,
       density: [0.018, 0.046],
       speed: 0.26,
@@ -61,7 +61,7 @@ export class WaveGradient {
     g.addColorStop(0, color);
     g.addColorStop(1, endColor || this.options.colors[(index + 1) % this.options.colors.length]);
     ctx.globalAlpha = opacity;
-    ctx.filter = 'blur(10px)';
+    ctx.filter = 'blur(18px)';
     ctx.fillStyle = g;
     ctx.fill();
     ctx.filter = 'none';
@@ -88,9 +88,9 @@ export class WaveGradient {
     const ctx = this.ctx;
     const colors = this.options.colors;
     const bg = ctx.createLinearGradient(0, 0, this.width, this.height);
-    bg.addColorStop(0, '#2D4CCB');
-    bg.addColorStop(0.48, '#3556D3');
-    bg.addColorStop(1, '#2948B8');
+    bg.addColorStop(0, '#304DCA');
+    bg.addColorStop(0.48, '#3553CD');
+    bg.addColorStop(1, '#2B48BB');
     ctx.globalAlpha = 1;
     ctx.fillStyle = bg;
     ctx.fillRect(0, 0, this.width, this.height);
@@ -98,9 +98,9 @@ export class WaveGradient {
     this.blob(0, colors[1], this.time + 0.4, 0.12);
     this.blob(1, colors[2], this.time + 3.2, 0.10);
     ctx.globalCompositeOperation = 'source-over';
-    this.wave(0, '#091861', this.time * 0.48 + 0.8, this.height * 0.47, 0.92, '#132779');
-    this.wave(1, '#122675', this.time * 0.36 + 2.9, this.height * 0.67, 0.82, '#1C3593');
-    this.wave(2, '#1B3599', this.time * 0.27 + 5.1, this.height * 0.86, 0.70, '#2948B8');
+    this.wave(0, '#142A87', this.time * 0.48 + 0.8, this.height * 0.47, 0.72, '#1C3598');
+    this.wave(1, '#1D3797', this.time * 0.36 + 2.9, this.height * 0.67, 0.60, '#2440AD');
+    this.wave(2, '#2646B7', this.time * 0.27 + 5.1, this.height * 0.86, 0.48, '#2B4BC0');
     ctx.globalCompositeOperation = 'source-over';
     ctx.globalAlpha = 1;
   }
