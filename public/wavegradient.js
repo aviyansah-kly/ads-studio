@@ -1,3 +1,96 @@
+const COPY_REPLACEMENTS = [
+  ['Temukan solusi iklan KLY yang tepat.', 'Temukan solusi ber-iklan yang tepat di KLY.'],
+  ['Susun Kampanye', 'Buat Campaign']
+];
+
+function normalizeKlyAdsCopy(value) {
+  if (typeof value !== 'string' || !value) return value;
+  let next = value;
+  for (const [from, to] of COPY_REPLACEMENTS) {
+    next = next.split(from).join(to);
+  }
+  return next
+    .replace(/KAMPANYE/g, 'CAMPAIGN')
+    .replace(/Kampanye/g, 'Campaign')
+    .replace(/kampanye/g, 'campaign');
+}
+
+function normalizeElementCopy(root) {
+  if (!root || typeof document === 'undefined') return;
+
+  const normalizeTextNode = (node) => {
+    const current = node.nodeValue;
+    const next = normalizeKlyAdsCopy(current);
+    if (next !== current) node.nodeValue = next;
+  };
+
+  if (root.nodeType === Node.TEXT_NODE) {
+    normalizeTextNode(root);
+    return;
+  }
+
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+  let textNode;
+  while ((textNode = walker.nextNode())) normalizeTextNode(textNode);
+
+  const elements = root.nodeType === Node.ELEMENT_NODE
+    ? [root, ...root.querySelectorAll('*')]
+    : [...document.querySelectorAll('*')];
+
+  const copyAttributes = ['aria-label', 'placeholder', 'title', 'content'];
+  for (const element of elements) {
+    for (const attr of copyAttributes) {
+      if (!element.hasAttribute || !element.hasAttribute(attr)) continue;
+      const current = element.getAttribute(attr);
+      const next = normalizeKlyAdsCopy(current);
+      if (next !== current) element.setAttribute(attr, next);
+    }
+  }
+}
+
+function installKlyAdsCopyNormalizer() {
+  if (typeof document === 'undefined') return;
+
+  const run = () => normalizeElementCopy(document);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', run, { once: true });
+  } else {
+    run();
+  }
+
+  const startObserver = () => {
+    if (!document.documentElement || typeof MutationObserver === 'undefined') return;
+    const observer = new MutationObserver((mutations) => {
+      for (const mutation of mutations) {
+        if (mutation.type === 'characterData') {
+          normalizeElementCopy(mutation.target);
+          continue;
+        }
+        for (const node of mutation.addedNodes) normalizeElementCopy(node);
+      }
+    });
+    observer.observe(document.documentElement, {
+      childList: true,
+      subtree: true,
+      characterData: true
+    });
+  };
+
+  if (document.documentElement) startObserver();
+  else document.addEventListener('DOMContentLoaded', startObserver, { once: true });
+
+  try {
+    if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+      const originalWriteText = navigator.clipboard.writeText.bind(navigator.clipboard);
+      navigator.clipboard.writeText = (text) => originalWriteText(normalizeKlyAdsCopy(text));
+    }
+  } catch (error) {
+    // Clipboard methods can be read-only in some browsers; UI copy remains normalized.
+  }
+}
+
+installKlyAdsCopyNormalizer();
+
 export class WaveGradient {
   constructor(canvas, options = {}) {
     if (!canvas) return;
