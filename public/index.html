@@ -164,15 +164,17 @@ button{border-radius:999px!important;font-weight:650!important}
 .resultApproach{margin-top:18px;padding:14px 15px;border-radius:12px;background:#F6F7FB}
 .resultApproach span{display:block;font-size:14px;font-weight:700;color:#5548FF}
 .resultApproach p{font-size:15px;line-height:1.5;color:#465165;margin:5px 0 0}
-.resultMetric{margin-top:20px;padding-top:19px;border-top:1px solid #E7EAF1}
-.resultMetricLabel{font-size:14px;font-weight:700;letter-spacing:.04em;color:#707A8D;text-transform:uppercase}
-.resultMetricPrimary{display:flex;align-items:flex-end;gap:9px;margin-top:8px}
-.resultMetricPrimary strong{font-size:clamp(42px,4vw,58px);line-height:.92;letter-spacing:-.055em;color:#17152F}
-.resultMetricPrimary span{font-size:16px;font-weight:650;color:#566174;padding-bottom:4px}
-.resultHighlights{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:17px}
-.resultHighlight{min-height:70px;padding:11px 12px;border-radius:12px;background:#F0EFFF;color:#4B40D2}
-.resultHighlight strong{display:block;font-size:21px;line-height:1.05;letter-spacing:-.025em}
-.resultHighlight span{display:block;font-size:14px;line-height:1.35;margin-top:5px;color:#626B7D}
+.resultMetric{position:relative;overflow:hidden;margin-top:20px;padding:20px;border-radius:18px;background:linear-gradient(145deg,#1B193D 0%,#272564 100%);color:#fff;box-shadow:0 16px 34px rgba(25,23,63,.18)}
+.resultMetric:after{content:"";position:absolute;width:190px;height:190px;right:-82px;top:-105px;border-radius:50%;background:radial-gradient(circle,rgba(128,119,255,.46),rgba(128,119,255,0) 70%);pointer-events:none}
+.resultMetricLabel{position:relative;z-index:1;font-size:14px;font-weight:750;letter-spacing:.1em;color:#BBB7FF;text-transform:uppercase}
+.resultMetricPrimary{position:relative;z-index:1;display:flex;flex-direction:column;align-items:flex-start;gap:7px;margin-top:12px}
+.resultMetricPrimary strong{max-width:100%;font-size:clamp(48px,4.4vw,66px);font-weight:780;line-height:.88;letter-spacing:-.06em;color:#fff}
+.resultMetricPrimary span{font-size:15px;font-weight:650;line-height:1.3;color:#D7D9EB}
+.resultHighlights{position:relative;z-index:1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:22px;padding-top:18px;border-top:1px solid rgba(255,255,255,.18)}
+.resultHighlight{min-width:0;padding:0 14px 0 0}
+.resultHighlight+ .resultHighlight{padding:0 0 0 16px;border-left:1px solid rgba(255,255,255,.18)}
+.resultHighlight strong{display:block;max-width:100%;font-size:clamp(25px,2.15vw,32px);font-weight:780;line-height:1;letter-spacing:-.035em;color:#fff;overflow-wrap:anywhere}
+.resultHighlight span{display:block;font-size:14px;font-weight:550;line-height:1.35;margin-top:8px;color:#BFC3D8}
 .resultCta{width:100%;min-height:46px;margin-top:20px;padding:11px 16px;background:#17152F!important;border:1px solid #17152F!important;color:#fff!important;font-size:15px!important}
 .resultsFootnote{font-size:14px;line-height:1.5;color:#778195;margin:18px 0 0}
 .processSection{position:relative;overflow:hidden;margin-top:88px;padding:88px 28px!important;background:linear-gradient(180deg,#F7F8FF 0%,#fff 100%)}
@@ -265,7 +267,7 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
 @media(max-width:1100px){.campaignGrid,.resultsGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.campaignCard:last-child,.resultCard:last-child{grid-column:1/-1}.capabilityLayout{gap:54px}.footerTop{grid-template-columns:1fr;gap:38px}}
 @media(max-width:980px){.goalIntro{grid-template-columns:1fr;gap:18px}.goalGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.advisorIntro{grid-template-columns:1fr;gap:20px}.advisorMeta{justify-content:flex-start}.advisorGrid{grid-template-columns:1fr!important}.advisorIdle{min-height:360px}.galleryHeader{grid-template-columns:1fr}.galleryHeader>div:last-child{justify-self:start}.galleryGrid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.campaignIntro,.resultsIntro,.processIntro{grid-template-columns:1fr;gap:16px}.processTimeline{grid-template-columns:repeat(2,minmax(0,1fr));gap:34px 24px}.processTimeline:before{display:none}.capabilityLayout{grid-template-columns:1fr;gap:38px}.capabilityIntro{position:static}.capabilityIntro h2{max-width:16ch}.finalCta{grid-template-columns:1fr}.finalCtaActions{flex-direction:row;min-width:0}.finalCtaActions button{flex:1}.footerColumns{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){h1{font-size:44px!important}h2{font-size:34px!important}header{top:10px;width:calc(100% - 20px)}header>div:first-child{padding-inline:14px!important}#top{margin-top:-72px;padding-top:150px!important;padding-bottom:130px!important}.gradient{filter:blur(4px) saturate(103%) brightness(.96)}.klyTrustSection{margin-top:0!important;padding-top:48px!important}.klyEcosystemStats{grid-template-columns:repeat(2,1fr);gap:18px 10px;margin-top:32px}.klyEcosystemStat{min-height:88px;padding:8px}.klyMediaLogos{margin-top:16px;mask-image:linear-gradient(90deg,transparent 0,#000 14%,#000 86%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 14%,#000 86%,transparent 100%)}.klyMediaTrack{animation-duration:22s}.klyMediaGroup{gap:42px;padding-right:42px}.klyMediaLogo{width:124px;flex-basis:124px}.klyMediaLogo img{height:30px}.goalGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.goalCard{min-height:220px}#top>div{grid-template-columns:1fr!important}#solutions,#gallery,#showcase,#casestudies,#howitworks{padding-inline:18px!important}#advisor{padding:64px 18px!important}.advisorFields{grid-template-columns:1fr!important}.advisorForm{padding:22px!important}.advisorFormHead{margin-bottom:20px}.advisorMeta span{font-size:13px}.advisorIdle{min-height:320px;padding:42px 22px!important}}
-@media(max-width:700px){.campaignGrid,.resultsGrid{grid-template-columns:1fr}.campaignCard:last-child,.resultCard:last-child{grid-column:auto}.campaignChallenge{min-height:0}.campaignVisual{min-height:174px}.campaignMap{grid-template-columns:minmax(0,.8fr) 14px minmax(0,1.1fr) 14px minmax(0,.8fr)}.campaignMapNode{padding:9px}.campaignMapNode strong{font-size:12px}.resultBody{padding:20px}.resultMetricPrimary strong{font-size:48px}.processTimeline{grid-template-columns:1fr}.processStep{padding:0 0 0 76px;min-height:118px}.processNumber{top:0}.capabilityItem{grid-template-columns:40px minmax(0,1fr)}.capabilityItem p{grid-column:2}.finalCtaActions{flex-direction:column}.footerColumns{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.campaignGrid,.resultsGrid{grid-template-columns:1fr}.campaignCard:last-child,.resultCard:last-child{grid-column:auto}.campaignChallenge{min-height:0}.campaignVisual{min-height:174px}.campaignMap{grid-template-columns:minmax(0,.8fr) 14px minmax(0,1.1fr) 14px minmax(0,.8fr)}.campaignMapNode{padding:9px}.campaignMapNode strong{font-size:12px}.resultBody{padding:20px}.resultMetric{padding:20px}.resultMetricPrimary strong{font-size:54px}.resultHighlight strong{font-size:28px}.processTimeline{grid-template-columns:1fr}.processStep{padding:0 0 0 76px;min-height:118px}.processNumber{top:0}.capabilityItem{grid-template-columns:40px minmax(0,1fr)}.capabilityItem p{grid-column:2}.finalCtaActions{flex-direction:column}.footerColumns{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.galleryFilters{grid-template-columns:1fr!important}.galleryGrid{grid-template-columns:1fr!important}.galleryToolbar{padding:14px!important}.galleryCardBody>p{min-height:0}}
 @media(max-width:460px){.goalGrid{grid-template-columns:1fr}.goalCard{min-height:190px}}
 @media(prefers-reduced-motion:reduce){.klyMediaTrack{animation:none}}
@@ -794,7 +796,7 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
               <p>{{ cs.solution }}</p>
             </div>
             <div class="resultMetric">
-              <div class="resultMetricLabel">Primary result</div>
+              <div class="resultMetricLabel">Hasil utama</div>
               <div class="resultMetricPrimary"><strong>{{ cs.mainValue }}</strong><span>{{ cs.mainLabel }}</span></div>
               <div class="resultHighlights">
                 <sc-for list="{{ cs.highlights }}" as="m" hint-placeholder-count="2">
