@@ -152,29 +152,24 @@ button{border-radius:999px!important;font-weight:650!important}
 .resultsGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:34px}
 .resultCard{min-width:0;overflow:hidden;display:flex;flex-direction:column;border:1px solid #E1E5EE;border-radius:22px;background:#fff;box-shadow:0 16px 46px rgba(23,21,47,.08);transition:transform .2s,border-color .2s,box-shadow .2s}
 .resultCard:hover{transform:translateY(-4px);border-color:#BEB8FF;box-shadow:0 24px 60px rgba(42,40,102,.13)}
-.resultImage{position:relative;aspect-ratio:16/9;overflow:hidden;background:#ECEEF5}
+.resultImage{position:relative;aspect-ratio:1.9/1;overflow:hidden;background:#ECEEF5}
 .resultImage:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(17,18,45,.48) 100%);pointer-events:none}
 .resultImage img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .45s ease}
 .resultCard:hover .resultImage img{transform:scale(1.025)}
 .resultCategory{position:absolute;z-index:1;left:18px;top:18px;display:inline-flex;align-items:center;min-height:31px;padding:6px 11px;border:1px solid rgba(255,255,255,.55);border-radius:999px;background:rgba(22,23,58,.62);backdrop-filter:blur(12px);color:#fff;font-size:14px;font-weight:700}
-.resultImageNote{position:absolute;z-index:1;right:18px;bottom:15px;color:#fff;font-size:14px;font-weight:650}
-.resultBody{display:flex;flex:1;flex-direction:column;padding:22px}
+.resultBody{display:flex;flex:1;flex-direction:column;padding:22px 22px 20px}
 .resultBody h3{font-size:23px!important;line-height:1.2!important;letter-spacing:-.02em!important;margin:0!important}
 .resultContext{font-size:16px;line-height:1.5;color:#596477;margin:11px 0 0}
-.resultApproach{margin-top:18px;padding:14px 15px;border-radius:12px;background:#F6F7FB}
-.resultApproach span{display:block;font-size:14px;font-weight:700;color:#5548FF}
-.resultApproach p{font-size:15px;line-height:1.5;color:#465165;margin:5px 0 0}
-.resultMetric{position:relative;overflow:hidden;margin-top:20px;padding:20px;border-radius:18px;background:radial-gradient(circle at 106% -12%,rgba(128,119,255,.5) 0%,rgba(128,119,255,0) 38%),linear-gradient(145deg,#1B193D 0%,#272564 100%);color:#fff;box-shadow:0 16px 34px rgba(25,23,63,.18)}
-.resultMetricLabel{position:relative;z-index:1;font-size:14px;font-weight:750;letter-spacing:.1em;color:#BBB7FF;text-transform:uppercase}
-.resultMetricPrimary{position:relative;z-index:1;display:flex;flex-direction:column;align-items:flex-start;gap:7px;margin-top:12px}
-.resultMetricPrimary strong{max-width:100%;font-size:clamp(48px,4.4vw,66px);font-weight:780;line-height:.88;letter-spacing:-.06em;color:#fff}
-.resultMetricPrimary span{font-size:15px;font-weight:650;line-height:1.3;color:#D7D9EB}
-.resultHighlights{position:relative;z-index:1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:22px;padding-top:18px;border-top:1px solid rgba(255,255,255,.18)}
-.resultHighlight{min-width:0;padding:0 14px 0 0}
-.resultHighlight+ .resultHighlight{padding:0 0 0 16px;border-left:1px solid rgba(255,255,255,.18)}
-.resultHighlight strong{display:block;max-width:100%;font-size:clamp(25px,2.15vw,32px);font-weight:780;line-height:1;letter-spacing:-.035em;color:#fff;overflow-wrap:anywhere}
-.resultHighlight span{display:block;font-size:14px;font-weight:550;line-height:1.35;margin-top:8px;color:#BFC3D8}
-.resultCta{width:100%;min-height:46px;margin-top:20px;padding:11px 16px;background:#17152F!important;border:1px solid #17152F!important;color:#fff!important;font-size:15px!important}
+.resultMetric{margin-top:20px;padding:17px 18px 18px;border-radius:15px;background:#F6F6FC}
+.resultMetricLabel{font-size:14px;font-weight:750;letter-spacing:.08em;color:#777F91;text-transform:uppercase}
+.resultMetricGrid{display:grid;grid-template-columns:1.1fr 1fr 1fr;align-items:start;margin-top:14px}
+.resultMetricPrimary,.resultHighlight{min-width:0;padding-right:13px}
+.resultHighlight{padding-left:14px;border-left:1px solid #DADDE7}
+.resultMetricPrimary strong,.resultHighlight strong{display:block;max-width:100%;font-size:clamp(25px,2.2vw,32px);font-weight:800;line-height:1;letter-spacing:-.04em;color:#17152F;overflow-wrap:anywhere}
+.resultMetricPrimary strong{color:#5548FF}
+.resultMetricPrimary span,.resultHighlight span{display:block;font-size:14px;font-weight:550;line-height:1.35;margin-top:8px;color:#626B7D}
+.resultCta{align-self:flex-start;min-height:auto;margin-top:18px;padding:0!important;background:transparent!important;border:0!important;color:#5548FF!important;font-size:15px!important;font-weight:750!important}
+.resultCta:after{content:" →"}
 .resultsFootnote{font-size:14px;line-height:1.5;color:#778195;margin:18px 0 0}
 .processSection{position:relative;overflow:hidden;margin-top:88px;padding:88px 28px!important;background:linear-gradient(180deg,#F7F8FF 0%,#fff 100%)}
 .processSection:before{content:"";position:absolute;width:420px;height:420px;right:-180px;top:-230px;border-radius:50%;background:radial-gradient(circle,rgba(88,77,252,.13),rgba(88,77,252,0) 70%);pointer-events:none}
@@ -266,7 +261,7 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
 @media(max-width:1100px){.campaignGrid,.resultsGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.campaignCard:last-child,.resultCard:last-child{grid-column:1/-1}.capabilityLayout{gap:54px}.footerTop{grid-template-columns:1fr;gap:38px}}
 @media(max-width:980px){.goalIntro{grid-template-columns:1fr;gap:18px}.goalGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.advisorIntro{grid-template-columns:1fr;gap:20px}.advisorMeta{justify-content:flex-start}.advisorGrid{grid-template-columns:1fr!important}.advisorIdle{min-height:360px}.galleryHeader{grid-template-columns:1fr}.galleryHeader>div:last-child{justify-self:start}.galleryGrid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.campaignIntro,.resultsIntro,.processIntro{grid-template-columns:1fr;gap:16px}.processTimeline{grid-template-columns:repeat(2,minmax(0,1fr));gap:34px 24px}.processTimeline:before{display:none}.capabilityLayout{grid-template-columns:1fr;gap:38px}.capabilityIntro{position:static}.capabilityIntro h2{max-width:16ch}.finalCta{grid-template-columns:1fr}.finalCtaActions{flex-direction:row;min-width:0}.finalCtaActions button{flex:1}.footerColumns{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){h1{font-size:44px!important}h2{font-size:34px!important}header{top:10px;width:calc(100% - 20px)}header>div:first-child{padding-inline:14px!important}#top{margin-top:-72px;padding-top:150px!important;padding-bottom:130px!important}.gradient{filter:blur(4px) saturate(103%) brightness(.96)}.klyTrustSection{margin-top:0!important;padding-top:48px!important}.klyEcosystemStats{grid-template-columns:repeat(2,1fr);gap:18px 10px;margin-top:32px}.klyEcosystemStat{min-height:88px;padding:8px}.klyMediaLogos{margin-top:16px;mask-image:linear-gradient(90deg,transparent 0,#000 14%,#000 86%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 14%,#000 86%,transparent 100%)}.klyMediaTrack{animation-duration:22s}.klyMediaGroup{gap:42px;padding-right:42px}.klyMediaLogo{width:124px;flex-basis:124px}.klyMediaLogo img{height:30px}.goalGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.goalCard{min-height:220px}#top>div{grid-template-columns:1fr!important}#solutions,#gallery,#showcase,#casestudies,#howitworks{padding-inline:18px!important}#advisor{padding:64px 18px!important}.advisorFields{grid-template-columns:1fr!important}.advisorForm{padding:22px!important}.advisorFormHead{margin-bottom:20px}.advisorMeta span{font-size:13px}.advisorIdle{min-height:320px;padding:42px 22px!important}}
-@media(max-width:700px){.campaignGrid,.resultsGrid{grid-template-columns:1fr}.campaignCard:last-child,.resultCard:last-child{grid-column:auto}.campaignChallenge{min-height:0}.campaignVisual{min-height:174px}.campaignMap{grid-template-columns:minmax(0,.8fr) 14px minmax(0,1.1fr) 14px minmax(0,.8fr)}.campaignMapNode{padding:9px}.campaignMapNode strong{font-size:12px}.resultBody{padding:20px}.resultMetric{padding:20px}.resultMetricPrimary strong{font-size:54px}.resultHighlight strong{font-size:28px}.processTimeline{grid-template-columns:1fr}.processStep{padding:0 0 0 76px;min-height:118px}.processNumber{top:0}.capabilityItem{grid-template-columns:40px minmax(0,1fr)}.capabilityItem p{grid-column:2}.finalCtaActions{flex-direction:column}.footerColumns{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.campaignGrid,.resultsGrid{grid-template-columns:1fr}.campaignCard:last-child,.resultCard:last-child{grid-column:auto}.campaignChallenge{min-height:0}.campaignVisual{min-height:174px}.campaignMap{grid-template-columns:minmax(0,.8fr) 14px minmax(0,1.1fr) 14px minmax(0,.8fr)}.campaignMapNode{padding:9px}.campaignMapNode strong{font-size:12px}.resultBody{padding:20px}.resultMetric{padding:17px}.resultMetricPrimary strong,.resultHighlight strong{font-size:28px}.processTimeline{grid-template-columns:1fr}.processStep{padding:0 0 0 76px;min-height:118px}.processNumber{top:0}.capabilityItem{grid-template-columns:40px minmax(0,1fr)}.capabilityItem p{grid-column:2}.finalCtaActions{flex-direction:column}.footerColumns{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.galleryFilters{grid-template-columns:1fr!important}.galleryGrid{grid-template-columns:1fr!important}.galleryToolbar{padding:14px!important}.galleryCardBody>p{min-height:0}}
 @media(max-width:460px){.goalGrid{grid-template-columns:1fr}.goalCard{min-height:190px}}
 @media(prefers-reduced-motion:reduce){.klyMediaTrack{animation:none}}
@@ -785,19 +780,14 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
           <div class="resultImage">
             <img src="{{ cs.image }}" alt="{{ cs.imageAlt }}" decoding="async">
             <span class="resultCategory">{{ cs.category }}</span>
-            <span class="resultImageNote">Public case</span>
           </div>
           <div class="resultBody">
             <h3>{{ cs.title }}</h3>
             <p class="resultContext">{{ cs.challenge }}</p>
-            <div class="resultApproach">
-              <span>Campaign approach</span>
-              <p>{{ cs.solution }}</p>
-            </div>
             <div class="resultMetric">
-              <div class="resultMetricLabel">Hasil utama</div>
-              <div class="resultMetricPrimary"><strong>{{ cs.mainValue }}</strong><span>{{ cs.mainLabel }}</span></div>
-              <div class="resultHighlights">
+              <div class="resultMetricLabel">Ringkasan hasil</div>
+              <div class="resultMetricGrid">
+                <div class="resultMetricPrimary"><strong>{{ cs.mainValue }}</strong><span>{{ cs.mainLabel }}</span></div>
                 <sc-for list="{{ cs.highlights }}" as="m" hint-placeholder-count="2">
                   <div class="resultHighlight"><strong>{{ m.value }}</strong><span>{{ m.label }}</span></div>
                 </sc-for>
