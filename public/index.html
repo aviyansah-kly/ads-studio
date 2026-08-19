@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Temukan solusi periklanan KLY, susun kebutuhan kampanye, bandingkan format, dan ajukan proposal.">
 <meta name="theme-color" content="#1769E0">
-<title>KLY Ads Studio</title>
+<title>KLY Ads Discovery</title>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -274,7 +274,7 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
   <div style="max-width:1260px;margin:0 auto;padding:0 28px;height:68px;display:flex;align-items:center;gap:32px">
     <a href="#top" style="display:flex;align-items:center;gap:9px;color:#172033;flex:none">
       <img src="/kly-logo-web.png" alt="KLY" style="width:58px;height:36px;object-fit:contain">
-      <span style="display:flex;align-items:center;height:36px;font-size:12px;font-weight:600;line-height:1;letter-spacing:0.16em;color:#5A6478">ADS STUDIO</span>
+      <span style="display:flex;align-items:center;height:36px;font-size:12px;font-weight:600;line-height:1;letter-spacing:0.16em;color:#5A6478">ADS DISCOVERY</span>
     </a>
     <nav style="display:none;gap:26px;flex:1" data-nav="desktop" class="klyNavDesktop">
       <sc-for list="{{ navItems }}" as="item" hint-placeholder-count="5">
@@ -867,7 +867,7 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
       <div class="footerBrand">
         <div style="display:flex;align-items:center;gap:10px">
           <img src="/kly-logo-web.png" alt="KLY" style="width:64px;height:40px;object-fit:contain">
-          <span style="font-size:14px;font-weight:700;letter-spacing:.14em;color:#5F6879">ADS STUDIO</span>
+          <span style="font-size:14px;font-weight:700;letter-spacing:.14em;color:#5F6879">ADS DISCOVERY</span>
         </div>
         <p>Temukan solusi advertising KLY berdasarkan objective, audience, dan kebutuhan brand.</p>
       </div>
@@ -1185,7 +1185,7 @@ section[style*="padding:84px"]>div p{color:rgba(255,255,255,.76)!important}
     <div id="planSheet" style="position:relative;width:min(720px,100%);max-height:86vh;overflow:auto;background:#fff;border-radius:14px;border:1px solid #E3E9F2;padding:28px;animation:kfUp .24s ease both">
       <div style="display:flex;align-items:flex-start;gap:14px">
         <div>
-          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;color:#8A94A6">KLY ADS STUDIO · RENCANA KAMPANYE</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;color:#8A94A6">KLY ADS DISCOVERY · RENCANA KAMPANYE</div>
           <h2 style="font-size:22px;font-weight:600;letter-spacing:-0.018em;margin:10px 0 0">{{ planTitle }}</h2>
         </div>
         <button onClick="{{ closePlan }}" aria-label="Tutup" style="margin-left:auto;width:34px;height:34px;flex:none;display:flex;align-items:center;justify-content:center;border:1px solid #D4DDEA;background:#fff;border-radius:9px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#172033" stroke-width="2.2" stroke-linecap="round"><path d="M18 6L6 18"></path><path d="M6 6l12 12"></path></svg></button>
@@ -1400,7 +1400,7 @@ class Component extends DCLogic {
     ],
     steps: [
       { n: '01', owner: 'Anda', title: 'Isi campaign brief', text: 'Tentukan objective, audience, budget, dan timeline.' },
-      { n: '02', owner: 'Ads Studio', title: 'Temukan rekomendasi', text: 'Sistem mencocokkan kebutuhan dengan solusi KLY yang relevan.' },
+      { n: '02', owner: 'Ads Discovery', title: 'Temukan rekomendasi', text: 'Sistem mencocokkan kebutuhan dengan solusi KLY yang relevan.' },
       { n: '03', owner: 'Anda', title: 'Review dan compare', text: 'Pelajari detail format dan pilih campaign mix awal.' },
       { n: '04', owner: 'Tim KLY', title: 'Validasi proposal', text: 'Finalisasi format, target KPI, timeline, dan kebutuhan produksi.' }
     ],
@@ -1561,7 +1561,7 @@ class Component extends DCLogic {
 
   copyPlan = () => {
     const text = this.planRows().map(r => r.k + ': ' + r.v).join('\n');
-    try { navigator.clipboard.writeText('KLY ADS STUDIO — RENCANA KAMPANYE\n\n' + text); } catch (e) {}
+    try { navigator.clipboard.writeText('KLY ADS DISCOVERY — RENCANA KAMPANYE\n\n' + text); } catch (e) {}
     this.setState({ copied: true });
     this.timers.push(setTimeout(() => this.setState({ copied: false }), 1600));
   };
