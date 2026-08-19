@@ -140,15 +140,15 @@ function installCampaignResultMetricStyles() {
     .resultHighlight strong {
       display: block !important;
       margin: 0 !important;
-      font-size: clamp(30px, 2.35vw, 38px) !important;
+      font-size: 20px !important;
       font-weight: 900 !important;
-      line-height: 1.04 !important;
-      letter-spacing: -.045em !important;
+      line-height: 1.08 !important;
+      letter-spacing: -.03em !important;
       overflow-wrap: anywhere !important;
     }
 
     .resultMetricPrimary strong {
-      font-size: clamp(32px, 2.55vw, 40px) !important;
+      font-size: 20px !important;
     }
 
     .resultMetricPrimary strong > .sc-interp,
@@ -189,7 +189,7 @@ function installCampaignResultMetricStyles() {
 
       .resultMetricPrimary strong,
       .resultHighlight strong {
-        font-size: clamp(29px, 3vw, 36px) !important;
+        font-size: 20px !important;
       }
     }
 
@@ -210,7 +210,7 @@ function installCampaignResultMetricStyles() {
 
       .resultMetricPrimary strong,
       .resultHighlight strong {
-        font-size: 29px !important;
+        font-size: 20px !important;
       }
 
       .resultMetricPrimary > span,
