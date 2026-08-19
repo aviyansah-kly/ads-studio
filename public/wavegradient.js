@@ -96,7 +96,123 @@ function installKlyAdsCopyNormalizer() {
   }
 }
 
+function installCampaignResultMetricStyles() {
+  if (typeof document === 'undefined') return;
+  if (document.getElementById('kly-campaign-result-metric-styles')) return;
+
+  const style = document.createElement('style');
+  style.id = 'kly-campaign-result-metric-styles';
+  style.textContent = `
+    .resultMetric {
+      margin-top: 22px !important;
+      padding: 20px 20px 22px !important;
+      border-radius: 16px !important;
+    }
+
+    .resultMetricLabel {
+      font-size: 13px !important;
+      font-weight: 750 !important;
+      line-height: 1.2 !important;
+      letter-spacing: .09em !important;
+    }
+
+    .resultMetricGrid {
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+      align-items: stretch !important;
+      margin-top: 18px !important;
+    }
+
+    .resultMetricPrimary,
+    .resultHighlight {
+      min-width: 0 !important;
+      padding: 2px 16px 0 !important;
+    }
+
+    .resultMetricPrimary {
+      padding-left: 0 !important;
+    }
+
+    .resultHighlight {
+      border-left: 1px solid #D7DBE6 !important;
+    }
+
+    .resultMetricPrimary strong,
+    .resultHighlight strong {
+      display: block !important;
+      margin: 0 !important;
+      font-size: clamp(28px, 2.35vw, 36px) !important;
+      font-weight: 800 !important;
+      line-height: 1.04 !important;
+      letter-spacing: -.045em !important;
+      overflow-wrap: anywhere !important;
+    }
+
+    .resultMetricPrimary strong {
+      font-size: clamp(30px, 2.55vw, 38px) !important;
+    }
+
+    .resultMetricPrimary span,
+    .resultHighlight span {
+      display: block !important;
+      margin-top: 10px !important;
+      font-size: 14px !important;
+      font-weight: 560 !important;
+      line-height: 1.4 !important;
+      color: #626B7D !important;
+    }
+
+    @media (max-width: 1100px) {
+      .resultMetric {
+        padding: 18px 18px 20px !important;
+      }
+
+      .resultMetricPrimary,
+      .resultHighlight {
+        padding-left: 13px !important;
+        padding-right: 13px !important;
+      }
+
+      .resultMetricPrimary {
+        padding-left: 0 !important;
+      }
+
+      .resultMetricPrimary strong,
+      .resultHighlight strong {
+        font-size: clamp(27px, 3vw, 34px) !important;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .resultMetricGrid {
+        gap: 0 !important;
+      }
+
+      .resultMetricPrimary,
+      .resultHighlight {
+        padding-left: 11px !important;
+        padding-right: 11px !important;
+      }
+
+      .resultMetricPrimary {
+        padding-left: 0 !important;
+      }
+
+      .resultMetricPrimary strong,
+      .resultHighlight strong {
+        font-size: 27px !important;
+      }
+
+      .resultMetricPrimary span,
+      .resultHighlight span {
+        font-size: 13px !important;
+      }
+    }
+  `;
+  document.head.appendChild(style);
+}
+
 installKlyAdsCopyNormalizer();
+installCampaignResultMetricStyles();
 
 export class WaveGradient {
   constructor(canvas, options = {}) {
