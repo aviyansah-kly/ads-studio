@@ -18,7 +18,13 @@ function normalizeKlyAdsCopy(value) {
 function normalizeElementCopy(root) {
   if (!root || typeof document === 'undefined') return;
 
+  const shouldSkipTextNode = (node) => {
+    const tag = node.parentElement && node.parentElement.tagName;
+    return tag === 'SCRIPT' || tag === 'STYLE' || tag === 'NOSCRIPT';
+  };
+
   const normalizeTextNode = (node) => {
+    if (shouldSkipTextNode(node)) return;
     const current = node.nodeValue;
     const next = normalizeKlyAdsCopy(current);
     if (next !== current) node.nodeValue = next;
@@ -39,6 +45,7 @@ function normalizeElementCopy(root) {
 
   const copyAttributes = ['aria-label', 'placeholder', 'title', 'content'];
   for (const element of elements) {
+    if (element.tagName === 'SCRIPT' || element.tagName === 'STYLE') continue;
     for (const attr of copyAttributes) {
       if (!element.hasAttribute || !element.hasAttribute(attr)) continue;
       const current = element.getAttribute(attr);
